@@ -108,7 +108,7 @@ class Robot:
         Move robot for home position
 
         """
-        list_joints = (0,0,0,0,0,0)
+        list_joints = (0, 0, 0, 0, 0, 0)
         self.move_joints(list_joints)
 
     def move_to_drop_inter(self):
@@ -117,7 +117,7 @@ class Robot:
         Move robot for home position
 
         """
-        list_joints = (0,0,0,0,0,0)
+        list_joints = (0, 0, 0, 0, 0, 0)
         self.move_joints(list_joints)
 
     def move_joints(self, joints_list):
