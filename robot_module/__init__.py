@@ -1,2 +1,2 @@
-from robot import robot_singleton
-from write_json import write_into_json
+from robot_module.robot import robot_singleton
+from robot_module.write_json import write_into_json

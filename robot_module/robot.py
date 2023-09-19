@@ -1,11 +1,9 @@
 import threading
 from time import sleep
 import robot_module.utils as robot_connection
-from kortex_api.autogen.messages import Base_pb2, BaseCyclic_pb2
+from kortex_api.autogen.messages import Base_pb2
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
-from robot_module.gripper_only import close_detection, close_destruction
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
-from kortex_api.autogen.client_stubs.DeviceConfigClientRpc import DeviceConfigClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
@@ -61,8 +59,6 @@ class Robot:
         (bool): Move is finished
         """
 
-        notification_handle = None
-
         e = threading.Event()
 
         if obj_notification == Base_pb2:
@@ -92,15 +88,28 @@ class Robot:
         """
         Move robot for home position
         """
-        list_joints = (0,0,0,0,0,0)
+        list_joints = (
+                       3.3874359130859375,
+                       298.6025390625,
+                       84.85797119140625,
+                       359.429931640625,
+                       78.80126953125,
+                       240.70870971679688
+                       )
         self.move_joints(list_joints)
 
     def move_to_get_inter(self):
         """
         Move robot for home position
         """
-        list_joints = (0,0,0,0,0,0)
-        self.move_joints(list_joints)
+        list_joints = [
+            0.37542736530303955,
+            -0.21927759051322937,
+            0.17, 80.98658752441406,
+            175.12979125976562,
+            9.363219261169434
+        ]
+        self.move_cartesian(list_joints)
 
     def move_to_drop(self):
         """
@@ -147,27 +156,95 @@ class Robot:
 
         return finished
 
-    @staticmethod
-    def close_tool() -> bool:
+    def move_cartesian(self, coordinates):
+        """
+        Movement with cartisian poses
+        Args:
+        coordinates(list): list with poses of moviment
+        :return:
+        """
+        action = Base_pb2.Action()
+        action.name = "Example Cartesian action movement"
+        action.application_data = ""
+
+        cartesian_pose = action.reach_pose.target_pose
+        cartesian_pose.x = coordinates[0]  # [meters]
+        cartesian_pose.y = coordinates[1]  # [meters]
+        cartesian_pose.z = coordinates[2]  # [meters]
+        cartesian_pose.theta_x = coordinates[3]  # [degrees]
+        cartesian_pose.theta_y = coordinates[4]  # [degrees]
+        cartesian_pose.theta_z = coordinates[5]  # [degrees]
+
+        e = threading.Event()
+        notification_handle = self.base.OnNotificationActionTopic(
+           self.check_for_end_or_abort(e),
+            Base_pb2.NotificationOptions()
+        )
+
+        self.base.ExecuteAction(action)
+
+        finished = e.wait(TIMEOUT_DURATION)
+        self.base.Unsubscribe(notification_handle)
+
+        if finished:
+            print("Cartesian movement completed")
+        else:
+            print("Timeout on action notification wait")
+        return finished
+
+    def close_tool(self) -> bool:
         """
         This function close the gripper and try detected object
         Returns:
-        (bool): object_detect: returns whether an object was detected or not detected
+        (bool): returns whether an object was detected or not detected
         """
-        object_detected = close_detection()
+        object_detected = False
+
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 97:
+            gripper_command = Base_pb2.GripperCommand()
+            finger = gripper_command.gripper.finger.add()
+            gripper_command.mode = Base_pb2.GRIPPER_POSITION
+            finger.finger_identifier = 1
+            finger.value = (float(self.atribue_from_gripper()["position"]) + 2) / 100
+            self.base.SendGripperCommand(gripper_command)
+
+            current = float(self.atribue_from_gripper()["current_motor"])
+            if 4 < current:
+                print("atypical current 1")
+                print(current)
+                current = 0
+
+            if current > 0.65:
+                finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
+                self.base.SendGripperCommand(gripper_command)
+                current = float(self.atribue_from_gripper()["current_motor"])
+                if current > 0.50:
+                    object_detected = True
 
         return object_detected
 
-    @staticmethod
-    def close_destruction() -> list:
+    def close_destruction(self) -> list:
         """
-
-        :return:
+        This function close the gripper to max
+        :Returns:
+        (list): list of currents and positions
         """
-        list_position_current = close_destruction()
-        return list_position_current
+        list_currents = []
+        while float(robot_singleton.atribue_from_gripper()["position"]) > 99.9:
+            gripper_command = Base_pb2.GripperCommand()
+            finger = gripper_command.gripper.finger.add()
+            gripper_command.mode = Base_pb2.GRIPPER_POSITION
+            finger.finger_identifier = 1
+            finger.value = (float(self.atribue_from_gripper()["position"]) + 2) / 100
+            self.base.SendGripperCommand(gripper_command)
+            current = self.atribue_from_gripper()["current_motor"]
+            if current > 0.60:
+                position = self.atribue_from_gripper()["position"]
+                list_currents.append((current, position))
 
-    def open_tool(self, value=0.50):
+        return list_currents
+
+    def open_tool(self, value=0.60):
         """
         Open griper with value
         Args
@@ -218,6 +295,20 @@ class Robot:
             joint_angles.append(joint.value)
 
         return joint_angles
+
+    def get_pose_cartisians(self):
+        joint_cartisians_pose = self.base.GetMeasuredCartesianPose()
+
+        joint_poses = [
+            joint_cartisians_pose.x,
+            joint_cartisians_pose.y,
+            joint_cartisians_pose.z,
+            joint_cartisians_pose.theta_x,
+            joint_cartisians_pose.theta_y,
+            joint_cartisians_pose.theta_z
+        ]
+
+        return joint_poses
 
     def apply_emergency_stop(self):
         self.base.ApplyEmergencyStop()
