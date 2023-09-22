@@ -84,18 +84,29 @@ class Robot:
         if self.action is not None:
             self.base.ClearFaults()
 
-    def move_to_get(self):
+    def move_to_get(self, robot):
         """
         Move robot for home position
         """
-        list_joints = (
-                       3.3874359130859375,
-                       298.6025390625,
-                       84.85797119140625,
-                       359.429931640625,
-                       78.80126953125,
-                       240.70870971679688
-                       )
+
+        if robot == 1:
+            list_joints = [
+                0.42413330078125,
+                294.19049072265625,
+                108.64239501953125,
+                63.70246887207031,
+                278.79168701171875,
+                271.28118896484375
+            ]
+        else:
+            list_joints = (
+                3.3874359130859375,
+                298.6025390625,
+                84.85797119140625,
+                359.429931640625,
+                78.80126953125,
+                240.70870971679688
+            )
         self.move_joints(list_joints)
 
     def move_to_get_inter(self):
@@ -110,6 +121,7 @@ class Robot:
             9.363219261169434
         ]
         self.move_cartesian(list_joints)
+
 
     def move_to_drop(self):
         """
@@ -177,7 +189,7 @@ class Robot:
 
         e = threading.Event()
         notification_handle = self.base.OnNotificationActionTopic(
-           self.check_for_end_or_abort(e),
+            self.check_for_end_or_abort(e),
             Base_pb2.NotificationOptions()
         )
 
@@ -230,16 +242,16 @@ class Robot:
         (list): list of currents and positions
         """
         list_currents = []
-        while float(robot_singleton.atribue_from_gripper()["position"]) > 99.9:
+        while float(robot_singleton.atribue_from_gripper()["position"]) < 98:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
             finger.finger_identifier = 1
             finger.value = (float(self.atribue_from_gripper()["position"]) + 2) / 100
             self.base.SendGripperCommand(gripper_command)
-            current = self.atribue_from_gripper()["current_motor"]
+            current = float(self.atribue_from_gripper()["current_motor"])
             if current > 0.60:
-                position = self.atribue_from_gripper()["position"]
+                position = float(self.atribue_from_gripper()["position"])
                 list_currents.append((current, position))
 
         return list_currents
