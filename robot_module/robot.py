@@ -79,49 +79,29 @@ class Robot:
 
         return finished
 
-    def clear_faults(self):
-
-        if self.action is not None:
-            self.base.ClearFaults()
-
-    def move_to_get(self, robot):
+    def move_to_get(self):
         """
         Move robot for home position
         """
 
-        if robot == 1:
-            list_joints = [
-                0.42413330078125,
-                294.19049072265625,
-                108.64239501953125,
-                63.70246887207031,
-                278.79168701171875,
-                271.28118896484375
-            ]
-        else:
-            list_joints = (
-                3.3874359130859375,
-                298.6025390625,
-                84.85797119140625,
-                359.429931640625,
-                78.80126953125,
-                240.70870971679688
-            )
+        list_joints = (
+            44.30694580078125,
+            310.5279235839844,
+            61.80702209472656,
+            337.88427734375,
+            47.84202575683594,
+            211.01341247558594
+        )
         self.move_joints(list_joints)
 
     def move_to_get_inter(self):
         """
-        Move robot for home position
+        Move robot for position safe after get medicine position
         """
-        list_joints = [
-            0.37542736530303955,
-            -0.21927759051322937,
-            0.17, 80.98658752441406,
-            175.12979125976562,
-            9.363219261169434
-        ]
-        self.move_cartesian(list_joints)
-
+        cordinates = self.get_pose_cartisians()
+        cordinates[-2] += 4
+        print(cordinates)
+        self.move_cartesian(cordinates)
 
     def move_to_drop(self):
         """
@@ -134,12 +114,12 @@ class Robot:
 
     def move_to_drop_inter(self):
         """
-
-        Move robot for home position
-
+        Move robot for position safe after get medicine position
         """
-        list_joints = (0, 0, 0, 0, 0, 0)
-        self.move_joints(list_joints)
+        cordinates = self.get_pose_cartisians()
+        cordinates[-1] += 4
+        print(cordinates)
+        self.move_cartesian(cordinates)
 
     def move_joints(self, joints_list):
         """
@@ -147,10 +127,9 @@ class Robot:
         Args:
             (list) joints_list: lista with values for all joints for movement
 
-        :return:
-        (bool) move is finished
+        Returns:
+            (bool) move is finished
         """
-
         self.action = Base_pb2.Action()
         self.action.name = "Example angular action movement"
         self.action.application_data = ""
@@ -170,10 +149,17 @@ class Robot:
 
     def move_cartesian(self, coordinates):
         """
-        Movement with cartisian poses
+        Set movement for robot with cartesian coordinates
         Args:
-        coordinates(list): list with poses of moviment
-        :return:
+            (float) pose[0]: x value
+            (float) pose[1]: y value
+            (float) pose[2]: z value
+            (float) 180 - abs(pose[3]): theta_x value
+            (float) -pose[4]: theta_y value
+            (float) 180 + pose[5]: theta_z value
+
+        Returns:
+            (bool): Move is finished
         """
         action = Base_pb2.Action()
         action.name = "Example Cartesian action movement"
@@ -187,21 +173,8 @@ class Robot:
         cartesian_pose.theta_y = coordinates[4]  # [degrees]
         cartesian_pose.theta_z = coordinates[5]  # [degrees]
 
-        e = threading.Event()
-        notification_handle = self.base.OnNotificationActionTopic(
-            self.check_for_end_or_abort(e),
-            Base_pb2.NotificationOptions()
-        )
+        finished = self.__detection_move(self.action)
 
-        self.base.ExecuteAction(action)
-
-        finished = e.wait(TIMEOUT_DURATION)
-        self.base.Unsubscribe(notification_handle)
-
-        if finished:
-            print("Cartesian movement completed")
-        else:
-            print("Timeout on action notification wait")
         return finished
 
     def close_tool(self) -> bool:
@@ -217,7 +190,7 @@ class Robot:
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
             finger.finger_identifier = 1
-            finger.value = (float(self.atribue_from_gripper()["position"]) + 2) / 100
+            finger.value = (float(self.atribue_from_gripper()["position"]) + 1.7) / 100
             self.base.SendGripperCommand(gripper_command)
 
             current = float(self.atribue_from_gripper()["current_motor"])
@@ -226,7 +199,7 @@ class Robot:
                 print(current)
                 current = 0
 
-            if current > 0.65:
+            if current > 0.70:
                 finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
                 self.base.SendGripperCommand(gripper_command)
                 current = float(self.atribue_from_gripper()["current_motor"])
