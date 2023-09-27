@@ -49,36 +49,6 @@ class Robot:
 
         return check
 
-    def __detection_move(self, obj_notification: object = None):
-        """
-        Create a thread and finish robot move
-        Args:
-            :(Any) action: Instructions for movement or joints or cartesian
-
-        :return:
-        (bool): Move is finished
-        """
-
-        e = threading.Event()
-
-        if obj_notification == Base_pb2:
-            notification_handle = \
-                self.base.OnNotificationActionTopic(
-                    self.check_for_end_or_abort(e),
-                    Base_pb2.NotificationOptions()
-                )
-
-        try:
-            self.base.ExecuteAction(self.action)
-        except (Exception,):
-            pass
-
-        finished = e.wait(TIMEOUT_DURATION)
-
-        self.base.Unsubscribe(notification_handle)
-
-        return finished
-
     def move_to_get(self):
         """
         Move robot for home position
@@ -161,11 +131,11 @@ class Robot:
         Returns:
             (bool): Move is finished
         """
-        action = Base_pb2.Action()
-        action.name = "Example Cartesian action movement"
-        action.application_data = ""
+        self.action = Base_pb2.Action()
+        self.action.name = "Example Cartesian action movement"
+        self.action.application_data = ""
 
-        cartesian_pose = action.reach_pose.target_pose
+        cartesian_pose = self.action.reach_pose.target_pose
         cartesian_pose.x = coordinates[0]  # [meters]
         cartesian_pose.y = coordinates[1]  # [meters]
         cartesian_pose.z = coordinates[2]  # [meters]
@@ -173,7 +143,52 @@ class Robot:
         cartesian_pose.theta_y = coordinates[4]  # [degrees]
         cartesian_pose.theta_z = coordinates[5]  # [degrees]
 
-        finished = self.__detection_move(self.action)
+        e = threading.Event()
+        notification_handle = self.base.OnNotificationActionTopic(
+            self.check_for_end_or_abort(e),
+            Base_pb2.NotificationOptions()
+        )
+
+        print("Executing action")
+        self.base.ExecuteAction(self.action)
+
+        print("Waiting for movement to finish ...")
+        finished = e.wait(TIMEOUT_DURATION)
+        self.base.Unsubscribe(notification_handle)
+
+        if finished:
+            print("Cartesian movement completed")
+        else:
+            print("Timeout on action notification wait")
+        return finished
+
+    def __detection_move(self, obj_notification: object = None):
+        """
+        Create a thread and finish robot move
+        Args:
+            :(Any) action: Instructions for movement or joints or cartesian
+
+        :return:
+        (bool): Move is finished
+        """
+
+        e = threading.Event()
+
+        if obj_notification == Base_pb2:
+            notification_handle = \
+                self.base.OnNotificationActionTopic(
+                    self.check_for_end_or_abort(e),
+                    Base_pb2.NotificationOptions()
+                )
+
+        try:
+            self.base.ExecuteAction(self.action)
+        except (Exception,):
+            pass
+
+        finished = e.wait(TIMEOUT_DURATION)
+
+        self.base.Unsubscribe(notification_handle)
 
         return finished
 
