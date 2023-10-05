@@ -214,12 +214,21 @@ class Robot:
                 print(current)
                 current = 0
 
-            if current > 0.70:
-                finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
+            if current > 0.65:
+                finger.value = (float(self.atribue_from_gripper()["position"]) + 1.3) / 100
                 self.base.SendGripperCommand(gripper_command)
                 current = float(self.atribue_from_gripper()["current_motor"])
-                if current > 0.50:
-                    object_detected = True
+                if current > 0.52:
+                    finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
+                    self.base.SendGripperCommand(gripper_command)
+                    current = float(self.atribue_from_gripper()["current_motor"])
+                    if current > 0.44:
+                        object_detected = True
+                        return object_detected
+                    else:
+                        print(f"0.49 > {current}")
+                else:
+                    print(f"0.52 > {current}")
 
         return object_detected
 
@@ -274,6 +283,7 @@ class Robot:
         self.base = BaseClient(self.router)
         self.base_cyclic = BaseCyclicClient(self.router)
         self.gripper = GripperCyclicClient(self.router)
+        self.open_tool()
 
     def disconnect(self):
         """
