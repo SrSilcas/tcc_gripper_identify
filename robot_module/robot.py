@@ -49,48 +49,6 @@ class Robot:
 
         return check
 
-    def move_to_get(self):
-        """
-        Move robot for home position
-        """
-
-        list_joints = (
-            44.30694580078125,
-            310.5279235839844,
-            61.80702209472656,
-            337.88427734375,
-            47.84202575683594,
-            211.01341247558594
-        )
-        self.move_joints(list_joints)
-
-    def move_to_get_inter(self):
-        """
-        Move robot for position safe after get medicine position
-        """
-        cordinates = self.get_pose_cartisians()
-        cordinates[-2] += 4
-        print(cordinates)
-        self.move_cartesian(cordinates)
-
-    def move_to_drop(self):
-        """
-
-        Move robot for home position
-
-        """
-        list_joints = (0, 0, 0, 0, 0, 0)
-        self.move_joints(list_joints)
-
-    def move_to_drop_inter(self):
-        """
-        Move robot for position safe after get medicine position
-        """
-        cordinates = self.get_pose_cartisians()
-        cordinates[-1] += 4
-        print(cordinates)
-        self.move_cartesian(cordinates)
-
     def move_joints(self, joints_list):
         """
         Set movement for robot with joints values
@@ -200,7 +158,7 @@ class Robot:
         """
         object_detected = False
 
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 97:
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 96:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -214,21 +172,17 @@ class Robot:
                 print(current)
                 current = 0
 
-            if current > 0.65:
+            if current > 0.655:
                 finger.value = (float(self.atribue_from_gripper()["position"]) + 1.3) / 100
                 self.base.SendGripperCommand(gripper_command)
                 current = float(self.atribue_from_gripper()["current_motor"])
-                if current > 0.52:
+                if current > 0.53:
                     finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.atribue_from_gripper()["current_motor"])
-                    if current > 0.44:
+                    if current > 0.46:
                         object_detected = True
                         return object_detected
-                    else:
-                        print(f"0.49 > {current}")
-                else:
-                    print(f"0.52 > {current}")
 
         return object_detected
 

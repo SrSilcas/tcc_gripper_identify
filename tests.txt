@@ -1,150 +1,300 @@
---Rotation: 1
+Rotation: 1
       True
-      Current mottor 0.6284226179122925
---Rotation: 2
+      Current mottor 0.7057842016220093
+Rotation: 2
       True
-      Current mottor 0.6139165759086609
---Rotation: 3
+      Current mottor 0.645336925983429
+Rotation: 3
       True
-      Current mottor 0.6244083642959595
---Rotation: 4
+      Current mottor 0.6509770154953003
+Rotation: 4
       True
-      Current mottor 0.6606686115264893
---Rotation: 5
-      True
-      Current mottor 0.6582319736480713
---Rotation: 6
-      True
-      Current mottor 0.6848220229148865
---Rotation: 7
-      True
-      Current mottor 0.6348637342453003
---Rotation: 8
-      True
-      Current mottor 0.6904582977294922
---Rotation: 9
-      True
-      Current mottor 0.6775639653205872
---Rotation: 10
-      True
-      Current mottor 0.6276143789291382
---Rotation: 11
-      True
-      Current mottor 0.6034471988677979
---Rotation: 12
-      True
-      Current mottor 0.681596040725708
---Rotation: 13
-      True
-      Current mottor 0.681596040725708
---Rotation: 14
-      True
-      Current mottor 0.6807866096496582
---Rotation: 15
-      True
-      Current mottor 0.6622872352600098
---Rotation: 16
-      True
-      Current mottor 0.6807880401611328
---Rotation: 17
-      True
-      Current mottor 0.6582280397415161
---Rotation: 18
-      True
-      Current mottor 0.6670917868614197
---Rotation: 19
-      True
-      Current mottor 0.6807861328125
---Rotation: 20
-      True
-      Current mottor 0.6767582893371582
---Rotation: 21
-      True
-      Current mottor 0.6050623059272766
---Rotation: 22
-      True
-      Current mottor 0.6775639653205872
---Rotation: 23
-      True
-      Current mottor 0.5913711190223694
---Rotation: 24
-      True
-      Current mottor 0.6622735261917114
---Rotation: 25
-      False
-      Current mottor 0.4898437559604645
---Rotation: 26
-      False
-      Current mottor 0.48662373423576355
---Rotation: 27
-      True
-      Current mottor 0.591357409954071
---Rotation: 28
-      False
-      Current mottor 0.5035458207130432
---Rotation: 29
-      True
-      Current mottor 0.6807880401611328
---Rotation: 30
-      True
-      Current mottor 0.6687055230140686
---Rotation: 31
-      True
-      Current mottor 0.48501044511795044
---Rotation: 32
-      False
-      Current mottor 0.48420408368110657
---Rotation: 33
-      True
-      Current mottor 0.6832150220870972
---Rotation: 34
-      True
-      Current mottor 0.672737181186676
---Rotation: 35
-      False
-      Current mottor 0.4979010224342346
---Rotation: 36
-      False
-      Current mottor 0.4793708026409149
---Rotation: 37
-      True
-      Current mottor 0.6662919521331787
---Rotation: 38
-      True
-      Current mottor 0.6993168592453003
---Rotation: 39
-      True
-      Current mottor 0.5978032946586609
---Rotation: 40
-      False
-      Current mottor 0.4777587950229645
---Rotation: 41
-      True
-      Current mottor 0.7081901431083679
---Rotation: 42
-      True
-      Current mottor 0.6550093293190002
---Rotation: 43
-      True
-      Current mottor 0.4850338399410248
---Rotation: 44
-      True
-      Current mottor 0.6711200475692749
---Rotation: 45
+      Current mottor 0.6985107064247131
+Rotation: 5
       True
       Current mottor 0.6856220364570618
---Rotation: 46
+Rotation: 6
       True
-      Current mottor 0.5607427954673767
---Rotation: 47
+      Current mottor 0.6421147584915161
+Rotation: 7
       True
-      Current mottor 0.6501713991165161
---Rotation: 48
+      Current mottor 0.6187583804130554
+Rotation: 8
+      True
+      Current mottor 0.6630659103393555
+Rotation: 9
+      True
+      Current mottor 0.5824972987174988
+Rotation: 10
+      True
+      Current mottor 0.5808888077735901
+Rotation: 11
+      True
+      Current mottor 0.6300622224807739
+Rotation: 12
+      True
+      Current mottor 0.5978466868400574
+Rotation: 13
+      True
+      Current mottor 0.5970057845115662
+Rotation: 14
+      True
+      Current mottor 0.6912639737129211
+Rotation: 15
+      True
+      Current mottor 0.6251958608627319
+Rotation: 16
       False
-      Current mottor 0.47615015506744385
---Rotation: 49
+      Current mottor 0.5132105350494385
+Rotation: 17
+      False
+      Current mottor 0.5180419683456421
+Rotation: 18
       True
-      Current mottor 0.5446312427520752
---Rotation: 50
+      Current mottor 0.6807866096496582
+Rotation: 19
       True
-      Current mottor 0.5953944325447083
+      Current mottor 0.6372822523117065
+Rotation: 20
+      True
+      Current mottor 0.6155321002006531
+Rotation: 21
+      True
+      Current mottor 0.620361864566803
+Rotation: 22
+      True
+      Current mottor 0.6332539916038513
+Rotation: 23
+      True
+      Current mottor 0.5816900134086609
+Rotation: 24
+      True
+      Current mottor 0.6800038814544678
+Rotation: 25
+      True
+      Current mottor 0.6155321002006531
+Rotation: 26
+      True
+      Current mottor 0.6380864381790161
+Rotation: 27
+      False
+      Current mottor 0.49145570397377014
+Rotation: 28
+      True
+      Current mottor 0.6340703964233398
+Rotation: 29
+      True
+      Current mottor 0.6268195509910583
+Rotation: 30
+      False
+      Current mottor 0.5091822147369385
+Rotation: 31
+      True
+      Current mottor 0.622803807258606
+Rotation: 32
+      True
+      Current mottor 0.609889805316925
+Rotation: 33
+      True
+      Current mottor 0.6195603609085083
+Rotation: 34
+      True
+      Current mottor 0.6227866411209106
+Rotation: 35
+      True
+      Current mottor 0.6010340452194214
+Rotation: 36
+      False
+      Current mottor 0.502734363079071
+Rotation: 37
+      True
+      Current mottor 0.6429198980331421
+Rotation: 38
+      True
+      Current mottor 0.645336925983429
+Rotation: 39
+      True
+      Current mottor 0.6904582977294922
+Rotation: 40
+      True
+      Current mottor 0.6243979334831238
+Rotation: 41
+      False
+      Current mottor 0.49145570397377014
+Rotation: 42
+      True
+      Current mottor 0.6066655516624451
+Rotation: 43
+      True
+      Current mottor 0.5511030554771423
+Rotation: 44
+      True
+      Current mottor 0.615527331829071
+Rotation: 45
+      True
+      Current mottor 0.6002283692359924
+Rotation: 46
+      False
+      Current mottor 0.5091822147369385
+Rotation: 47
+      False
+      Current mottor 0.49548929929733276
+Rotation: 48
+      False
+      Current mottor 0.4979010224342346
+Rotation: 49
+      False
+      Current mottor 0.4922633767127991
+Rotation: 50
+      True
+      Current mottor 0.6388961672782898
+Rotation: 51
+      True
+      Current mottor 0.6268071532249451
+Rotation: 52
+      True
+      Current mottor 0.6469486951828003
+Rotation: 53
+      True
+      Current mottor 0.6372848153114319
+Rotation: 54
+      True
+      Current mottor 0.626034140586853
+Rotation: 55
+      False
+      Current mottor 0.5059576630592346
+Rotation: 56
+      True
+      Current mottor 0.6171407699584961
+Rotation: 57
+      True
+      Current mottor 0.619555652141571
+Rotation: 58
+      False
+      Current mottor 0.4946783781051636
+Rotation: 59
+      True
+      Current mottor 0.6421162486076355
+Rotation: 60
+      True
+      Current mottor 0.6123179197311401
+Rotation: 61
+      True
+      Current mottor 0.6703202724456787
+Rotation: 62
+      True
+      Current mottor 0.6074792742729187
+Rotation: 63
+      False
+      Current mottor 0.4922613799571991
+Rotation: 64
+      True
+      Current mottor 0.6388915777206421
+Rotation: 65
+      False
+      Current mottor 0.48904404044151306
+Rotation: 66
+      False
+      Current mottor 0.5051538944244385
+Rotation: 67
+      True
+      Current mottor 0.6485615968704224
+Rotation: 68
+      True
+      Current mottor 0.6090825796127319
+Rotation: 69
+      True
+      Current mottor 0.5285162329673767
+Rotation: 70
+      False
+      Current mottor 0.4721198081970215
+Rotation: 71
+      True
+      Current mottor 0.6533980369567871
+Rotation: 72
+      True
+      Current mottor 0.615529477596283
+Rotation: 73
+      False
+      Current mottor 0.4793708026409149
+Rotation: 74
+      True
+      Current mottor 0.5639654397964478
+Rotation: 75
+      True
+      Current mottor 0.6268087029457092
+Rotation: 76
+      False
+      Current mottor 0.4979010224342346
+Rotation: 77
+      False
+      Current mottor 0.48662373423576355
+Rotation: 78
+      False
+      Current mottor 0.5164331793785095
+Rotation: 79
+      False
+      Current mottor 0.5148199796676636
+Rotation: 80
+      True
+      Current mottor 0.6388920545578003
+Rotation: 81
+      False
+      Current mottor 0.5043559670448303
+Rotation: 82
+      False
+      Current mottor 0.4906500577926636
+Rotation: 83
+      False
+      Current mottor 0.49548599123954773
+Rotation: 84
+      False
+      Current mottor 0.4890380799770355
+Rotation: 85
+      True
+      Current mottor 0.6203660368919373
+Rotation: 86
+      False
+      Current mottor 0.48986032605171204
+Rotation: 87
+      True
+      Current mottor 0.6646733283996582
+Rotation: 88
+      False
+      Current mottor 0.49870866537094116
+Rotation: 89
+      True
+      Current mottor 0.6171392202377319
+Rotation: 90
+      True
+      Current mottor 0.5607444643974304
+Rotation: 91
+      False
+      Current mottor 0.4922613799571991
+Rotation: 92
+      True
+      Current mottor 0.5913662314414978
+Rotation: 93
+      False
+      Current mottor 0.493069052696228
+Rotation: 94
+      True
+      Current mottor 0.6622602939605713
+Rotation: 95
+      True
+      Current mottor 0.6421147584915161
+Rotation: 96
+      True
+      Current mottor 0.5567843914031982
+Rotation: 97
+      True
+      Current mottor 0.6147221922874451
+Rotation: 98
+      False
+      Current mottor 0.4834011495113373
+Rotation: 99
+      False
+      Current mottor 0.49870866537094116
+Rotation: 100
+      True
+      Current mottor 0.6211717128753662
