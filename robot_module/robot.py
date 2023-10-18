@@ -223,17 +223,13 @@ class Robot:
                 finger.value = (float(self.atribue_from_gripper()["position"]) + 1.3) / 100
                 self.base.SendGripperCommand(gripper_command)
                 current = float(self.atribue_from_gripper()["current_motor"])
-                if current > 0.52:
+                if current > 0.56:
                     finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.atribue_from_gripper()["current_motor"])
-                    if current > 0.44:
+                    if current > 0.56:
                         object_detected = True
                         return object_detected
-                    else:
-                        print(f"0.49 > {current}")
-                else:
-                    print(f"0.52 > {current}")
 
         return object_detected
 
