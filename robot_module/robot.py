@@ -7,7 +7,7 @@ from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
-
+INCREMENT = (1.15, 1.3, 1.7)
 
 class Robot:
     def __init__(self):
@@ -200,12 +200,17 @@ class Robot:
         """
         object_detected = False
 
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 97:
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 96.5:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
             finger.finger_identifier = 1
-            finger.value = (float(self.atribue_from_gripper()["position"]) + 1.7) / 100
+            if float(self.atribue_from_gripper()['position']) < 70:
+                finger.value = (float(self.atribue_from_gripper()["position"]) + INCREMENT[2]) / 100
+            elif float(self.atribue_from_gripper()['position']) < 85:
+                finger.value = (float(self.atribue_from_gripper()["position"]) + INCREMENT[1]) / 100
+            else:
+                finger.value = (float(self.atribue_from_gripper()["position"]) + INCREMENT[0]) / 100
             self.base.SendGripperCommand(gripper_command)
 
             current = float(self.atribue_from_gripper()["current_motor"])
