@@ -207,11 +207,12 @@ class Robot:
         Returns:
         (bool): returns whether an object was detected or not detected
         """
-        variation = 0.29
         object_detected = False
-        currents = 0
-        loops = 1
         sum_ = 0
+        loops = 1
+        current = 0
+        currents = 0
+        max_variation = 0.29
         while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -229,11 +230,11 @@ class Robot:
                 print("atipical current")
 
             if loops > 1:
-                if sum_ + variation < current:
+                if sum_ + max_variation < current:
                     finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.atribue_from_gripper()["current_motor"])
-                    if sum_ + variation < current:
+                    if sum_ + max_variation < current:
                         object_detected = True
 
         print(loops)
@@ -250,6 +251,10 @@ class Robot:
         (list): list of currents and positions
         """
         list_currents = []
+        sum_ = 0
+        loops = 1
+        currents = 0
+        max_variation = 0.29
         while float(robot_singleton.atribue_from_gripper()["position"]) < 98:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -258,9 +263,17 @@ class Robot:
             finger.value = (float(self.atribue_from_gripper()["position"]) + 2) / 100
             self.base.SendGripperCommand(gripper_command)
             current = float(self.atribue_from_gripper()["current_motor"])
-            if current > 0.60:
-                position = float(self.atribue_from_gripper()["position"])
-                list_currents.append((current, position))
+            if 4 > current:
+                currents += current
+                sum_ = currents/loops
+                loops += 1
+            else:
+                print("atipical current")
+
+            if loops > 1:
+                if sum_ + max_variation < current:
+                    position = float(self.atribue_from_gripper()["position"])
+                    list_currents.append((current, position))
 
         return list_currents
 

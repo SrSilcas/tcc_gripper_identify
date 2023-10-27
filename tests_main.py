@@ -18,9 +18,5 @@ if __name__ == '__main__':
         result = f"Rotation: {i}\n     {pegou_}\n     Current_mottor: {current_affter}\n     Position: {position_after}\n"
         results += result
     write_into_txt(results)
-    # for i in range(1, 11):
-    #     list_destruction = robot_singleton.close_destruction()
-    #     dict_destruction[i] = list_destruction
-    #     robot_singleton.open_tool()
     print("Não pegou ", nao_pegou)
     print("Pegou ", pegou)
