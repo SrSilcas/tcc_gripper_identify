@@ -2,5 +2,5 @@
 
 
 def write_into_txt(list_mensage: str):
-    with open("tests.txt", 'w') as arqv:
+    with open("test.txt", 'w') as arqv:
         arqv.write(list_mensage)

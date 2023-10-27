@@ -1,0 +1,200 @@
+Rotation: 1
+     False
+     Current_mottor: 0.4825954735279083
+     Position: 96.65666198730469
+Rotation: 2
+     False
+     Current_mottor: 0.4495605528354645
+     Position: 96.51703643798828
+Rotation: 3
+     False
+     Current_mottor: 0.44876137375831604
+     Position: 96.63829040527344
+Rotation: 4
+     False
+     Current_mottor: 0.4270026981830597
+     Position: 96.90987396240234
+Rotation: 5
+     False
+     Current_mottor: 0.4777594804763794
+     Position: 96.66793823242188
+Rotation: 6
+     False
+     Current_mottor: 0.43425291776657104
+     Position: 96.7801284790039
+Rotation: 7
+     True
+     Current_mottor: 0.41572344303131104
+     Position: 96.50971221923828
+Rotation: 8
+     False
+     Current_mottor: 0.43184271454811096
+     Position: 96.79291534423828
+Rotation: 9
+     False
+     Current_mottor: 0.4068611264228821
+     Position: 96.84941864013672
+Rotation: 10
+     False
+     Current_mottor: 0.3851107954978943
+     Position: 96.85128021240234
+Rotation: 11
+     False
+     Current_mottor: 0.3939705491065979
+     Position: 96.61864471435547
+Rotation: 12
+     False
+     Current_mottor: 0.4100838005542755
+     Position: 96.92103576660156
+Rotation: 13
+     False
+     Current_mottor: 0.4568115174770355
+     Position: 97.7508773803711
+Rotation: 14
+     False
+     Current_mottor: 0.4189484119415283
+     Position: 96.88034057617188
+Rotation: 15
+     False
+     Current_mottor: 0.47857531905174255
+     Position: 97.70751190185547
+Rotation: 16
+     False
+     Current_mottor: 0.47614744305610657
+     Position: 96.67095947265625
+Rotation: 17
+     False
+     Current_mottor: 0.3931673467159271
+     Position: 96.76873779296875
+Rotation: 18
+     False
+     Current_mottor: 0.45842570066452026
+     Position: 97.69088745117188
+Rotation: 19
+     False
+     Current_mottor: 0.43828123807907104
+     Position: 96.63817596435547
+Rotation: 20
+     False
+     Current_mottor: 0.48422086238861084
+     Position: 97.70333099365234
+Rotation: 21
+     False
+     Current_mottor: 0.4535895884037018
+     Position: 96.65201568603516
+Rotation: 22
+     False
+     Current_mottor: 0.4801764488220215
+     Position: 96.99671936035156
+Rotation: 23
+     False
+     Current_mottor: 0.4487548768520355
+     Position: 96.65863800048828
+Rotation: 24
+     False
+     Current_mottor: 0.4334472715854645
+     Position: 96.97532653808594
+Rotation: 25
+     False
+     Current_mottor: 0.4358672499656677
+     Position: 96.78919982910156
+Rotation: 26
+     False
+     Current_mottor: 0.3955884277820587
+     Position: 96.83314514160156
+Rotation: 27
+     False
+     Current_mottor: 0.41008299589157104
+     Position: 97.63008880615234
+Rotation: 28
+     False
+     Current_mottor: 0.4640631675720215
+     Position: 97.9417724609375
+Rotation: 29
+     True
+     Current_mottor: 0.5067633390426636
+     Position: 97.62101745605469
+Rotation: 30
+     False
+     Current_mottor: 0.4415039122104645
+     Position: 96.8040771484375
+Rotation: 31
+     False
+     Current_mottor: 0.45521798729896545
+     Position: 96.65177917480469
+Rotation: 32
+     False
+     Current_mottor: 0.4632575213909149
+     Position: 97.81016540527344
+Rotation: 33
+     False
+     Current_mottor: 0.39638751745224
+     Position: 97.63682556152344
+Rotation: 34
+     False
+     Current_mottor: 0.43104231357574463
+     Position: 96.63282775878906
+Rotation: 35
+     False
+     Current_mottor: 0.43183666467666626
+     Position: 96.63968658447266
+Rotation: 36
+     False
+     Current_mottor: 0.4576200246810913
+     Position: 97.93014526367188
+Rotation: 37
+     False
+     Current_mottor: 0.41813963651657104
+     Position: 96.76408386230469
+Rotation: 38
+     False
+     Current_mottor: 0.38349947333335876
+     Position: 96.84535217285156
+Rotation: 39
+     False
+     Current_mottor: 0.44795212149620056
+     Position: 96.77175903320312
+Rotation: 40
+     False
+     Current_mottor: 0.42539140582084656
+     Position: 96.7698974609375
+Rotation: 41
+     False
+     Current_mottor: 0.3818856179714203
+     Position: 96.83976745605469
+Rotation: 42
+     False
+     Current_mottor: 0.3899422287940979
+     Position: 96.58412170410156
+Rotation: 43
+     False
+     Current_mottor: 0.45842570066452026
+     Position: 97.93921661376953
+Rotation: 44
+     False
+     Current_mottor: 0.47453680634498596
+     Position: 97.86678314208984
+Rotation: 45
+     False
+     Current_mottor: 0.43022459745407104
+     Position: 96.52924346923828
+Rotation: 46
+     False
+     Current_mottor: 0.4334540069103241
+     Position: 97.60137176513672
+Rotation: 47
+     False
+     Current_mottor: 0.4374763071537018
+     Position: 96.82279205322266
+Rotation: 48
+     False
+     Current_mottor: 0.4245918393135071
+     Position: 96.77338409423828
+Rotation: 49
+     False
+     Current_mottor: 0.4350593388080597
+     Position: 96.79093933105469
+Rotation: 50
+     False
+     Current_mottor: 0.4334479868412018
+     Position: 96.7767562866211

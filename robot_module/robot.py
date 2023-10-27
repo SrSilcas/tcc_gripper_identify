@@ -9,6 +9,7 @@ from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclic
 TIMEOUT_DURATION = 20
 INCREMENT = (1.15, 1.3, 1.7)
 
+
 class Robot:
     def __init__(self):
         self.active_state = None
@@ -192,44 +193,53 @@ class Robot:
 
         return finished
 
+    def __increment(self):
+        if float(self.atribue_from_gripper()['position']) < 70:
+            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[2]) / 100
+        elif float(self.atribue_from_gripper()['position']) < 85:
+            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[1]) / 100
+        else:
+            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[0]) / 100
+
     def close_tool(self) -> bool:
         """
         This function close the gripper and try detected object
         Returns:
         (bool): returns whether an object was detected or not detected
         """
+        variation = 0.29
         object_detected = False
-
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 96.5:
+        currents = 0
+        loops = 1
+        sum_ = 0
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
             finger.finger_identifier = 1
-            if float(self.atribue_from_gripper()['position']) < 70:
-                finger.value = (float(self.atribue_from_gripper()["position"]) + INCREMENT[2]) / 100
-            elif float(self.atribue_from_gripper()['position']) < 85:
-                finger.value = (float(self.atribue_from_gripper()["position"]) + INCREMENT[1]) / 100
-            else:
-                finger.value = (float(self.atribue_from_gripper()["position"]) + INCREMENT[0]) / 100
+            finger.value = self.__increment()
             self.base.SendGripperCommand(gripper_command)
 
             current = float(self.atribue_from_gripper()["current_motor"])
-            if 4 < current:
-                print("atypical current 1")
-                print(current)
-                current = 0
+            if 4 > current:
+                currents += current
+                sum_ = currents/loops
+                loops += 1
+            else:
+                print("atipical current")
 
-            if current > 0.65:
-                finger.value = (float(self.atribue_from_gripper()["position"]) + 1.3) / 100
-                self.base.SendGripperCommand(gripper_command)
-                current = float(self.atribue_from_gripper()["current_motor"])
-                if current > 0.56:
-                    finger.value = (float(self.atribue_from_gripper()["position"]) + 1.15) / 100
+            if loops > 1:
+                if sum_ + variation < current:
+                    finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.atribue_from_gripper()["current_motor"])
-                    if current > 0.56:
+                    if sum_ + variation < current:
                         object_detected = True
-                        return object_detected
+
+        print(loops)
+        print(self.atribue_from_gripper()["position"])
+        print(current)
+        print(sum_)
 
         return object_detected
 

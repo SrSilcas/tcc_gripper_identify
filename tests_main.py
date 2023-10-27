@@ -9,12 +9,13 @@ if __name__ == '__main__':
         pegou_ = robot_singleton.close_tool()
         print(pegou_)
         current_affter = robot_singleton.atribue_from_gripper()['current_motor']
+        position_after = robot_singleton.atribue_from_gripper()['position']
         robot_singleton.open_tool(0.60)
         if pegou_:
             pegou += 1
         else:
             nao_pegou += 1
-        result = f"--Rotation: {i}\n      {pegou_}\n      Current mottor {current_affter}\n"
+        result = f"Rotation: {i}\n     {pegou_}\n     Current_mottor: {current_affter}\n     Position: {position_after}\n"
         results += result
     write_into_txt(results)
     # for i in range(1, 11):
