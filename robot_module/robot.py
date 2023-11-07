@@ -255,7 +255,7 @@ class Robot:
         loops = 1
         currents = 0
         max_variation = 0.29
-        while float(robot_singleton.atribue_from_gripper()["position"]) < 98:
+        while float(robot_singleton.atribue_from_gripper()["position"]) < 98.9:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -274,8 +274,7 @@ class Robot:
                 if sum_ + max_variation < current:
                     position = float(self.atribue_from_gripper()["position"])
                     list_currents.append((current, position))
-
-        return list_currents
+                    return list_currents
 
     def open_tool(self, value=0.60):
         """

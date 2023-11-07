@@ -17,6 +17,6 @@ if __name__ == '__main__':
             nao_pegou += 1
         result = f"Rotation: {i}\n     {pegou_}\n     Current_mottor: {current_affter}\n     Position: {position_after}\n"
         results += result
-    write_into_txt(results)
+    write_into_txt(results, "text_main")
     print("Não pegou ", nao_pegou)
     print("Pegou ", pegou)
