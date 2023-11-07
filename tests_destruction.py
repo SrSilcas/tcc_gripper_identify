@@ -13,5 +13,4 @@ if __name__ == '__main__':
             result = f"Rotation: {i}\n     Current_mottor: {element[0]}\n     Position: {element[1]}\n"
             results += result
     write_into_txt(results)
-    print("Não pegou ", nao_pegou)
-    print("Pegou ", pegou)
+
