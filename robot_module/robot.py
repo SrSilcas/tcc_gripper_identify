@@ -244,7 +244,7 @@ class Robot:
 
         return object_detected
 
-    def close_destruction(self) -> list:
+    def close_destruction(self) -> tuple:
         """
         This function close the gripper to max
         :Returns:
@@ -255,7 +255,7 @@ class Robot:
         loops = 1
         currents = 0
         max_variation = 0.29
-        while float(robot_singleton.atribue_from_gripper()["position"]) < 98.9:
+        while float(robot_singleton.atribue_from_gripper()["position"]) < 98:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -273,8 +273,8 @@ class Robot:
             if loops > 1:
                 if sum_ + max_variation < current:
                     position = float(self.atribue_from_gripper()["position"])
-                    list_currents.append((current, position))
-                    return list_currents
+                    tuple_ = current, position
+                    return tuple_
 
     def open_tool(self, value=0.60):
         """
