@@ -212,8 +212,8 @@ class Robot:
         loops = 1
         current = 0
         currents = 0
-        max_variation = 0.29
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
+        max_variation = 0.296
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 94.5:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
