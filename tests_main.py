@@ -1,6 +1,9 @@
 from robot_module import robot_singleton
 from robot_module import write_into_txt
+import move_ment
+
 if __name__ == '__main__':
+
     robot_singleton.connect()
     pegou = 0
     nao_pegou = 0
@@ -18,6 +21,6 @@ if __name__ == '__main__':
         result = f"Rotation: {i}\n     {pegou_}\n     Current_mottor: {current_affter}\n     Position: {position_after}\n"
         results += result
         print(i)
-    write_into_txt(results, "text_main_0.296_94.5")
+    write_into_txt(results, "text_main_0.27_95_not")
     print("Não pegou ", nao_pegou)
     print("Pegou ", pegou)

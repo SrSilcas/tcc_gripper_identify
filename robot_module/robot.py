@@ -7,7 +7,7 @@ from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
-INCREMENT = (1.15, 1.3, 1.7)
+INCREMENT = (1.3, 1.5, 1.7)
 
 
 class Robot:
@@ -49,48 +49,6 @@ class Robot:
                 event.set()
 
         return check
-
-    def move_to_get(self):
-        """
-        Move robot for home position
-        """
-
-        list_joints = (
-            44.30694580078125,
-            310.5279235839844,
-            61.80702209472656,
-            337.88427734375,
-            47.84202575683594,
-            211.01341247558594
-        )
-        self.move_joints(list_joints)
-
-    def move_to_get_inter(self):
-        """
-        Move robot for position safe after get medicine position
-        """
-        cordinates = self.get_pose_cartisians()
-        cordinates[-2] += 4
-        print(cordinates)
-        self.move_cartesian(cordinates)
-
-    def move_to_drop(self):
-        """
-
-        Move robot for home position
-
-        """
-        list_joints = (0, 0, 0, 0, 0, 0)
-        self.move_joints(list_joints)
-
-    def move_to_drop_inter(self):
-        """
-        Move robot for position safe after get medicine position
-        """
-        cordinates = self.get_pose_cartisians()
-        cordinates[-1] += 4
-        print(cordinates)
-        self.move_cartesian(cordinates)
 
     def move_joints(self, joints_list):
         """
@@ -212,8 +170,8 @@ class Robot:
         loops = 1
         current = 0
         currents = 0
-        max_variation = 0.26
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 94:
+        max_variation = 0.27
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
