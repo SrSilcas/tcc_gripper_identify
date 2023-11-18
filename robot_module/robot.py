@@ -208,7 +208,6 @@ class Robot:
         :Returns:
         (list): list of currents and positions
         """
-        list_currents = []
         average = 0
         loops = 1
         currents = 0
