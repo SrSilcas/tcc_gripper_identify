@@ -166,7 +166,7 @@ class Robot:
         (bool): returns whether an object was detected or not detected
         """
         object_detected = False
-        sum_ = 0
+        average = 0
         loops = 1
         current = 0
         currents = 0
@@ -182,23 +182,23 @@ class Robot:
             current = float(self.atribue_from_gripper()["current_motor"])
             if 4 > current:
                 currents += current
-                sum_ = currents/loops
+                average = currents/loops
                 loops += 1
             else:
                 print("atipical current")
 
             if loops > 1:
-                if sum_ + max_variation < current:
+                if average + max_variation < current:
                     finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.atribue_from_gripper()["current_motor"])
-                    if sum_ + max_variation < current:
+                    if average + max_variation < current:
                         object_detected = True
 
         print(loops)
         print(self.atribue_from_gripper()["position"])
         print(current)
-        print(sum_)
+        print(average)
 
         return object_detected
 
@@ -209,7 +209,7 @@ class Robot:
         (list): list of currents and positions
         """
         list_currents = []
-        sum_ = 0
+        average = 0
         loops = 1
         currents = 0
         max_variation = 0.29
@@ -223,13 +223,13 @@ class Robot:
             current = float(self.atribue_from_gripper()["current_motor"])
             if 4 > current:
                 currents += current
-                sum_ = currents/loops
+                average = currents/loops
                 loops += 1
             else:
                 print("atipical current")
 
             if loops > 1:
-                if sum_ + max_variation < current:
+                if average + max_variation < current:
                     position = float(self.atribue_from_gripper()["position"])
                     tuple_ = current, position
                     return tuple_
