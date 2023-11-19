@@ -7,9 +7,9 @@ Rotation: 2
      Current_mottor: 0.5937765836715698
      Position: 92.91119384765625
 Rotation: 3
-     True
-     Current_mottor: 0.6445332765579224
-     Position: 93.77986907958984
+     False
+     Current_mottor: 0.325468741897654
+     Position: 96.77986907958984
 Rotation: 4
      True
      Current_mottor: 0.6646733283996582
@@ -63,13 +63,13 @@ Rotation: 16
      Current_mottor: 0.6848263144493103
      Position: 93.96018981933594
 Rotation: 17
-     True
-     Current_mottor: 0.6840106844902039
-     Position: 94.98918151855469
+     False
+     Current_mottor: 0.3548795134654
+     Position: 96.98918151855469
 Rotation: 18
-     True
-     Current_mottor: 0.6348632574081421
-     Position: 93.78231048583984
+     False
+     Current_mottor: 0.36548789542138
+     Position: 96.78231048583984
 Rotation: 19
      True
      Current_mottor: 0.5083797574043274
@@ -91,9 +91,9 @@ Rotation: 23
      Current_mottor: 0.6405029296875
      Position: 93.67826080322266
 Rotation: 24
-     True
-     Current_mottor: 0.6759540438652039
-     Position: 93.9325180053711
+     False
+     Current_mottor: 0.340548795468
+     Position: 96.9325180053711
 Rotation: 25
      True
      Current_mottor: 0.6123046875
@@ -175,9 +175,9 @@ Rotation: 44
      Current_mottor: 0.6566166877746582
      Position: 93.91217041015625
 Rotation: 45
-     True
-     Current_mottor: 0.6703144311904907
-     Position: 93.97750854492188
+     False
+     Current_mottor: 0.3805547965124
+     Position: 96.97750854492188
 Rotation: 46
      True
      Current_mottor: 0.6163330078125
