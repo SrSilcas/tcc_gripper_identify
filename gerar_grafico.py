@@ -33,7 +33,7 @@ def gerar_grafico(current_motor, posicao):
     plt.title('Variação de Current_motor')
     plt.xlabel('Rotação')
     plt.ylabel('Current_motor')
-    plt.ylim(min(current_motor), max(current_motor))
+    plt.ylim(0.2, 0.6) # Get 0.3, 0.8 - Not 
 
     # Gerando gráfico para a variação de Posição
     plt.subplot(1, 2, 2)
@@ -41,6 +41,7 @@ def gerar_grafico(current_motor, posicao):
     plt.title('Variação de Posição')
     plt.xlabel('Rotação')
     plt.ylabel('Posição')
+    plt.ylim(94.5, 98.5) # Get 91.5, 99.5 - Not
 
     # Exibindo os gráficos
     plt.tight_layout()
@@ -48,7 +49,7 @@ def gerar_grafico(current_motor, posicao):
 
 if __name__ == "__main__":
     # Nome do arquivo a ser lido
-    nome_arquivo = 'text_main_amont_get.txt'
+    nome_arquivo = 'text_main_implet_1_not.txt'
 
     # Lendo o arquivo e processando os dados
     linhas = ler_arquivo(nome_arquivo)
