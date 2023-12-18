@@ -7,7 +7,7 @@ from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
-INCREMENT = (1.3, 1.5, 1.7)
+INCREMENT = (1.3, 1.5, 2, 1.175)
 
 
 class Robot:
@@ -26,6 +26,7 @@ class Robot:
         self.gripper_command = None
         self.action_list = []
         self.status_message = []
+        self.final_position = None
 
     @staticmethod
     def check_for_end_or_abort(e):
@@ -151,8 +152,10 @@ class Robot:
 
         return finished
 
-    def __increment(self):
-        if float(self.atribue_from_gripper()['position']) < 70:
+    def __increment(self, another_way: bool = False):
+        if another_way:
+            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[3]) / 100
+        elif float(self.atribue_from_gripper()['position']) < 70:
             return (float(self.atribue_from_gripper()["position"]) + INCREMENT[2]) / 100
         elif float(self.atribue_from_gripper()['position']) < 85:
             return (float(self.atribue_from_gripper()["position"]) + INCREMENT[1]) / 100
@@ -168,7 +171,6 @@ class Robot:
         object_detected = False
         average = 0
         loops = 1
-        current = 0
         currents = 0
         max_variation = 0.27
         while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
@@ -194,6 +196,9 @@ class Robot:
                     current = float(self.atribue_from_gripper()["current_motor"])
                     if average + max_variation < current:
                         object_detected = True
+                        finger.value = self.__increment(another_way=True)
+                        self.base.SendGripperCommand(gripper_command)
+                        self.final_position = float(self.atribue_from_gripper()["position"]) / 100
 
         print(loops)
         print(self.atribue_from_gripper()["position"])
@@ -249,7 +254,31 @@ class Robot:
         finger.value = value
         self.base.SendGripperCommand(self.gripper_command)
 
-        sleep(2)
+        sleep(0.16)
+
+    def confirmation_gripper(self):
+        init_current = float(self.atribue_from_gripper()['current_motor'])
+
+        if self.final_position is None:
+            self.final_position = 0.6
+
+        object_continuous = False
+        gripper_command = Base_pb2.GripperCommand()
+        finger = gripper_command.gripper.finger.add()
+        gripper_command.mode = Base_pb2.GRIPPER_POSITION
+        finger.finger_identifier = 1
+
+        finger.value = self.__increment(another_way=True)
+        self.base.SendGripperCommand(gripper_command)
+        current = float(self.atribue_from_gripper()['current_motor'])
+
+        if current > init_current:
+            object_continuous = True
+        sleep(0.16)
+
+        self.open_tool(self.final_position)
+
+        return object_continuous, current, init_current
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """

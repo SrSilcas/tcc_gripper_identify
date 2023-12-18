@@ -1,6 +1,5 @@
 from robot_module import robot_singleton
 from robot_module import write_into_txt
-import move_ment
 
 if __name__ == '__main__':
 
