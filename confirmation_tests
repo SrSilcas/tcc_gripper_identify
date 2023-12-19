@@ -1,250 +1,250 @@
 Rotation: 1
 True
-   First current: 0.9297376871109009
-   Second current: 0.6106938719749451
-   Avarage current: 0.770215779542923
+   Bigger Current: 0.8330566
+   Lesser Current: 0.43586725
+   Amount: 0.634461925
 Rotation: 2
 True
-   First current: 0.47695380449295044
-   Second current: 0.24250487983226776
-   Avarage current: 0.3597293421626091
+   Bigger Current: 0.7750488
+   Lesser Current: 0.24331187
+   Amount: 0.509180335
 Rotation: 3
 True
-   First current: 0.700929582118988
-   Second current: 0.309376060962677
-   Avarage current: 0.5051528215408325
+   Bigger Current: 0.6179443
+   Lesser Current: 0.24089356
+   Amount: 0.42941893
 Rotation: 4
 True
-   First current: 0.2940773069858551
-   Second current: 0.09026673436164856
-   Avarage current: 0.19217202067375183
+   Bigger Current: 0.6606524
+   Lesser Current: 0.1885254
+   Amount: 0.42458890000000005
 Rotation: 5
 True
-   First current: 0.5373784899711609
-   Second current: 0.17966307699680328
-   Avarage current: 0.3585207834839821
+   Bigger Current: 0.5808888
+   Lesser Current: 0.19094917
+   Amount: 0.385918985
 Rotation: 6
-True
-   First current: 0.629223644733429
-   Second current: 0.2586294412612915
-   Avarage current: 0.44392654299736023
+False
+   Bigger Current: 0.4970973
+   Lesser Current: 0.16919138
+   Amount: 0.33314434000000004
 Rotation: 7
 True
-   First current: 0.27553829550743103
-   Second current: 0.03545837476849556
-   Avarage current: 0.1554983351379633
+   Bigger Current: 0.60908204
+   Lesser Current: 0.20545855
+   Amount: 0.407270295
 Rotation: 8
-True
-   First current: 0.46245184540748596
-   Second current: 0.19094407558441162
-   Avarage current: 0.3266979604959488
+False
+   Bigger Current: 0.53657466
+   Lesser Current: 0.17483096
+   Amount: 0.35570281
 Rotation: 9
 True
-   First current: 0.6300313472747803
-   Second current: 0.2787609100341797
-   Avarage current: 0.45439612865448
+   Bigger Current: 0.60505426
+   Lesser Current: 0.20061682
+   Amount: 0.40283554
 Rotation: 10
-True
-   First current: 0.4809841513633728
-   Second current: 0.07251423597335815
-   Avarage current: 0.2767491936683655
+False
+   Bigger Current: 0.52932185
+   Lesser Current: 0.16194649
+   Amount: 0.34563416999999996
 Rotation: 11
 True
-   First current: 0.5559175610542297
-   Second current: 0.1490478515625
-   Avarage current: 0.35248270630836487
+   Bigger Current: 0.583303
+   Lesser Current: 0.21108398
+   Amount: 0.39719349000000004
 Rotation: 12
 True
-   First current: 0.57283616065979
-   Second current: 0.2376708984375
-   Avarage current: 0.405253529548645
+   Bigger Current: 0.5808888
+   Lesser Current: 0.18530273
+   Amount: 0.383095765
 Rotation: 13
-True
-   First current: 0.488243043422699
-   Second current: 0.03790047764778137
-   Avarage current: 0.2630717605352402
+False
+   Bigger Current: 0.5381932
+   Lesser Current: 0.22156346
+   Amount: 0.37987833000000004
 Rotation: 14
 False
-   First current: 0.6179448962211609
-   Second current: 0.1627461314201355
-   Avarage current: 0.3903455138206482
+   Bigger Current: 0.47937283
+   Lesser Current: 0.18611014
+   Amount: 0.332741485
 Rotation: 15
-True
-   First current: 0.574447512626648
-   Second current: 0.27070310711860657
-   Avarage current: 0.42257530987262726
+False
+   Bigger Current: 0.51401365
+   Lesser Current: 0.186921
+   Amount: 0.350467325
 Rotation: 16
 True
-   First current: 0.31904295086860657
-   Second current: 0.045929916203022
-   Avarage current: 0.18248643353581429
+   Bigger Current: 0.5784673
+   Lesser Current: 0.17080078
+   Amount: 0.37463404
 Rotation: 17
-True
-   First current: 0.6219726204872131
-   Second current: 0.18852539360523224
-   Avarage current: 0.4052490070462227
+False
+   Bigger Current: 0.46728584
+   Lesser Current: 0.14826189
+   Amount: 0.30777386500000004
 Rotation: 18
 True
-   First current: 0.6662846803665161
-   Second current: 0.26828733086586
-   Avarage current: 0.46728600561618805
+   Bigger Current: 0.5454369
+   Lesser Current: 0.16274613
+   Amount: 0.354091515
 Rotation: 19
 True
-   First current: 0.3859206438064575
-   Second current: 0.06284695863723755
-   Avarage current: 0.22438380122184753
+   Bigger Current: 0.57524467
+   Lesser Current: 0.1563009
+   Amount: 0.365772785
 Rotation: 20
 True
-   First current: 0.6026372313499451
-   Second current: 0.1933610588312149
-   Avarage current: 0.39799914509058
+   Bigger Current: 0.54865956
+   Lesser Current: 0.18853228
+   Amount: 0.36859592
 Rotation: 21
 True
-   First current: 0.5986089110374451
-   Second current: 0.2763439416885376
-   Avarage current: 0.43747642636299133
+   Bigger Current: 0.5897483
+   Lesser Current: 0.1756366
+   Amount: 0.38269245
 Rotation: 22
 True
-   First current: 0.38994473218917847
-   Second current: 0.07493109256029129
-   Avarage current: 0.23243791237473488
+   Bigger Current: 0.5615571
+   Lesser Current: 0.18369848
+   Amount: 0.37262779
 Rotation: 23
 True
-   First current: 0.5559087991714478
-   Second current: 0.1893327534198761
-   Avarage current: 0.3726207762956619
+   Bigger Current: 0.5510766
+   Lesser Current: 0.18772665
+   Amount: 0.369401625
 Rotation: 24
 True
-   First current: 0.7645756006240845
-   Second current: 0.26264646649360657
-   Avarage current: 0.5136110335588455
+   Bigger Current: 0.5615484
+   Lesser Current: 0.22881427
+   Amount: 0.39518133499999997
 Rotation: 25
 True
-   First current: 0.4350653290748596
-   Second current: 0.08298730850219727
-   Avarage current: 0.25902631878852844
+   Bigger Current: 0.5510748
+   Lesser Current: 0.18046875
+   Amount: 0.365771775
 Rotation: 26
 True
-   First current: 0.53173828125
-   Second current: 0.21511831879615784
-   Avarage current: 0.3734283000230789
+   Bigger Current: 0.54301757
+   Lesser Current: 0.17725343
+   Amount: 0.36013549999999994
 Rotation: 27
 True
-   First current: 0.5309380888938904
-   Second current: 0.2715087831020355
-   Avarage current: 0.40122343599796295
+   Bigger Current: 0.6026416
+   Lesser Current: 0.17483653
+   Amount: 0.388739065
 Rotation: 28
 True
-   First current: 0.43989256024360657
-   Second current: 0.06205705553293228
-   Avarage current: 0.2509748078882694
+   Bigger Current: 0.6687055
+   Lesser Current: 0.17405327
+   Amount: 0.421379385
 Rotation: 29
 True
-   First current: 0.5897466540336609
-   Second current: 0.19738933444023132
-   Avarage current: 0.3935679942369461
+   Bigger Current: 0.5736334
+   Lesser Current: 0.22800292
+   Amount: 0.40081816
 Rotation: 30
-True
-   First current: 0.6880413293838501
-   Second current: 0.27150997519493103
-   Avarage current: 0.47977565228939056
+False
+   Bigger Current: 0.4890487
+   Lesser Current: 0.16193847
+   Amount: 0.32549358500000003
 Rotation: 31
 True
-   First current: 0.3569100797176361
-   Second current: 0.05961913987994194
-   Avarage current: 0.20826460979878902
+   Bigger Current: 0.6018332
+   Lesser Current: 0.22881001
+   Amount: 0.415321605
 Rotation: 32
 False
-   First current: 0.5188576579093933
-   Second current: 0.19174803793430328
-   Avarage current: 0.3553028479218483
+   Bigger Current: 0.46406248
+   Lesser Current: 0.17080268
+   Amount: 0.31743258
 Rotation: 33
 True
-   First current: 0.5244879126548767
-   Second current: 0.26748165488243103
-   Avarage current: 0.39598478376865387
+   Bigger Current: 0.5671898
+   Lesser Current: 0.19738933
+   Amount: 0.382289565
 Rotation: 34
 True
-   First current: 0.38510826230049133
-   Second current: 0.05158767104148865
-   Avarage current: 0.21834796667099
+   Bigger Current: 0.5873313
+   Lesser Current: 0.18449883
+   Amount: 0.385915065
 Rotation: 35
 True
-   First current: 0.6219732165336609
-   Second current: 0.1828928291797638
-   Avarage current: 0.40243302285671234
+   Bigger Current: 0.59055394
+   Lesser Current: 0.18772146
+   Amount: 0.38913770000000003
 Rotation: 36
 True
-   First current: 0.629231870174408
-   Second current: 0.2844005525112152
-   Avarage current: 0.4568162113428116
+   Bigger Current: 0.663062
+   Lesser Current: 0.18127441
+   Amount: 0.422168205
 Rotation: 37
 True
-   First current: 0.3617440462112427
-   Second current: 0.07734374701976776
-   Avarage current: 0.21954389661550522
+   Bigger Current: 0.6445333
+   Lesser Current: 0.21430816
+   Amount: 0.42942073
 Rotation: 38
-True
-   First current: 0.5172362923622131
-   Second current: 0.15549315512180328
-   Avarage current: 0.3363647237420082
+False
+   Bigger Current: 0.52851623
+   Lesser Current: 0.17241964
+   Amount: 0.350467935
 Rotation: 39
 True
-   First current: 0.6848149299621582
-   Second current: 0.2521728575229645
-   Avarage current: 0.46849389374256134
+   Bigger Current: 0.56960505
+   Lesser Current: 0.24814977
+   Amount: 0.40887741
 Rotation: 40
-True
-   First current: 0.4632575213909149
-   Second current: 0.05964091047644615
-   Avarage current: 0.26144921593368053
+False
+   Bigger Current: 0.4326416
+   Lesser Current: 0.16919138
+   Amount: 0.30091649
 Rotation: 41
 True
-   First current: 0.544628918170929
-   Second current: 0.18209612369537354
-   Avarage current: 0.36336252093315125
+   Bigger Current: 0.6219732
+   Lesser Current: 0.22881001
+   Amount: 0.425391605
 Rotation: 42
 True
-   First current: 0.5454351305961609
-   Second current: 0.25297850370407104
-   Avarage current: 0.39920681715011597
+   Bigger Current: 0.67193156
+   Lesser Current: 0.19498569
+   Amount: 0.433458625
 Rotation: 43
-True
-   First current: 0.3617440462112427
-   Second current: 0.06768057495355606
-   Avarage current: 0.21471231058239937
+False
+   Bigger Current: 0.53738034
+   Lesser Current: 0.19255371
+   Amount: 0.364967025
 Rotation: 44
-True
-   First current: 0.6340596675872803
-   Second current: 0.17805904150009155
-   Avarage current: 0.4060593545436859
+False
+   Bigger Current: 0.53254944
+   Lesser Current: 0.17886467
+   Amount: 0.355707055
 Rotation: 45
 True
-   First current: 0.788745105266571
-   Second current: 0.2739269435405731
-   Avarage current: 0.5313360244035721
+   Bigger Current: 0.55914015
+   Lesser Current: 0.17080268
+   Amount: 0.36497141499999997
 Rotation: 46
 True
-   First current: 0.3955818712711334
-   Second current: 0.10312814265489578
-   Avarage current: 0.2493550069630146
+   Bigger Current: 0.6219747
+   Lesser Current: 0.16678023
+   Amount: 0.394377465
 Rotation: 47
-True
-   First current: 0.45520657300949097
-   Second current: 0.17080077528953552
-   Avarage current: 0.31300367414951324
+False
+   Bigger Current: 0.52529854
+   Lesser Current: 0.171614
+   Amount: 0.34845627
 Rotation: 48
-True
-   First current: 0.6566181778907776
-   Second current: 0.25217798352241516
-   Avarage current: 0.4543980807065964
+False
+   Bigger Current: 0.46728584
+   Lesser Current: 0.15952352
+   Amount: 0.31340468
 Rotation: 49
 True
-   First current: 0.41330644488334656
-   Second current: 0.088623046875
-   Avarage current: 0.2509647458791733
+   Bigger Current: 0.56396544
+   Lesser Current: 0.20141762
+   Amount: 0.38269153
 Rotation: 50
-True
-   First current: 0.4125007688999176
-   Second current: 0.19498568773269653
-   Avarage current: 0.30374322831630707
+False
+   Bigger Current: 0.50112367
+   Lesser Current: 0.16678023
+   Amount: 0.33395195

@@ -8,7 +8,8 @@ if __name__ == '__main__':
     confirmou = 0
     nao_confirmou = 0
     results = f""
-    robot_singleton.close_tool()
+    print(robot_singleton.close_tool())
+    input("Press any key to start test without or if medicine")
     for i in range(1, 51):
 
         return_ = robot_singleton.confirmation_gripper()
@@ -18,11 +19,12 @@ if __name__ == '__main__':
             confirmou += 1
         else:
             nao_confirmou += 1
-        result = f"Rotation: {i}\n{return_[0]}\n   Current: {return_[1]}\n   Initial current: {return_[2]}\n"
+        result = (f"Rotation: {i}\n{return_[0]}\n   Bigger Current: {return_[1]}\n   Lesser Current: {return_[2]}\n"
+                  f"   Amount: {return_[3]}\n")
         results += result
         print(i)
 
-    write_into_txt(results, "confirmation_tests")
+    write_into_txt(results, "confirmation_tests_without")
 
     robot_singleton.open_tool()
 

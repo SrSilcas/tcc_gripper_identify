@@ -7,7 +7,7 @@ from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
-INCREMENT = (1.3, 1.5, 2, 1.175)
+INCREMENT = (1.3, 1.5, 2, 1.2)
 
 
 class Robot:
@@ -173,7 +173,7 @@ class Robot:
         loops = 1
         currents = 0
         max_variation = 0.27
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 94:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -257,7 +257,6 @@ class Robot:
         sleep(0.16)
 
     def confirmation_gripper(self):
-        init_current = float(self.atribue_from_gripper()['current_motor'])
 
         if self.final_position is None:
             self.final_position = 0.6
@@ -268,17 +267,24 @@ class Robot:
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
         finger.finger_identifier = 1
 
-        finger.value = self.__increment(another_way=True)
-        self.base.SendGripperCommand(gripper_command)
-        current = float(self.atribue_from_gripper()['current_motor'])
+        bigger_current = 0
+        lesser_current = 0
 
-        if current > init_current:
+        for i in range(4):
+            finger.value = self.__increment(another_way=True)
+            self.base.SendGripperCommand(gripper_command)
+            current = float(self.atribue_from_gripper()['current_motor'])
+            if 1.4 > current > 0 and current > bigger_current:
+                bigger_current = current
+            elif 1.4 > current > 0 and current < bigger_current:
+                lesser_current = current
+
+        if lesser_current > 0.13:
             object_continuous = True
         sleep(0.16)
-
+        amount = (bigger_current+lesser_current) / 2
         self.open_tool(self.final_position)
-
-        return object_continuous, current, init_current
+        return object_continuous, bigger_current, lesser_current, amount
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """

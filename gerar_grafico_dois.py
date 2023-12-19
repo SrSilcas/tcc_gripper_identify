@@ -9,8 +9,9 @@ def ler_arquivo(nome_arquivo):
 
 def processar_dados(linhas):
     # Inicializando listas para armazenar dados
-    current = []
-    initial_currents = []
+    bigger = []
+    lesser = []
+    amount = []
 
     resultados = {'True': 0, 'False': 0}
 
@@ -20,32 +21,42 @@ def processar_dados(linhas):
             resultados['True'] += 1
         elif 'False' in linha:
             resultados['False'] += 1
-        elif 'Current' in linha:
-            current.append(float(linha.split(':')[-1].strip()))
-        elif 'Initial' in linha:
-            initial_currents.append(float(linha.split(':')[-1].strip()))
+        elif 'Bigger' in linha:
+            bigger.append(float(linha.split(':')[-1].strip()))
+        elif 'Lesser' in linha:
+            lesser.append(float(linha.split(':')[-1].strip()))
+        elif 'Amount' in linha:
+            amount.append(float(linha.split(':')[-1].strip()))
 
-    return current, initial_currents, resultados
+    return bigger, lesser, amount, resultados
 
 
-def gerar_grafico(currents, inital_current):
+def gerar_grafico(biggers, lessers, amounts):
     # Gerando gráfico para a variação de Current_motor
-    plt.figure(figsize=(10, 20))
+    plt.figure(figsize=(20, 10))
 
-    plt.subplot(1, 2, 1)
-    plt.plot(currents, color='c')
-    plt.title('Variação de Current_motor')
+    plt.subplot(1, 3, 1)
+    plt.plot(biggers, color='c')
+    plt.title('biggers')
     plt.xlabel('Rotação')
-    plt.ylabel('Current_motor')
-    plt.ylim(min(currents), max(currents))
+    plt.ylabel('Current motor')
+    plt.ylim(min(biggers), max(biggers))
 
     # Gerando gráfico para a variação de Posição
-    plt.subplot(1, 2, 2)
-    plt.plot(inital_current, color='c')
-    plt.title('Variação de Posição')
+    plt.subplot(1, 3, 2)
+    plt.plot(lessers, color='c')
+    plt.title('lessers')
     plt.xlabel('Rotação')
-    plt.ylabel('Posição')
-    plt.ylim(min(inital_current), max(inital_current))
+    plt.ylabel('Current motor')
+    plt.ylim(min(lessers), max(lessers))
+
+    # Gerando gráfico para a variação de Posição
+    plt.subplot(1, 3, 3)
+    plt.plot(amounts, color='c')
+    plt.title('amounts')
+    plt.xlabel('Rotação')
+    plt.ylabel('Current motor')
+    plt.ylim(min(amounts), max(amounts))
 
     # Exibindo os gráficos
     plt.tight_layout()
@@ -54,16 +65,19 @@ def gerar_grafico(currents, inital_current):
 
 if __name__ == "__main__":
     # Nome do arquivo a ser lido
-    nome_arquivo = 'confirmation_tests'
+    nome_arquivo = 'confirmation_tests_without'
 
     # Lendo o arquivo e processando os dados
     linhas = ler_arquivo(nome_arquivo)
-    current, inital, resultados = processar_dados(linhas)
+    bigger, lesser, amount, results = processar_dados(linhas)
 
     # Gerando gráficos
-    gerar_grafico(current, inital)
+    gerar_grafico(bigger, lesser, amount)
 
     print("Resultados:")
-    for resultado, valor in resultados.items():
+    for resultado, valor in results.items():
         print(f"{resultado}: {valor}")
 
+    print("Max and mim Bigger:", max(bigger), min(bigger))
+    print("Max and mim Lesser:", max(lesser), min(lesser))
+    print("Max and mim Amount:", max(amount), min(amount))
