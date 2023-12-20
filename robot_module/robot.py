@@ -7,7 +7,7 @@ from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
-INCREMENT = (1.3, 1.5, 1.7)
+INCREMENT = (1.3, 1.5, 1.7, 1.2)
 
 
 class Robot:
@@ -151,8 +151,10 @@ class Robot:
 
         return finished
 
-    def __increment(self):
-        if float(self.atribue_from_gripper()['position']) < 70:
+    def __increment(self, is_medicine: bool = False) -> float:
+        if is_medicine:
+            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[3]) / 100
+        elif float(self.atribue_from_gripper()['position']) < 70:
             return (float(self.atribue_from_gripper()["position"]) + INCREMENT[2]) / 100
         elif float(self.atribue_from_gripper()['position']) < 85:
             return (float(self.atribue_from_gripper()["position"]) + INCREMENT[1]) / 100
@@ -168,10 +170,9 @@ class Robot:
         object_detected = False
         average = 0
         loops = 1
-        current = 0
+        max_variation = 0.295
         currents = 0
-        max_variation = 0.27
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 95:
+        while not object_detected and float(self.atribue_from_gripper()["position"]) < 94:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -185,7 +186,7 @@ class Robot:
                 average = currents/loops
                 loops += 1
             else:
-                print("atipical current")
+                print("atypical current")
 
             if loops > 1:
                 if average + max_variation < current:
@@ -194,6 +195,8 @@ class Robot:
                     current = float(self.atribue_from_gripper()["current_motor"])
                     if average + max_variation < current:
                         object_detected = True
+                        finger.value = self.__increment(is_medicine=True)
+                        self.base.SendGripperCommand(gripper_command)
 
         print(loops)
         print(self.atribue_from_gripper()["position"])

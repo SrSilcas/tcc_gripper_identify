@@ -1,6 +1,5 @@
 from robot_module import robot_singleton
 from robot_module import write_into_txt
-import move_ment
 
 if __name__ == '__main__':
 
@@ -18,7 +17,7 @@ if __name__ == '__main__':
             pegou += 1
         else:
             nao_pegou += 1
-        result = f"Rotation: {i}\n     {pegou_}\n     Current_mottor: {current_affter}\n     Position: {position_after}\n"
+        result = f"Rotation: {i}\n     {pegou_}\n     Current_motor: {current_affter}\n     Position: {position_after}\n"
         results += result
         print(i)
     write_into_txt(results, "text_main_0.27_95_not")
