@@ -1,3 +1,5 @@
+import time
+
 from robot_module import robot_singleton
 from robot_module import write_into_txt
 
@@ -8,6 +10,8 @@ if __name__ == '__main__':
     confirmou = 0
     nao_confirmou = 0
     results = f""
+    robot_singleton.open_tool()
+    time.sleep(1)
     print(robot_singleton.close_tool())
     input("Press any key to start test without or if medicine")
     for i in range(1, 51):
@@ -19,8 +23,7 @@ if __name__ == '__main__':
             confirmou += 1
         else:
             nao_confirmou += 1
-        result = (f"Rotation: {i}\n{return_[0]}\n   Bigger Current: {return_[1]}\n   Lesser Current: {return_[2]}\n"
-                  f"   Amount: {return_[3]}\n")
+        result = f"Rotation: {i}\n{return_[0]}\n   Bigger Current: {return_[1]}\n   Amount: {return_[2]}\n"
         results += result
         print(i)
 

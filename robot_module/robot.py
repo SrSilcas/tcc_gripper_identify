@@ -154,13 +154,13 @@ class Robot:
 
     def __increment(self, another_way: bool = False):
         if another_way:
-            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[3]) / 100
-        elif float(self.atribue_from_gripper()['position']) < 70:
-            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[2]) / 100
-        elif float(self.atribue_from_gripper()['position']) < 85:
-            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[1]) / 100
+            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[3]) / 100
+        elif float(self.atribute_from_gripper()['position']) < 70:
+            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[2]) / 100
+        elif float(self.atribute_from_gripper()['position']) < 85:
+            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[1]) / 100
         else:
-            return (float(self.atribue_from_gripper()["position"]) + INCREMENT[0]) / 100
+            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[0]) / 100
 
     def close_tool(self) -> bool:
         """
@@ -173,7 +173,7 @@ class Robot:
         loops = 1
         currents = 0
         max_variation = 0.27
-        while not object_detected and float(self.atribue_from_gripper()["position"]) < 94:
+        while not object_detected and float(self.atribute_from_gripper()["position"]) < 94:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -181,7 +181,7 @@ class Robot:
             finger.value = self.__increment()
             self.base.SendGripperCommand(gripper_command)
 
-            current = float(self.atribue_from_gripper()["current_motor"])
+            current = float(self.atribute_from_gripper()["current_motor"])
             if 4 > current:
                 currents += current
                 average = currents/loops
@@ -193,15 +193,15 @@ class Robot:
                 if average + max_variation < current:
                     finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
-                    current = float(self.atribue_from_gripper()["current_motor"])
+                    current = float(self.atribute_from_gripper()["current_motor"])
                     if average + max_variation < current:
                         object_detected = True
                         finger.value = self.__increment(another_way=True)
                         self.base.SendGripperCommand(gripper_command)
-                        self.final_position = float(self.atribue_from_gripper()["position"]) / 100
+                        self.final_position = float(self.atribute_from_gripper()["position"]) / 100
 
         print(loops)
-        print(self.atribue_from_gripper()["position"])
+        print(self.atribute_from_gripper()["position"])
         print(current)
         print(average)
 
@@ -217,14 +217,14 @@ class Robot:
         loops = 1
         currents = 0
         max_variation = 0.29
-        while float(robot_singleton.atribue_from_gripper()["position"]) < 98:
+        while float(robot_singleton.atribute_from_gripper()["position"]) < 98:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
             finger.finger_identifier = 1
-            finger.value = (float(self.atribue_from_gripper()["position"]) + 2) / 100
+            finger.value = (float(self.atribute_from_gripper()["position"]) + 2) / 100
             self.base.SendGripperCommand(gripper_command)
-            current = float(self.atribue_from_gripper()["current_motor"])
+            current = float(self.atribute_from_gripper()["current_motor"])
             if 4 > current:
                 currents += current
                 average = currents/loops
@@ -234,7 +234,7 @@ class Robot:
 
             if loops > 1:
                 if average + max_variation < current:
-                    position = float(self.atribue_from_gripper()["position"])
+                    position = float(self.atribute_from_gripper()["position"])
                     tuple_ = current, position
                     return tuple_
 
@@ -261,30 +261,32 @@ class Robot:
         if self.final_position is None:
             self.final_position = 0.6
 
-        object_continuous = False
+        object_continuous = True
         gripper_command = Base_pb2.GripperCommand()
         finger = gripper_command.gripper.finger.add()
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
         finger.finger_identifier = 1
 
         bigger_current = 0
-        lesser_current = 0
-
-        for i in range(4):
+        amount = 0
+        for i in range(5):
             finger.value = self.__increment(another_way=True)
             self.base.SendGripperCommand(gripper_command)
-            current = float(self.atribue_from_gripper()['current_motor'])
-            if 1.4 > current > 0 and current > bigger_current:
-                bigger_current = current
-            elif 1.4 > current > 0 and current < bigger_current:
-                lesser_current = current
+            current = float(self.atribute_from_gripper()['current_motor'])
 
-        if lesser_current > 0.13:
-            object_continuous = True
+            if 2.0 > current > 0 and current > bigger_current:
+                bigger_current = current
+
+            if 2.0 > current > 0:
+                amount += current
+
+        if amount < 1.75 and bigger_current < 0.635:
+            object_continuous = False
         sleep(0.16)
-        amount = (bigger_current+lesser_current) / 2
+
         self.open_tool(self.final_position)
-        return object_continuous, bigger_current, lesser_current, amount
+
+        return object_continuous, bigger_current, amount
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
@@ -342,7 +344,7 @@ class Robot:
     def get_gripper_command():
         return Base_pb2.GripperCommand()
 
-    def atribue_from_gripper(self):
+    def atribute_from_gripper(self):
         variable = self.base_cyclic.RefreshFeedback().__str__().split()
         position = variable.index("gripper_feedback")
         informations_gripper = {"position": variable[position + 7],

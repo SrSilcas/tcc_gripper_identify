@@ -10,8 +10,8 @@ if __name__ == '__main__':
     for i in range(1, 51):
         pegou_ = robot_singleton.close_tool()
         print(pegou_)
-        current_affter = robot_singleton.atribue_from_gripper()['current_motor']
-        position_after = robot_singleton.atribue_from_gripper()['position']
+        current_affter = robot_singleton.atribute_from_gripper()['current_motor']
+        position_after = robot_singleton.atribute_from_gripper()['position']
         robot_singleton.open_tool(0.60)
         if pegou_:
             pegou += 1

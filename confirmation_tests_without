@@ -1,250 +1,200 @@
 Rotation: 1
 True
-   Bigger Current: 0.78230643
-   Lesser Current: 0.21108553
-   Amount: 0.49669598
+   Bigger Current: 0.6268113
+   Amount: 1.1319908499999998
 Rotation: 2
-True
-   Bigger Current: 0.5261011
-   Lesser Current: 0.14262302
-   Amount: 0.33436206
+False
+   Bigger Current: 0.52448976
+   Amount: 1.524362167
 Rotation: 3
-True
-   Bigger Current: 0.5462456
-   Lesser Current: 0.16113281
-   Amount: 0.353689205
+False
+   Bigger Current: 0.5462408
+   Amount: 1.471988347
 Rotation: 4
-True
-   Bigger Current: 0.65097857
-   Lesser Current: 0.18449883
-   Amount: 0.4177387
+False
+   Bigger Current: 0.51806456
+   Amount: 1.535635206
 Rotation: 5
-True
-   Bigger Current: 0.54301995
-   Lesser Current: 0.1748291
-   Amount: 0.358924525
+False
+   Bigger Current: 0.5317603
+   Amount: 1.4905589899999998
 Rotation: 6
-True
-   Bigger Current: 0.5349633
-   Lesser Current: 0.17080268
-   Amount: 0.35288299
+False
+   Bigger Current: 0.6171434
+   Amount: 1.536570996
 Rotation: 7
-True
-   Bigger Current: 0.58169
-   Lesser Current: 0.17241399
-   Amount: 0.37705199500000003
+False
+   Bigger Current: 0.5422215
+   Amount: 1.5831847350000001
 Rotation: 8
-True
-   Bigger Current: 0.4584257
-   Lesser Current: 0.13615961
-   Amount: 0.297292655
+False
+   Bigger Current: 0.5059596
+   Amount: 1.34479686
 Rotation: 9
-True
-   Bigger Current: 0.58088434
-   Lesser Current: 0.18369317
-   Amount: 0.382288755
+False
+   Bigger Current: 0.5164307
+   Amount: 1.5420845440000002
 Rotation: 10
 False
-   Bigger Current: 0.4326536
-   Lesser Current: 0.120046645
-   Amount: 0.2763501225
+   Bigger Current: 0.5003336
+   Amount: 1.53805187
 Rotation: 11
-True
-   Bigger Current: 0.54383814
-   Lesser Current: 0.16999702
-   Amount: 0.35691757999999996
+False
+   Bigger Current: 0.5333496
+   Amount: 1.48573559
 Rotation: 12
 False
-   Bigger Current: 0.4471443
-   Lesser Current: 0.11118164
-   Amount: 0.27916297
+   Bigger Current: 0.4697049
+   Amount: 1.389014407
 Rotation: 13
-True
-   Bigger Current: 0.5398046
-   Lesser Current: 0.15227902
-   Amount: 0.34604181
+False
+   Bigger Current: 0.5204615
+   Amount: 1.448612842
 Rotation: 14
-True
-   Bigger Current: 0.5768555
-   Lesser Current: 0.16919138
-   Amount: 0.37302344
+False
+   Bigger Current: 0.5624003
+   Amount: 1.5961024999999998
 Rotation: 15
-True
-   Bigger Current: 0.5422215
-   Lesser Current: 0.1514734
-   Amount: 0.34684745
+False
+   Bigger Current: 0.5043457
+   Amount: 1.512262004
 Rotation: 16
-True
-   Bigger Current: 0.4745368
-   Lesser Current: 0.158724
-   Amount: 0.3166304
+False
+   Bigger Current: 0.52451766
+   Amount: 1.546981938
 Rotation: 17
-True
-   Bigger Current: 0.6775711
-   Lesser Current: 0.13615961
-   Amount: 0.406865355
+False
+   Bigger Current: 0.5236916
+   Amount: 1.581648114
 Rotation: 18
-True
-   Bigger Current: 0.54705125
-   Lesser Current: 0.1563009
-   Amount: 0.351676075
+False
+   Bigger Current: 0.4914557
+   Amount: 1.445424434
 Rotation: 19
-True
-   Bigger Current: 0.63405967
-   Lesser Current: 0.17321964
-   Amount: 0.403639655
+False
+   Bigger Current: 0.52932376
+   Amount: 1.64603558
 Rotation: 20
-True
-   Bigger Current: 0.5357672
-   Lesser Current: 0.1772461
-   Amount: 0.35650665
+False
+   Bigger Current: 0.4270027
+   Amount: 1.2069682400000001
 Rotation: 21
-True
-   Bigger Current: 0.6074712
-   Lesser Current: 0.17402343
-   Amount: 0.390747315
+False
+   Bigger Current: 0.5446438
+   Amount: 1.5235982310000002
 Rotation: 22
-True
-   Bigger Current: 0.6904546
-   Lesser Current: 0.16919713
-   Amount: 0.42982586500000003
+False
+   Bigger Current: 0.5519175
+   Amount: 1.4712735499999998
 Rotation: 23
-True
-   Bigger Current: 0.53254455
-   Lesser Current: 0.16113482
-   Amount: 0.346839685
+False
+   Bigger Current: 0.48420408
+   Amount: 1.48244212
 Rotation: 24
-True
-   Bigger Current: 0.58975106
-   Lesser Current: 0.18208008
-   Amount: 0.38591557
-Rotation: 25
-True
-   Bigger Current: 0.43666992
-   Lesser Current: 0.14502177
-   Amount: 0.290845845
-Rotation: 26
-True
+False
    Bigger Current: 0.5301325
-   Lesser Current: 0.15630713
-   Amount: 0.343219815
+   Amount: 1.64841783
+Rotation: 25
+False
+   Bigger Current: 0.47695312
+   Amount: 1.48973691
+Rotation: 26
+False
+   Bigger Current: 0.5664391
+   Amount: 1.564733994
 Rotation: 27
-True
-   Bigger Current: 0.6799976
-   Lesser Current: 0.17805357
-   Amount: 0.429025585
+False
+   Bigger Current: 0.43996632
+   Amount: 1.193676937
 Rotation: 28
-True
-   Bigger Current: 0.58491266
-   Lesser Current: 0.17321777
-   Amount: 0.379065215
+False
+   Bigger Current: 0.55591756
+   Amount: 1.563885805
 Rotation: 29
-True
-   Bigger Current: 0.5800804
-   Lesser Current: 0.17162345
-   Amount: 0.37585192500000003
+False
+   Bigger Current: 0.5228766
+   Amount: 1.34880446
 Rotation: 30
-True
-   Bigger Current: 0.5478539
-   Lesser Current: 0.16758586
-   Amount: 0.35771988
+False
+   Bigger Current: 0.588941
+   Amount: 1.313275092
 Rotation: 31
-True
-   Bigger Current: 0.62036186
-   Lesser Current: 0.16355178
-   Amount: 0.39195682000000004
+False
+   Bigger Current: 0.519654
+   Amount: 1.4438473649999999
 Rotation: 32
-True
-   Bigger Current: 0.44794995
-   Lesser Current: 0.13615961
-   Amount: 0.29205477999999996
+False
+   Bigger Current: 0.5301275
+   Amount: 1.364852527
 Rotation: 33
 False
-   Bigger Current: 0.5736334
-   Lesser Current: 0.05317993
-   Amount: 0.313406665
+   Bigger Current: 0.5269067
+   Amount: 1.51551028
 Rotation: 34
-True
-   Bigger Current: 0.5260986
-   Lesser Current: 0.1659668
-   Amount: 0.34603269999999997
+False
+   Bigger Current: 0.5913596
+   Amount: 1.613098634
 Rotation: 35
 False
-   Bigger Current: 0.5454369
-   Lesser Current: 0.06284696
-   Amount: 0.30414193
+   Bigger Current: 0.56799376
+   Amount: 1.630729483
 Rotation: 36
-True
-   Bigger Current: 0.5116068
-   Lesser Current: 0.158724
-   Amount: 0.3351654
+False
+   Bigger Current: 0.5381932
+   Amount: 1.31488574
 Rotation: 37
-True
-   Bigger Current: 0.51401937
-   Lesser Current: 0.17806816
-   Amount: 0.346043765
+False
+   Bigger Current: 0.54625505
+   Amount: 1.6322965360000001
 Rotation: 38
-True
-   Bigger Current: 0.505152
-   Lesser Current: 0.16919713
-   Amount: 0.33717456500000004
+False
+   Bigger Current: 0.5865323
+   Amount: 1.5759863319999998
 Rotation: 39
-True
-   Bigger Current: 0.6147407
-   Lesser Current: 0.18047594
-   Amount: 0.39760832
+False
+   Bigger Current: 0.5809514
+   Amount: 1.5260089170000002
 Rotation: 40
-True
-   Bigger Current: 0.5470465
-   Lesser Current: 0.1740253
-   Amount: 0.3605359
+False
+   Bigger Current: 0.5244879
+   Amount: 1.4865022959999998
 Rotation: 41
-True
-   Bigger Current: 0.53980035
-   Lesser Current: 0.16194649
-   Amount: 0.35087342
+False
+   Bigger Current: 0.53093505
+   Amount: 1.484101985
 Rotation: 42
-True
-   Bigger Current: 0.7412179
-   Lesser Current: 0.16757812
-   Amount: 0.45439801
+False
+   Bigger Current: 0.52851623
+   Amount: 1.472771684
 Rotation: 43
-True
-   Bigger Current: 0.53898984
-   Lesser Current: 0.16032918
-   Amount: 0.34965951
+False
+   Bigger Current: 0.497903
+   Amount: 1.45750481
 Rotation: 44
-True
-   Bigger Current: 0.5333496
-   Lesser Current: 0.1748458
-   Amount: 0.35409769999999996
+False
+   Bigger Current: 0.5817251
+   Amount: 1.632337932
 Rotation: 45
-True
-   Bigger Current: 0.5752464
-   Lesser Current: 0.1869158
-   Amount: 0.3810811
+False
+   Bigger Current: 0.5623679
+   Amount: 1.510718373
 Rotation: 46
-True
-   Bigger Current: 0.7589355
-   Lesser Current: 0.1683915
-   Amount: 0.4636635
+False
+   Bigger Current: 0.50839
+   Amount: 1.52842674
 Rotation: 47
-True
-   Bigger Current: 0.5414158
-   Lesser Current: 0.1563009
-   Amount: 0.34885835
+False
+   Bigger Current: 0.5575248
+   Amount: 1.4873075500000001
 Rotation: 48
-True
-   Bigger Current: 0.54946524
-   Lesser Current: 0.16274413
-   Amount: 0.356104685
+False
+   Bigger Current: 0.58169
+   Amount: 1.41080696
 Rotation: 49
-True
-   Bigger Current: 0.6646733
-   Lesser Current: 0.18208186
-   Amount: 0.42337758000000003
+False
+   Bigger Current: 0.5228784
+   Amount: 1.4188317129999999
 Rotation: 50
-True
-   Bigger Current: 0.52932376
-   Lesser Current: 0.16032715
-   Amount: 0.344825455
+False
+   Bigger Current: 0.5397955
+   Amount: 1.52758226

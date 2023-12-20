@@ -10,7 +10,6 @@ def ler_arquivo(nome_arquivo):
 def processar_dados(linhas):
     # Inicializando listas para armazenar dados
     bigger = []
-    lesser = []
     amount = []
 
     resultados = {'True': 0, 'False': 0}
@@ -23,19 +22,17 @@ def processar_dados(linhas):
             resultados['False'] += 1
         elif 'Bigger' in linha:
             bigger.append(float(linha.split(':')[-1].strip()))
-        elif 'Lesser' in linha:
-            lesser.append(float(linha.split(':')[-1].strip()))
         elif 'Amount' in linha:
             amount.append(float(linha.split(':')[-1].strip()))
 
-    return bigger, lesser, amount, resultados
+    return bigger, amount, resultados
 
 
-def gerar_grafico(biggers, lessers, amounts):
+def gerar_grafico(biggers, amounts):
     # Gerando gráfico para a variação de Current_motor
     plt.figure(figsize=(20, 10))
 
-    plt.subplot(1, 3, 1)
+    plt.subplot(1, 2, 1)
     plt.plot(biggers, color='c')
     plt.title('biggers')
     plt.xlabel('Rotação')
@@ -43,15 +40,7 @@ def gerar_grafico(biggers, lessers, amounts):
     plt.ylim(min(biggers), max(biggers))
 
     # Gerando gráfico para a variação de Posição
-    plt.subplot(1, 3, 2)
-    plt.plot(lessers, color='c')
-    plt.title('lessers')
-    plt.xlabel('Rotação')
-    plt.ylabel('Current motor')
-    plt.ylim(min(lessers), max(lessers))
-
-    # Gerando gráfico para a variação de Posição
-    plt.subplot(1, 3, 3)
+    plt.subplot(1, 2, 2)
     plt.plot(amounts, color='c')
     plt.title('amounts')
     plt.xlabel('Rotação')
@@ -69,15 +58,14 @@ if __name__ == "__main__":
 
     # Lendo o arquivo e processando os dados
     linhas = ler_arquivo(nome_arquivo)
-    bigger, lesser, amount, results = processar_dados(linhas)
+    bigger, amount, results = processar_dados(linhas)
 
     # Gerando gráficos
-    gerar_grafico(bigger, lesser, amount)
+    gerar_grafico(bigger, amount)
 
     print("Resultados:")
     for resultado, valor in results.items():
         print(f"{resultado}: {valor}")
 
     print("Max and mim Bigger:", max(bigger), min(bigger))
-    print("Max and mim Lesser:", max(lesser), min(lesser))
     print("Max and mim Amount:", max(amount), min(amount))
