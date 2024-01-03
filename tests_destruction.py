@@ -6,7 +6,10 @@ if __name__ == '__main__':
     for i in range(1, 51):
         tuple_ = robot_singleton.close_destruction()
         robot_singleton.open_tool(0.60)
+        result = f"Rotation: {i}\n"
+        for j in tuple_:
 
-        result = f"Rotation: {i}\n     Current_mottor: {tuple_[0]}\n     Position: {tuple_[1]}\n"
-        results += result
+            result += f"     Current_mottor: {j[0]}\n     Position: {j[1]}\n     Velocity: {j[2]}\n"
+            results += result
+
     write_into_txt(results, "test_destruction")

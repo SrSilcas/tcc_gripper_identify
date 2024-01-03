@@ -7,7 +7,6 @@ from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
 
 TIMEOUT_DURATION = 20
-INCREMENT = (1.3, 1.5, 2, 1.2)
 
 
 class Robot:
@@ -152,17 +151,19 @@ class Robot:
 
         return finished
 
-    def __increment(self, another_way: bool = False):
+    def __increment(self, another_way: bool = False) -> float:
+        INCREMENT = (1.3, 1.5, 2, 1.25)
+        position = float(self.atribute_from_gripper()["position"])
         if another_way:
-            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[3]) / 100
-        elif float(self.atribute_from_gripper()['position']) < 70:
-            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[2]) / 100
-        elif float(self.atribute_from_gripper()['position']) < 85:
-            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[1]) / 100
+            return (position + INCREMENT[3]) / 100
+        elif position < 70:
+            return (position + INCREMENT[2]) / 100
+        elif position < 85:
+            return (position + INCREMENT[1]) / 100
         else:
-            return (float(self.atribute_from_gripper()["position"]) + INCREMENT[0]) / 100
+            return (position + INCREMENT[0]) / 100
 
-    def close_tool(self) -> bool:
+    def close_tool(self) -> tuple:
         """
         This function close the gripper and try detected object
         Returns:
@@ -172,7 +173,9 @@ class Robot:
         average = 0
         loops = 1
         currents = 0
-        max_variation = 0.27
+        first_variation = 0.27
+        second_variation = 0.16
+
         while not object_detected and float(self.atribute_from_gripper()["position"]) < 94:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -184,17 +187,17 @@ class Robot:
             current = float(self.atribute_from_gripper()["current_motor"])
             if 4 > current:
                 currents += current
-                average = currents/loops
+                average = currents / loops
                 loops += 1
             else:
                 print("atipical current")
 
             if loops > 1:
-                if average + max_variation < current:
-                    finger.value = self.__increment()
+                if first_variation <= current - average:
+                    finger.value = self.__increment(another_way=True)
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.atribute_from_gripper()["current_motor"])
-                    if average + max_variation < current:
+                    if second_variation <= current - average:
                         object_detected = True
                         finger.value = self.__increment(another_way=True)
                         self.base.SendGripperCommand(gripper_command)
@@ -205,7 +208,9 @@ class Robot:
         print(current)
         print(average)
 
-        return object_detected
+        difference = current - average
+
+        return object_detected, current, average, difference
 
     def close_destruction(self) -> tuple:
         """
@@ -216,18 +221,21 @@ class Robot:
         average = 0
         loops = 1
         currents = 0
-        max_variation = 0.29
+        max_variation = 0.27
+        gripper_command = Base_pb2.GripperCommand()
+        finger = gripper_command.gripper.finger.add()
+        gripper_command.mode = Base_pb2.GRIPPER_POSITION
+        finger.finger_identifier = 1
+        tuple_ = None
         while float(robot_singleton.atribute_from_gripper()["position"]) < 98:
-            gripper_command = Base_pb2.GripperCommand()
-            finger = gripper_command.gripper.finger.add()
-            gripper_command.mode = Base_pb2.GRIPPER_POSITION
-            finger.finger_identifier = 1
-            finger.value = (float(self.atribute_from_gripper()["position"]) + 2) / 100
+            finger.value = self.__increment()
             self.base.SendGripperCommand(gripper_command)
-            current = float(self.atribute_from_gripper()["current_motor"])
+            current, velocity = (float(self.atribute_from_gripper()["current_motor"]),
+                                 float(self.atribute_from_gripper()['velocity']))
+
             if 4 > current:
                 currents += current
-                average = currents/loops
+                average = currents / loops
                 loops += 1
             else:
                 print("atipical current")
@@ -235,8 +243,9 @@ class Robot:
             if loops > 1:
                 if average + max_variation < current:
                     position = float(self.atribute_from_gripper()["position"])
-                    tuple_ = current, position
-                    return tuple_
+                    tuple_ = current, position, velocity
+
+        return tuple_
 
     def open_tool(self, value=0.60):
         """
@@ -266,27 +275,34 @@ class Robot:
         finger = gripper_command.gripper.finger.add()
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
         finger.finger_identifier = 1
-
+        velocity = None
         bigger_current = 0
         amount = 0
+        rotations = 0
+        media = 0
         for i in range(5):
             finger.value = self.__increment(another_way=True)
             self.base.SendGripperCommand(gripper_command)
             current = float(self.atribute_from_gripper()['current_motor'])
+            velocity = float(self.atribute_from_gripper()['velocity'])
 
             if 2.0 > current > 0 and current > bigger_current:
                 bigger_current = current
 
             if 2.0 > current > 0:
                 amount += current
+                rotations += 1
 
         if amount < 1.75 and bigger_current < 0.635:
             object_continuous = False
+
+        if rotations > 0:
+            media = amount / rotations
         sleep(0.16)
 
         self.open_tool(self.final_position)
 
-        return object_continuous, bigger_current, amount
+        return object_continuous, bigger_current, amount, velocity, media
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
@@ -348,7 +364,7 @@ class Robot:
         variable = self.base_cyclic.RefreshFeedback().__str__().split()
         position = variable.index("gripper_feedback")
         informations_gripper = {"position": variable[position + 7],
-                                "velocitxy": variable[position + 9],
+                                "velocity": variable[position + 9],
                                 "current_motor": variable[position + 11]}
 
         return informations_gripper
