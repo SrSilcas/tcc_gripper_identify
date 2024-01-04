@@ -1,0 +1,2329 @@
+Rotation: 1
+     Current_mottor: 0.7347696
+     Position: 93.47144
+     Velocity: 15.184356
+Rotation: 1
+     Current_mottor: 0.7347696
+     Position: 93.47144
+     Velocity: 15.184356
+     Current_mottor: 0.79116577
+     Position: 94.883156
+     Velocity: 22.831669
+Rotation: 1
+     Current_mottor: 0.7347696
+     Position: 93.47144
+     Velocity: 15.184356
+     Current_mottor: 0.79116577
+     Position: 94.883156
+     Velocity: 22.831669
+     Current_mottor: 0.90235674
+     Position: 96.39183
+     Velocity: 20.640297
+Rotation: 1
+     Current_mottor: 0.7347696
+     Position: 93.47144
+     Velocity: 15.184356
+     Current_mottor: 0.79116577
+     Position: 94.883156
+     Velocity: 22.831669
+     Current_mottor: 0.90235674
+     Position: 96.39183
+     Velocity: 20.640297
+     Current_mottor: 0.89590746
+     Position: 97.80947
+     Velocity: 23.101208
+Rotation: 1
+     Current_mottor: 0.7347696
+     Position: 93.47144
+     Velocity: 15.184356
+     Current_mottor: 0.79116577
+     Position: 94.883156
+     Velocity: 22.831669
+     Current_mottor: 0.90235674
+     Position: 96.39183
+     Velocity: 20.640297
+     Current_mottor: 0.89590746
+     Position: 97.80947
+     Velocity: 23.101208
+     Current_mottor: 0.96840847
+     Position: 99.258385
+     Velocity: 26.240944
+Rotation: 2
+     Current_mottor: 0.72191995
+     Position: 92.98944
+     Velocity: 21.249056
+Rotation: 2
+     Current_mottor: 0.72191995
+     Position: 92.98944
+     Velocity: 21.249056
+     Current_mottor: 0.7766706
+     Position: 94.387436
+     Velocity: 21.922518
+Rotation: 2
+     Current_mottor: 0.72191995
+     Position: 92.98944
+     Velocity: 21.249056
+     Current_mottor: 0.7766706
+     Position: 94.387436
+     Velocity: 21.922518
+     Current_mottor: 0.8604587
+     Position: 95.841
+     Velocity: 35.59042
+Rotation: 2
+     Current_mottor: 0.72191995
+     Position: 92.98944
+     Velocity: 21.249056
+     Current_mottor: 0.7766706
+     Position: 94.387436
+     Velocity: 21.922518
+     Current_mottor: 0.8604587
+     Position: 95.841
+     Velocity: 35.59042
+     Current_mottor: 0.9232924
+     Position: 97.26992
+     Velocity: 33.386482
+Rotation: 2
+     Current_mottor: 0.72191995
+     Position: 92.98944
+     Velocity: 21.249056
+     Current_mottor: 0.7766706
+     Position: 94.387436
+     Velocity: 21.922518
+     Current_mottor: 0.8604587
+     Position: 95.841
+     Velocity: 35.59042
+     Current_mottor: 0.9232924
+     Position: 97.26992
+     Velocity: 33.386482
+     Current_mottor: 0.9716309
+     Position: 98.75046
+     Velocity: 23.619585
+Rotation: 3
+     Current_mottor: 0.6928828
+     Position: 91.670845
+     Velocity: 18.550402
+Rotation: 3
+     Current_mottor: 0.6928828
+     Position: 91.670845
+     Velocity: 18.550402
+     Current_mottor: 0.764582
+     Position: 93.03699
+     Velocity: 18.829996
+Rotation: 3
+     Current_mottor: 0.6928828
+     Position: 91.670845
+     Velocity: 18.550402
+     Current_mottor: 0.764582
+     Position: 93.03699
+     Velocity: 18.829996
+     Current_mottor: 0.81775534
+     Position: 94.43068
+     Velocity: 18.717072
+Rotation: 3
+     Current_mottor: 0.6928828
+     Position: 91.670845
+     Velocity: 18.550402
+     Current_mottor: 0.764582
+     Position: 93.03699
+     Velocity: 18.829996
+     Current_mottor: 0.81775534
+     Position: 94.43068
+     Velocity: 18.717072
+     Current_mottor: 0.9313898
+     Position: 95.93424
+     Velocity: 20.768908
+Rotation: 3
+     Current_mottor: 0.6928828
+     Position: 91.670845
+     Velocity: 18.550402
+     Current_mottor: 0.764582
+     Position: 93.03699
+     Velocity: 18.829996
+     Current_mottor: 0.81775534
+     Position: 94.43068
+     Velocity: 18.717072
+     Current_mottor: 0.9313898
+     Position: 95.93424
+     Velocity: 20.768908
+     Current_mottor: 0.8822055
+     Position: 97.32201
+     Velocity: 19.073486
+Rotation: 3
+     Current_mottor: 0.6928828
+     Position: 91.670845
+     Velocity: 18.550402
+     Current_mottor: 0.764582
+     Position: 93.03699
+     Velocity: 18.829996
+     Current_mottor: 0.81775534
+     Position: 94.43068
+     Velocity: 18.717072
+     Current_mottor: 0.9313898
+     Position: 95.93424
+     Velocity: 20.768908
+     Current_mottor: 0.8822055
+     Position: 97.32201
+     Velocity: 19.073486
+     Current_mottor: 0.91362303
+     Position: 98.790565
+     Velocity: 25.636911
+Rotation: 4
+     Current_mottor: 0.69126165
+     Position: 92.63102
+     Velocity: 26.762873
+Rotation: 4
+     Current_mottor: 0.69126165
+     Position: 92.63102
+     Velocity: 26.762873
+     Current_mottor: 0.7243032
+     Position: 93.99495
+     Velocity: 22.449028
+Rotation: 4
+     Current_mottor: 0.69126165
+     Position: 92.63102
+     Velocity: 26.762873
+     Current_mottor: 0.7243032
+     Position: 93.99495
+     Velocity: 22.449028
+     Current_mottor: 0.8016459
+     Position: 95.38027
+     Velocity: 27.58205
+Rotation: 4
+     Current_mottor: 0.69126165
+     Position: 92.63102
+     Velocity: 26.762873
+     Current_mottor: 0.7243032
+     Position: 93.99495
+     Velocity: 22.449028
+     Current_mottor: 0.8016459
+     Position: 95.38027
+     Velocity: 27.58205
+     Current_mottor: 0.85723263
+     Position: 96.80594
+     Velocity: 16.80851
+Rotation: 4
+     Current_mottor: 0.69126165
+     Position: 92.63102
+     Velocity: 26.762873
+     Current_mottor: 0.7243032
+     Position: 93.99495
+     Velocity: 22.449028
+     Current_mottor: 0.8016459
+     Position: 95.38027
+     Velocity: 27.58205
+     Current_mottor: 0.85723263
+     Position: 96.80594
+     Velocity: 16.80851
+     Current_mottor: 0.89107025
+     Position: 98.2609
+     Velocity: 33.79539
+Rotation: 5
+     Current_mottor: 0.75814056
+     Position: 94.23305
+     Velocity: 21.432947
+Rotation: 5
+     Current_mottor: 0.75814056
+     Position: 94.23305
+     Velocity: 21.432947
+     Current_mottor: 0.812925
+     Position: 95.627785
+     Velocity: 16.670334
+Rotation: 5
+     Current_mottor: 0.75814056
+     Position: 94.23305
+     Velocity: 21.432947
+     Current_mottor: 0.812925
+     Position: 95.627785
+     Velocity: 16.670334
+     Current_mottor: 0.8677035
+     Position: 97.11879
+     Velocity: 22.568121
+Rotation: 5
+     Current_mottor: 0.75814056
+     Position: 94.23305
+     Velocity: 21.432947
+     Current_mottor: 0.812925
+     Position: 95.627785
+     Velocity: 16.670334
+     Current_mottor: 0.8677035
+     Position: 97.11879
+     Velocity: 22.568121
+     Current_mottor: 0.92734766
+     Position: 98.52143
+     Velocity: 28.184511
+Rotation: 6
+     Current_mottor: 0.70822453
+     Position: 92.85504
+     Velocity: 24.72844
+Rotation: 6
+     Current_mottor: 0.70822453
+     Position: 92.85504
+     Velocity: 24.72844
+     Current_mottor: 0.767813
+     Position: 94.3021
+     Velocity: 19.884375
+Rotation: 6
+     Current_mottor: 0.70822453
+     Position: 92.85504
+     Velocity: 24.72844
+     Current_mottor: 0.767813
+     Position: 94.3021
+     Velocity: 19.884375
+     Current_mottor: 0.8693354
+     Position: 95.77369
+     Velocity: 23.04914
+Rotation: 6
+     Current_mottor: 0.70822453
+     Position: 92.85504
+     Velocity: 24.72844
+     Current_mottor: 0.767813
+     Position: 94.3021
+     Velocity: 19.884375
+     Current_mottor: 0.8693354
+     Position: 95.77369
+     Velocity: 23.04914
+     Current_mottor: 0.85723263
+     Position: 97.207726
+     Velocity: 27.59695
+Rotation: 6
+     Current_mottor: 0.70822453
+     Position: 92.85504
+     Velocity: 24.72844
+     Current_mottor: 0.767813
+     Position: 94.3021
+     Velocity: 19.884375
+     Current_mottor: 0.8693354
+     Position: 95.77369
+     Velocity: 23.04914
+     Current_mottor: 0.85723263
+     Position: 97.207726
+     Velocity: 27.59695
+     Current_mottor: 0.9660318
+     Position: 98.604904
+     Velocity: 21.869143
+Rotation: 7
+     Current_mottor: 0.66064453
+     Position: 91.834305
+     Velocity: 25.212765
+Rotation: 7
+     Current_mottor: 0.66064453
+     Position: 91.834305
+     Velocity: 25.212765
+     Current_mottor: 0.7065747
+     Position: 93.26706
+     Velocity: 28.823727
+Rotation: 7
+     Current_mottor: 0.66064453
+     Position: 91.834305
+     Velocity: 25.212765
+     Current_mottor: 0.7065747
+     Position: 93.26706
+     Velocity: 28.823727
+     Current_mottor: 0.81453276
+     Position: 94.725395
+     Velocity: 24.638493
+Rotation: 7
+     Current_mottor: 0.66064453
+     Position: 91.834305
+     Velocity: 25.212765
+     Current_mottor: 0.7065747
+     Position: 93.26706
+     Velocity: 28.823727
+     Current_mottor: 0.81453276
+     Position: 94.725395
+     Velocity: 24.638493
+     Current_mottor: 0.852396
+     Position: 96.14024
+     Velocity: 23.49913
+Rotation: 7
+     Current_mottor: 0.66064453
+     Position: 91.834305
+     Velocity: 25.212765
+     Current_mottor: 0.7065747
+     Position: 93.26706
+     Velocity: 28.823727
+     Current_mottor: 0.81453276
+     Position: 94.725395
+     Velocity: 24.638493
+     Current_mottor: 0.852396
+     Position: 96.14024
+     Velocity: 23.49913
+     Current_mottor: 0.90960366
+     Position: 97.591835
+     Velocity: 17.954838
+Rotation: 7
+     Current_mottor: 0.66064453
+     Position: 91.834305
+     Velocity: 25.212765
+     Current_mottor: 0.7065747
+     Position: 93.26706
+     Velocity: 28.823727
+     Current_mottor: 0.81453276
+     Position: 94.725395
+     Velocity: 24.638493
+     Current_mottor: 0.852396
+     Position: 96.14024
+     Velocity: 23.49913
+     Current_mottor: 0.90960366
+     Position: 97.591835
+     Velocity: 17.954838
+     Current_mottor: 0.88864785
+     Position: 99.02738
+     Velocity: 17.136335
+Rotation: 8
+     Current_mottor: 0.7839178
+     Position: 94.38639
+     Velocity: 18.388033
+Rotation: 8
+     Current_mottor: 0.7839178
+     Position: 94.38639
+     Velocity: 18.388033
+     Current_mottor: 0.800039
+     Position: 95.77694
+     Velocity: 30.88458
+Rotation: 8
+     Current_mottor: 0.7839178
+     Position: 94.38639
+     Velocity: 18.388033
+     Current_mottor: 0.800039
+     Position: 95.77694
+     Velocity: 30.88458
+     Current_mottor: 0.8757568
+     Position: 97.21528
+     Velocity: 30.969273
+Rotation: 8
+     Current_mottor: 0.7839178
+     Position: 94.38639
+     Velocity: 18.388033
+     Current_mottor: 0.800039
+     Position: 95.77694
+     Velocity: 30.88458
+     Current_mottor: 0.8757568
+     Position: 97.21528
+     Velocity: 30.969273
+     Current_mottor: 0.93941665
+     Position: 98.720695
+     Velocity: 18.954277
+Rotation: 9
+     Current_mottor: 0.74364364
+     Position: 92.99211
+     Velocity: 24.753145
+Rotation: 9
+     Current_mottor: 0.74364364
+     Position: 92.99211
+     Velocity: 24.753145
+     Current_mottor: 0.73637694
+     Position: 94.37639
+     Velocity: 19.382383
+Rotation: 9
+     Current_mottor: 0.74364364
+     Position: 92.99211
+     Velocity: 24.753145
+     Current_mottor: 0.73637694
+     Position: 94.37639
+     Velocity: 19.382383
+     Current_mottor: 0.86852974
+     Position: 95.808914
+     Velocity: 32.728996
+Rotation: 9
+     Current_mottor: 0.74364364
+     Position: 92.99211
+     Velocity: 24.753145
+     Current_mottor: 0.73637694
+     Position: 94.37639
+     Velocity: 19.382383
+     Current_mottor: 0.86852974
+     Position: 95.808914
+     Velocity: 32.728996
+     Current_mottor: 0.87495154
+     Position: 97.244225
+     Velocity: 29.742718
+Rotation: 9
+     Current_mottor: 0.74364364
+     Position: 92.99211
+     Velocity: 24.753145
+     Current_mottor: 0.73637694
+     Position: 94.37639
+     Velocity: 19.382383
+     Current_mottor: 0.86852974
+     Position: 95.808914
+     Velocity: 32.728996
+     Current_mottor: 0.87495154
+     Position: 97.244225
+     Velocity: 29.742718
+     Current_mottor: 0.9378016
+     Position: 98.68896
+     Velocity: 30.265368
+Rotation: 10
+     Current_mottor: 0.72510886
+     Position: 93.01095
+     Velocity: 23.743347
+Rotation: 10
+     Current_mottor: 0.72510886
+     Position: 93.01095
+     Velocity: 23.743347
+     Current_mottor: 0.8169449
+     Position: 94.42382
+     Velocity: 21.436737
+Rotation: 10
+     Current_mottor: 0.72510886
+     Position: 93.01095
+     Velocity: 23.743347
+     Current_mottor: 0.8169449
+     Position: 94.42382
+     Velocity: 21.436737
+     Current_mottor: 0.8999559
+     Position: 95.9018
+     Velocity: 33.542503
+Rotation: 10
+     Current_mottor: 0.72510886
+     Position: 93.01095
+     Velocity: 23.743347
+     Current_mottor: 0.8169449
+     Position: 94.42382
+     Velocity: 21.436737
+     Current_mottor: 0.8999559
+     Position: 95.9018
+     Velocity: 33.542503
+     Current_mottor: 0.8886507
+     Position: 97.30585
+     Velocity: 23.346935
+Rotation: 10
+     Current_mottor: 0.72510886
+     Position: 93.01095
+     Velocity: 23.743347
+     Current_mottor: 0.8169449
+     Position: 94.42382
+     Velocity: 21.436737
+     Current_mottor: 0.8999559
+     Position: 95.9018
+     Velocity: 33.542503
+     Current_mottor: 0.8886507
+     Position: 97.30585
+     Velocity: 23.346935
+     Current_mottor: 0.93215644
+     Position: 98.81684
+     Velocity: 31.622147
+Rotation: 11
+     Current_mottor: 0.8089064
+     Position: 95.73288
+     Velocity: 21.15423
+Rotation: 11
+     Current_mottor: 0.8089064
+     Position: 95.73288
+     Velocity: 21.15423
+     Current_mottor: 0.8999444
+     Position: 97.1761
+     Velocity: 23.569578
+Rotation: 11
+     Current_mottor: 0.8089064
+     Position: 95.73288
+     Velocity: 21.15423
+     Current_mottor: 0.8999444
+     Position: 97.1761
+     Velocity: 23.569578
+     Current_mottor: 0.93618476
+     Position: 98.60479
+     Velocity: 21.996643
+Rotation: 12
+     Current_mottor: 0.7226847
+     Position: 93.077095
+     Velocity: 22.351742
+Rotation: 12
+     Current_mottor: 0.7226847
+     Position: 93.077095
+     Velocity: 22.351742
+     Current_mottor: 0.75732464
+     Position: 94.47056
+     Velocity: 24.974346
+Rotation: 12
+     Current_mottor: 0.7226847
+     Position: 93.077095
+     Velocity: 22.351742
+     Current_mottor: 0.75732464
+     Position: 94.47056
+     Velocity: 24.974346
+     Current_mottor: 0.8588413
+     Position: 95.97377
+     Velocity: 26.977753
+Rotation: 12
+     Current_mottor: 0.7226847
+     Position: 93.077095
+     Velocity: 22.351742
+     Current_mottor: 0.75732464
+     Position: 94.47056
+     Velocity: 24.974346
+     Current_mottor: 0.8588413
+     Position: 95.97377
+     Velocity: 26.977753
+     Current_mottor: 0.87736815
+     Position: 97.40211
+     Velocity: 29.374228
+Rotation: 12
+     Current_mottor: 0.7226847
+     Position: 93.077095
+     Velocity: 22.351742
+     Current_mottor: 0.75732464
+     Position: 94.47056
+     Velocity: 24.974346
+     Current_mottor: 0.8588413
+     Position: 95.97377
+     Velocity: 26.977753
+     Current_mottor: 0.87736815
+     Position: 97.40211
+     Velocity: 29.374228
+     Current_mottor: 0.91040176
+     Position: 98.84951
+     Velocity: 26.855469
+Rotation: 13
+     Current_mottor: 0.7178539
+     Position: 93.099884
+     Velocity: 17.821789
+Rotation: 13
+     Current_mottor: 0.7178539
+     Position: 93.099884
+     Velocity: 17.821789
+     Current_mottor: 0.7363787
+     Position: 94.50741
+     Velocity: 31.618584
+Rotation: 13
+     Current_mottor: 0.7178539
+     Position: 93.099884
+     Velocity: 17.821789
+     Current_mottor: 0.7363787
+     Position: 94.50741
+     Velocity: 31.618584
+     Current_mottor: 0.8403138
+     Position: 95.975395
+     Velocity: 30.707127
+Rotation: 13
+     Current_mottor: 0.7178539
+     Position: 93.099884
+     Velocity: 17.821789
+     Current_mottor: 0.7363787
+     Position: 94.50741
+     Velocity: 31.618584
+     Current_mottor: 0.8403138
+     Position: 95.975395
+     Velocity: 30.707127
+     Current_mottor: 0.8805967
+     Position: 97.41512
+     Velocity: 28.355787
+Rotation: 13
+     Current_mottor: 0.7178539
+     Position: 93.099884
+     Velocity: 17.821789
+     Current_mottor: 0.7363787
+     Position: 94.50741
+     Velocity: 31.618584
+     Current_mottor: 0.8403138
+     Position: 95.975395
+     Velocity: 30.707127
+     Current_mottor: 0.8805967
+     Position: 97.41512
+     Velocity: 28.355787
+     Current_mottor: 0.95148927
+     Position: 98.87009
+     Velocity: 29.72458
+Rotation: 14
+     Current_mottor: 0.74766713
+     Position: 93.01153
+     Velocity: 25.565556
+Rotation: 14
+     Current_mottor: 0.74766713
+     Position: 93.01153
+     Velocity: 25.565556
+     Current_mottor: 0.807279
+     Position: 94.390686
+     Velocity: 28.729439
+Rotation: 14
+     Current_mottor: 0.74766713
+     Position: 93.01153
+     Velocity: 25.565556
+     Current_mottor: 0.807279
+     Position: 94.390686
+     Velocity: 28.729439
+     Current_mottor: 0.8056644
+     Position: 95.82414
+     Velocity: 26.673079
+Rotation: 14
+     Current_mottor: 0.74766713
+     Position: 93.01153
+     Velocity: 25.565556
+     Current_mottor: 0.807279
+     Position: 94.390686
+     Velocity: 28.729439
+     Current_mottor: 0.8056644
+     Position: 95.82414
+     Velocity: 26.673079
+     Current_mottor: 0.8846191
+     Position: 97.227135
+     Velocity: 28.952957
+Rotation: 14
+     Current_mottor: 0.74766713
+     Position: 93.01153
+     Velocity: 25.565556
+     Current_mottor: 0.807279
+     Position: 94.390686
+     Velocity: 28.729439
+     Current_mottor: 0.8056644
+     Position: 95.82414
+     Velocity: 26.673079
+     Current_mottor: 0.8846191
+     Position: 97.227135
+     Velocity: 28.952957
+     Current_mottor: 0.9716362
+     Position: 98.66164
+     Velocity: 29.571844
+Rotation: 15
+     Current_mottor: 0.7943913
+     Position: 92.99397
+     Velocity: 17.547607
+Rotation: 15
+     Current_mottor: 0.7943913
+     Position: 92.99397
+     Velocity: 17.547607
+     Current_mottor: 0.82098585
+     Position: 94.42231
+     Velocity: 36.05514
+Rotation: 15
+     Current_mottor: 0.7943913
+     Position: 92.99397
+     Velocity: 17.547607
+     Current_mottor: 0.82098585
+     Position: 94.42231
+     Velocity: 36.05514
+     Current_mottor: 0.8749604
+     Position: 95.86158
+     Velocity: 15.899539
+Rotation: 15
+     Current_mottor: 0.7943913
+     Position: 92.99397
+     Velocity: 17.547607
+     Current_mottor: 0.82098585
+     Position: 94.42231
+     Velocity: 36.05514
+     Current_mottor: 0.8749604
+     Position: 95.86158
+     Velocity: 15.899539
+     Current_mottor: 0.8660892
+     Position: 97.27643
+     Velocity: 18.507242
+Rotation: 15
+     Current_mottor: 0.7943913
+     Position: 92.99397
+     Velocity: 17.547607
+     Current_mottor: 0.82098585
+     Position: 94.42231
+     Velocity: 36.05514
+     Current_mottor: 0.8749604
+     Position: 95.86158
+     Velocity: 15.899539
+     Current_mottor: 0.8660892
+     Position: 97.27643
+     Velocity: 18.507242
+     Current_mottor: 0.9708305
+     Position: 98.7057
+     Velocity: 20.18626
+Rotation: 16
+     Current_mottor: 0.67354286
+     Position: 91.791405
+     Velocity: 17.671753
+Rotation: 16
+     Current_mottor: 0.67354286
+     Position: 91.791405
+     Velocity: 17.671753
+     Current_mottor: 0.7903601
+     Position: 94.5195
+     Velocity: 28.001738
+Rotation: 16
+     Current_mottor: 0.67354286
+     Position: 91.791405
+     Velocity: 17.671753
+     Current_mottor: 0.7903601
+     Position: 94.5195
+     Velocity: 28.001738
+     Current_mottor: 0.848378
+     Position: 95.97726
+     Velocity: 26.66738
+Rotation: 16
+     Current_mottor: 0.67354286
+     Position: 91.791405
+     Velocity: 17.671753
+     Current_mottor: 0.7903601
+     Position: 94.5195
+     Velocity: 28.001738
+     Current_mottor: 0.848378
+     Position: 95.97726
+     Velocity: 26.66738
+     Current_mottor: 0.837891
+     Position: 97.4786
+     Velocity: 24.488495
+Rotation: 16
+     Current_mottor: 0.67354286
+     Position: 91.791405
+     Velocity: 17.671753
+     Current_mottor: 0.7903601
+     Position: 94.5195
+     Velocity: 28.001738
+     Current_mottor: 0.848378
+     Position: 95.97726
+     Velocity: 26.66738
+     Current_mottor: 0.837891
+     Position: 97.4786
+     Velocity: 24.488495
+     Current_mottor: 0.94344115
+     Position: 98.91787
+     Velocity: 28.135717
+Rotation: 17
+     Current_mottor: 0.71059567
+     Position: 92.92399
+     Velocity: 33.944847
+Rotation: 17
+     Current_mottor: 0.71059567
+     Position: 92.92399
+     Velocity: 33.944847
+     Current_mottor: 0.7911625
+     Position: 94.30663
+     Velocity: 27.820469
+Rotation: 17
+     Current_mottor: 0.71059567
+     Position: 92.92399
+     Velocity: 33.944847
+     Current_mottor: 0.7911625
+     Position: 94.30663
+     Velocity: 27.820469
+     Current_mottor: 0.809694
+     Position: 95.73207
+     Velocity: 19.63973
+Rotation: 17
+     Current_mottor: 0.71059567
+     Position: 92.92399
+     Velocity: 33.944847
+     Current_mottor: 0.7911625
+     Position: 94.30663
+     Velocity: 27.820469
+     Current_mottor: 0.809694
+     Position: 95.73207
+     Velocity: 19.63973
+     Current_mottor: 0.9080123
+     Position: 97.165634
+     Velocity: 32.903088
+Rotation: 17
+     Current_mottor: 0.71059567
+     Position: 92.92399
+     Velocity: 33.944847
+     Current_mottor: 0.7911625
+     Position: 94.30663
+     Velocity: 27.820469
+     Current_mottor: 0.809694
+     Position: 95.73207
+     Velocity: 19.63973
+     Current_mottor: 0.9080123
+     Position: 97.165634
+     Velocity: 32.903088
+     Current_mottor: 0.8757572
+     Position: 98.57503
+     Velocity: 22.828579
+Rotation: 18
+     Current_mottor: 0.8483677
+     Position: 96.33277
+     Velocity: 23.996246
+Rotation: 18
+     Current_mottor: 0.8483677
+     Position: 96.33277
+     Velocity: 23.996246
+     Current_mottor: 0.93618476
+     Position: 97.74274
+     Velocity: 29.39999
+Rotation: 18
+     Current_mottor: 0.8483677
+     Position: 96.33277
+     Velocity: 23.996246
+     Current_mottor: 0.93618476
+     Position: 97.74274
+     Velocity: 29.39999
+     Current_mottor: 0.9426356
+     Position: 99.17491
+     Velocity: 15.874191
+Rotation: 19
+     Current_mottor: 0.73799926
+     Position: 94.41103
+     Velocity: 15.988234
+Rotation: 19
+     Current_mottor: 0.73799926
+     Position: 94.41103
+     Velocity: 15.988234
+     Current_mottor: 0.87736857
+     Position: 95.85844
+     Velocity: 24.631279
+Rotation: 19
+     Current_mottor: 0.73799926
+     Position: 94.41103
+     Velocity: 15.988234
+     Current_mottor: 0.87736857
+     Position: 95.85844
+     Velocity: 24.631279
+     Current_mottor: 0.8910677
+     Position: 97.27829
+     Velocity: 24.288893
+Rotation: 19
+     Current_mottor: 0.73799926
+     Position: 94.41103
+     Velocity: 15.988234
+     Current_mottor: 0.87736857
+     Position: 95.85844
+     Velocity: 24.631279
+     Current_mottor: 0.8910677
+     Position: 97.27829
+     Velocity: 24.288893
+     Current_mottor: 0.931348
+     Position: 98.753136
+     Velocity: 21.623007
+Rotation: 20
+     Current_mottor: 0.7669926
+     Position: 93.03699
+     Velocity: 28.252602
+Rotation: 20
+     Current_mottor: 0.7669926
+     Position: 93.03699
+     Velocity: 28.252602
+     Current_mottor: 0.8056705
+     Position: 94.448235
+     Velocity: 29.791721
+Rotation: 20
+     Current_mottor: 0.7669926
+     Position: 93.03699
+     Velocity: 28.252602
+     Current_mottor: 0.8056705
+     Position: 94.448235
+     Velocity: 29.791721
+     Current_mottor: 0.93459255
+     Position: 95.93296
+     Velocity: 24.223495
+Rotation: 20
+     Current_mottor: 0.7669926
+     Position: 93.03699
+     Velocity: 28.252602
+     Current_mottor: 0.8056705
+     Position: 94.448235
+     Velocity: 29.791721
+     Current_mottor: 0.93459255
+     Position: 95.93296
+     Velocity: 24.223495
+     Current_mottor: 0.91685456
+     Position: 97.35118
+     Velocity: 26.875795
+Rotation: 20
+     Current_mottor: 0.7669926
+     Position: 93.03699
+     Velocity: 28.252602
+     Current_mottor: 0.8056705
+     Position: 94.448235
+     Velocity: 29.791721
+     Current_mottor: 0.93459255
+     Position: 95.93296
+     Velocity: 24.223495
+     Current_mottor: 0.91685456
+     Position: 97.35118
+     Velocity: 26.875795
+     Current_mottor: 0.96842027
+     Position: 98.80103
+     Velocity: 31.456352
+Rotation: 21
+     Current_mottor: 0.71623576
+     Position: 93.22719
+     Velocity: 27.403542
+Rotation: 21
+     Current_mottor: 0.71623576
+     Position: 93.22719
+     Velocity: 27.403542
+     Current_mottor: 0.7984391
+     Position: 94.65715
+     Velocity: 39.80054
+Rotation: 21
+     Current_mottor: 0.71623576
+     Position: 93.22719
+     Velocity: 27.403542
+     Current_mottor: 0.7984391
+     Position: 94.65715
+     Velocity: 39.80054
+     Current_mottor: 0.83871025
+     Position: 96.139786
+     Velocity: 29.44396
+Rotation: 21
+     Current_mottor: 0.71623576
+     Position: 93.22719
+     Velocity: 27.403542
+     Current_mottor: 0.7984391
+     Position: 94.65715
+     Velocity: 39.80054
+     Current_mottor: 0.83871025
+     Position: 96.139786
+     Velocity: 29.44396
+     Current_mottor: 0.90074146
+     Position: 97.636246
+     Velocity: 22.271397
+Rotation: 21
+     Current_mottor: 0.71623576
+     Position: 93.22719
+     Velocity: 27.403542
+     Current_mottor: 0.7984391
+     Position: 94.65715
+     Velocity: 39.80054
+     Current_mottor: 0.83871025
+     Position: 96.139786
+     Velocity: 29.44396
+     Current_mottor: 0.90074146
+     Position: 97.636246
+     Velocity: 22.271397
+     Current_mottor: 0.9724578
+     Position: 99.08377
+     Velocity: 22.136408
+Rotation: 22
+     Current_mottor: 0.7331543
+     Position: 93.04594
+     Velocity: 19.63973
+Rotation: 22
+     Current_mottor: 0.7331543
+     Position: 93.04594
+     Velocity: 19.63973
+     Current_mottor: 0.79519695
+     Position: 94.438934
+     Velocity: 17.257496
+Rotation: 22
+     Current_mottor: 0.7331543
+     Position: 93.04594
+     Velocity: 19.63973
+     Current_mottor: 0.79519695
+     Position: 94.438934
+     Velocity: 17.257496
+     Current_mottor: 0.9539093
+     Position: 95.89355
+     Velocity: 14.934434
+Rotation: 22
+     Current_mottor: 0.7331543
+     Position: 93.04594
+     Velocity: 19.63973
+     Current_mottor: 0.79519695
+     Position: 94.438934
+     Velocity: 17.257496
+     Current_mottor: 0.9539093
+     Position: 95.89355
+     Velocity: 14.934434
+     Current_mottor: 0.87898284
+     Position: 97.30805
+     Velocity: 16.670334
+Rotation: 22
+     Current_mottor: 0.7331543
+     Position: 93.04594
+     Velocity: 19.63973
+     Current_mottor: 0.79519695
+     Position: 94.438934
+     Velocity: 17.257496
+     Current_mottor: 0.9539093
+     Position: 95.89355
+     Velocity: 14.934434
+     Current_mottor: 0.87898284
+     Position: 97.30805
+     Velocity: 16.670334
+     Current_mottor: 0.9394264
+     Position: 98.772545
+     Velocity: 29.176474
+Rotation: 23
+     Current_mottor: 0.7331702
+     Position: 92.9777
+     Velocity: 18.512733
+Rotation: 23
+     Current_mottor: 0.7331702
+     Position: 92.9777
+     Velocity: 18.512733
+     Current_mottor: 0.7525178
+     Position: 94.38058
+     Velocity: 32.080673
+Rotation: 23
+     Current_mottor: 0.7331702
+     Position: 92.9777
+     Velocity: 18.512733
+     Current_mottor: 0.7525178
+     Position: 94.38058
+     Velocity: 32.080673
+     Current_mottor: 0.8556167
+     Position: 95.83751
+     Velocity: 28.148293
+Rotation: 23
+     Current_mottor: 0.7331702
+     Position: 92.9777
+     Velocity: 18.512733
+     Current_mottor: 0.7525178
+     Position: 94.38058
+     Velocity: 32.080673
+     Current_mottor: 0.8556167
+     Position: 95.83751
+     Velocity: 28.148293
+     Current_mottor: 0.8934945
+     Position: 97.2841
+     Velocity: 19.928022
+Rotation: 23
+     Current_mottor: 0.7331702
+     Position: 92.9777
+     Velocity: 18.512733
+     Current_mottor: 0.7525178
+     Position: 94.38058
+     Velocity: 32.080673
+     Current_mottor: 0.8556167
+     Position: 95.83751
+     Velocity: 28.148293
+     Current_mottor: 0.8934945
+     Position: 97.2841
+     Velocity: 19.928022
+     Current_mottor: 0.95954895
+     Position: 98.74825
+     Velocity: 21.286081
+Rotation: 24
+     Current_mottor: 0.8749526
+     Position: 95.851
+     Velocity: 28.190723
+Rotation: 24
+     Current_mottor: 0.8749526
+     Position: 95.851
+     Velocity: 28.190723
+     Current_mottor: 0.8717289
+     Position: 97.25097
+     Velocity: 16.84999
+Rotation: 24
+     Current_mottor: 0.8749526
+     Position: 95.851
+     Velocity: 28.190723
+     Current_mottor: 0.8717289
+     Position: 97.25097
+     Velocity: 16.84999
+     Current_mottor: 0.97648114
+     Position: 98.74034
+     Velocity: 29.040379
+Rotation: 25
+     Current_mottor: 0.6944824
+     Position: 91.654686
+     Velocity: 25.833826
+Rotation: 25
+     Current_mottor: 0.6944824
+     Position: 91.654686
+     Velocity: 25.833826
+     Current_mottor: 0.77182615
+     Position: 93.042336
+     Velocity: 17.136335
+Rotation: 25
+     Current_mottor: 0.6944824
+     Position: 91.654686
+     Velocity: 25.833826
+     Current_mottor: 0.77182615
+     Position: 93.042336
+     Velocity: 17.136335
+     Current_mottor: 0.8000504
+     Position: 94.44987
+     Velocity: 27.962685
+Rotation: 25
+     Current_mottor: 0.6944824
+     Position: 91.654686
+     Velocity: 25.833826
+     Current_mottor: 0.77182615
+     Position: 93.042336
+     Velocity: 17.136335
+     Current_mottor: 0.8000504
+     Position: 94.44987
+     Velocity: 27.962685
+     Current_mottor: 0.79601604
+     Position: 95.899826
+     Velocity: 22.210842
+Rotation: 25
+     Current_mottor: 0.6944824
+     Position: 91.654686
+     Velocity: 25.833826
+     Current_mottor: 0.77182615
+     Position: 93.042336
+     Velocity: 17.136335
+     Current_mottor: 0.8000504
+     Position: 94.44987
+     Velocity: 27.962685
+     Current_mottor: 0.79601604
+     Position: 95.899826
+     Velocity: 22.210842
+     Current_mottor: 0.85241127
+     Position: 97.27387
+     Velocity: 14.521325
+Rotation: 25
+     Current_mottor: 0.6944824
+     Position: 91.654686
+     Velocity: 25.833826
+     Current_mottor: 0.77182615
+     Position: 93.042336
+     Velocity: 17.136335
+     Current_mottor: 0.8000504
+     Position: 94.44987
+     Velocity: 27.962685
+     Current_mottor: 0.79601604
+     Position: 95.899826
+     Velocity: 22.210842
+     Current_mottor: 0.85241127
+     Position: 97.27387
+     Velocity: 14.521325
+     Current_mottor: 0.957943
+     Position: 98.75081
+     Velocity: 29.444572
+Rotation: 26
+     Current_mottor: 0.8073011
+     Position: 94.44231
+     Velocity: 25.501957
+Rotation: 26
+     Current_mottor: 0.8073011
+     Position: 94.44231
+     Velocity: 25.501957
+     Current_mottor: 0.86611927
+     Position: 95.93238
+     Velocity: 26.565256
+Rotation: 26
+     Current_mottor: 0.8073011
+     Position: 94.44231
+     Velocity: 25.501957
+     Current_mottor: 0.86611927
+     Position: 95.93238
+     Velocity: 26.565256
+     Current_mottor: 0.8733413
+     Position: 97.39223
+     Velocity: 25.843178
+Rotation: 26
+     Current_mottor: 0.8073011
+     Position: 94.44231
+     Velocity: 25.501957
+     Current_mottor: 0.86611927
+     Position: 95.93238
+     Velocity: 26.565256
+     Current_mottor: 0.8733413
+     Position: 97.39223
+     Velocity: 25.843178
+     Current_mottor: 0.9128178
+     Position: 98.831024
+     Velocity: 25.449192
+Rotation: 27
+     Current_mottor: 0.7307591
+     Position: 93.06466
+     Velocity: 19.834848
+Rotation: 27
+     Current_mottor: 0.7307591
+     Position: 93.06466
+     Velocity: 19.834848
+     Current_mottor: 0.76540166
+     Position: 94.42661
+     Velocity: 23.394823
+Rotation: 27
+     Current_mottor: 0.7307591
+     Position: 93.06466
+     Velocity: 19.834848
+     Current_mottor: 0.76540166
+     Position: 94.42661
+     Velocity: 23.394823
+     Current_mottor: 0.848383
+     Position: 95.85193
+     Velocity: 27.645708
+Rotation: 27
+     Current_mottor: 0.7307591
+     Position: 93.06466
+     Velocity: 19.834848
+     Current_mottor: 0.76540166
+     Position: 94.42661
+     Velocity: 23.394823
+     Current_mottor: 0.848383
+     Position: 95.85193
+     Velocity: 27.645708
+     Current_mottor: 0.863696
+     Position: 97.26597
+     Velocity: 16.344143
+Rotation: 27
+     Current_mottor: 0.7307591
+     Position: 93.06466
+     Velocity: 19.834848
+     Current_mottor: 0.76540166
+     Position: 94.42661
+     Velocity: 23.394823
+     Current_mottor: 0.848383
+     Position: 95.85193
+     Velocity: 27.645708
+     Current_mottor: 0.863696
+     Position: 97.26597
+     Velocity: 16.344143
+     Current_mottor: 0.9450453
+     Position: 98.71616
+     Velocity: 24.767275
+Rotation: 28
+     Current_mottor: 0.7484688
+     Position: 94.4866
+     Velocity: 29.53314
+Rotation: 28
+     Current_mottor: 0.7484688
+     Position: 94.4866
+     Velocity: 29.53314
+     Current_mottor: 0.91363186
+     Position: 95.955864
+     Velocity: 21.198862
+Rotation: 28
+     Current_mottor: 0.7484688
+     Position: 94.4866
+     Velocity: 29.53314
+     Current_mottor: 0.91363186
+     Position: 95.955864
+     Velocity: 21.198862
+     Current_mottor: 0.859645
+     Position: 97.35805
+     Velocity: 18.47887
+Rotation: 28
+     Current_mottor: 0.7484688
+     Position: 94.4866
+     Velocity: 29.53314
+     Current_mottor: 0.91363186
+     Position: 95.955864
+     Velocity: 21.198862
+     Current_mottor: 0.859645
+     Position: 97.35805
+     Velocity: 18.47887
+     Current_mottor: 0.9377943
+     Position: 98.840904
+     Velocity: 31.14876
+Rotation: 29
+     Current_mottor: 0.7702186
+     Position: 92.99688
+     Velocity: 25.516085
+Rotation: 29
+     Current_mottor: 0.7702186
+     Position: 92.99688
+     Velocity: 25.516085
+     Current_mottor: 0.8266212
+     Position: 94.413246
+     Velocity: 23.080523
+Rotation: 29
+     Current_mottor: 0.7702186
+     Position: 92.99688
+     Velocity: 25.516085
+     Current_mottor: 0.8266212
+     Position: 94.413246
+     Velocity: 23.080523
+     Current_mottor: 0.90235674
+     Position: 95.90785
+     Velocity: 17.71748
+Rotation: 29
+     Current_mottor: 0.7702186
+     Position: 92.99688
+     Velocity: 25.516085
+     Current_mottor: 0.8266212
+     Position: 94.413246
+     Velocity: 23.080523
+     Current_mottor: 0.90235674
+     Position: 95.90785
+     Velocity: 17.71748
+     Current_mottor: 0.85000646
+     Position: 97.30933
+     Velocity: 27.29856
+Rotation: 29
+     Current_mottor: 0.7702186
+     Position: 92.99688
+     Velocity: 25.516085
+     Current_mottor: 0.8266212
+     Position: 94.413246
+     Velocity: 23.080523
+     Current_mottor: 0.90235674
+     Position: 95.90785
+     Velocity: 17.71748
+     Current_mottor: 0.85000646
+     Position: 97.30933
+     Velocity: 27.29856
+     Current_mottor: 0.9426301
+     Position: 98.80208
+     Velocity: 32.231213
+Rotation: 30
+     Current_mottor: 0.74283797
+     Position: 92.97758
+     Velocity: 37.409508
+Rotation: 30
+     Current_mottor: 0.74283797
+     Position: 92.97758
+     Velocity: 37.409508
+     Current_mottor: 0.75169146
+     Position: 94.34314
+     Velocity: 24.855137
+Rotation: 30
+     Current_mottor: 0.74283797
+     Position: 92.97758
+     Velocity: 37.409508
+     Current_mottor: 0.75169146
+     Position: 94.34314
+     Velocity: 24.855137
+     Current_mottor: 0.8080911
+     Position: 95.80763
+     Velocity: 28.93665
+Rotation: 30
+     Current_mottor: 0.74283797
+     Position: 92.97758
+     Velocity: 37.409508
+     Current_mottor: 0.75169146
+     Position: 94.34314
+     Velocity: 24.855137
+     Current_mottor: 0.8080911
+     Position: 95.80763
+     Velocity: 28.93665
+     Current_mottor: 0.88623047
+     Position: 97.242714
+     Velocity: 30.328028
+Rotation: 30
+     Current_mottor: 0.74283797
+     Position: 92.97758
+     Velocity: 37.409508
+     Current_mottor: 0.75169146
+     Position: 94.34314
+     Velocity: 24.855137
+     Current_mottor: 0.8080911
+     Position: 95.80763
+     Velocity: 28.93665
+     Current_mottor: 0.88623047
+     Position: 97.242714
+     Velocity: 30.328028
+     Current_mottor: 0.93376505
+     Position: 98.71779
+     Velocity: 19.219448
+Rotation: 31
+     Current_mottor: 0.81211936
+     Position: 94.40348
+     Velocity: 23.219896
+Rotation: 31
+     Current_mottor: 0.81211936
+     Position: 94.40348
+     Velocity: 23.219896
+     Current_mottor: 0.8161393
+     Position: 95.80426
+     Velocity: 14.299827
+Rotation: 31
+     Current_mottor: 0.81211936
+     Position: 94.40348
+     Velocity: 23.219896
+     Current_mottor: 0.8161393
+     Position: 95.80426
+     Velocity: 14.299827
+     Current_mottor: 0.8999358
+     Position: 97.2619
+     Velocity: 26.763218
+Rotation: 31
+     Current_mottor: 0.81211936
+     Position: 94.40348
+     Velocity: 23.219896
+     Current_mottor: 0.8161393
+     Position: 95.80426
+     Velocity: 14.299827
+     Current_mottor: 0.8999358
+     Position: 97.2619
+     Velocity: 26.763218
+     Current_mottor: 0.9281376
+     Position: 98.754295
+     Velocity: 29.684769
+Rotation: 32
+     Current_mottor: 0.71382564
+     Position: 93.01222
+     Velocity: 26.43466
+Rotation: 32
+     Current_mottor: 0.71382564
+     Position: 93.01222
+     Velocity: 26.43466
+     Current_mottor: 0.8072854
+     Position: 94.42917
+     Velocity: 22.37297
+Rotation: 32
+     Current_mottor: 0.71382564
+     Position: 93.01222
+     Velocity: 26.43466
+     Current_mottor: 0.8072854
+     Position: 94.42917
+     Velocity: 22.37297
+     Current_mottor: 0.884625
+     Position: 95.88797
+     Velocity: 17.842546
+Rotation: 32
+     Current_mottor: 0.71382564
+     Position: 93.01222
+     Velocity: 26.43466
+     Current_mottor: 0.8072854
+     Position: 94.42917
+     Velocity: 22.37297
+     Current_mottor: 0.884625
+     Position: 95.88797
+     Velocity: 17.842546
+     Current_mottor: 0.8419224
+     Position: 97.32933
+     Velocity: 29.14838
+Rotation: 32
+     Current_mottor: 0.71382564
+     Position: 93.01222
+     Velocity: 26.43466
+     Current_mottor: 0.8072854
+     Position: 94.42917
+     Velocity: 22.37297
+     Current_mottor: 0.884625
+     Position: 95.88797
+     Velocity: 17.842546
+     Current_mottor: 0.8419224
+     Position: 97.32933
+     Velocity: 29.14838
+     Current_mottor: 0.94831586
+     Position: 98.79394
+     Velocity: 28.075607
+Rotation: 33
+     Current_mottor: 0.7138297
+     Position: 93.111046
+     Velocity: 18.393488
+Rotation: 33
+     Current_mottor: 0.7138297
+     Position: 93.111046
+     Velocity: 18.393488
+     Current_mottor: 0.7629847
+     Position: 94.49706
+     Velocity: 21.289553
+Rotation: 33
+     Current_mottor: 0.7138297
+     Position: 93.111046
+     Velocity: 18.393488
+     Current_mottor: 0.7629847
+     Position: 94.49706
+     Velocity: 21.289553
+     Current_mottor: 0.84998935
+     Position: 95.959236
+     Velocity: 29.726381
+Rotation: 33
+     Current_mottor: 0.7138297
+     Position: 93.111046
+     Velocity: 18.393488
+     Current_mottor: 0.7629847
+     Position: 94.49706
+     Velocity: 21.289553
+     Current_mottor: 0.84998935
+     Position: 95.959236
+     Velocity: 29.726381
+     Current_mottor: 0.87415475
+     Position: 97.43791
+     Velocity: 30.308962
+Rotation: 33
+     Current_mottor: 0.7138297
+     Position: 93.111046
+     Velocity: 18.393488
+     Current_mottor: 0.7629847
+     Position: 94.49706
+     Velocity: 21.289553
+     Current_mottor: 0.84998935
+     Position: 95.959236
+     Velocity: 29.726381
+     Current_mottor: 0.87415475
+     Position: 97.43791
+     Velocity: 30.308962
+     Current_mottor: 0.9095962
+     Position: 98.936356
+     Velocity: 31.661987
+Rotation: 34
+     Current_mottor: 0.6960979
+     Position: 91.55343
+     Velocity: 17.757206
+Rotation: 34
+     Current_mottor: 0.6960979
+     Position: 91.55343
+     Velocity: 17.757206
+     Current_mottor: 0.75571674
+     Position: 94.30477
+     Velocity: 27.525106
+Rotation: 34
+     Current_mottor: 0.6960979
+     Position: 91.55343
+     Velocity: 17.757206
+     Current_mottor: 0.75571674
+     Position: 94.30477
+     Velocity: 27.525106
+     Current_mottor: 0.8032487
+     Position: 95.71603
+     Velocity: 19.129782
+Rotation: 34
+     Current_mottor: 0.6960979
+     Position: 91.55343
+     Velocity: 17.757206
+     Current_mottor: 0.75571674
+     Position: 94.30477
+     Velocity: 27.525106
+     Current_mottor: 0.8032487
+     Position: 95.71603
+     Velocity: 19.129782
+     Current_mottor: 0.89267904
+     Position: 97.15692
+     Velocity: 32.63422
+Rotation: 34
+     Current_mottor: 0.6960979
+     Position: 91.55343
+     Velocity: 17.757206
+     Current_mottor: 0.75571674
+     Position: 94.30477
+     Velocity: 27.525106
+     Current_mottor: 0.8032487
+     Position: 95.71603
+     Velocity: 19.129782
+     Current_mottor: 0.89267904
+     Position: 97.15692
+     Velocity: 32.63422
+     Current_mottor: 0.90315264
+     Position: 98.564445
+     Velocity: 21.576881
+Rotation: 35
+     Current_mottor: 0.79196817
+     Position: 92.99409
+     Velocity: 16.626448
+Rotation: 35
+     Current_mottor: 0.79196817
+     Position: 92.99409
+     Velocity: 16.626448
+     Current_mottor: 0.76135635
+     Position: 94.413475
+     Velocity: 35.07733
+Rotation: 35
+     Current_mottor: 0.79196817
+     Position: 92.99409
+     Velocity: 16.626448
+     Current_mottor: 0.76135635
+     Position: 94.413475
+     Velocity: 35.07733
+     Current_mottor: 0.8588413
+     Position: 95.84414
+     Velocity: 33.039692
+Rotation: 35
+     Current_mottor: 0.79196817
+     Position: 92.99409
+     Velocity: 16.626448
+     Current_mottor: 0.76135635
+     Position: 94.413475
+     Velocity: 35.07733
+     Current_mottor: 0.8588413
+     Position: 95.84414
+     Velocity: 33.039692
+     Current_mottor: 0.90476114
+     Position: 97.276085
+     Velocity: 21.729645
+Rotation: 35
+     Current_mottor: 0.79196817
+     Position: 92.99409
+     Velocity: 16.626448
+     Current_mottor: 0.76135635
+     Position: 94.413475
+     Velocity: 35.07733
+     Current_mottor: 0.8588413
+     Position: 95.84414
+     Velocity: 33.039692
+     Current_mottor: 0.90476114
+     Position: 97.276085
+     Velocity: 21.729645
+     Current_mottor: 0.9579359
+     Position: 98.71872
+     Velocity: 25.605406
+Rotation: 36
+     Current_mottor: 0.75974804
+     Position: 92.99025
+     Velocity: 21.219254
+Rotation: 36
+     Current_mottor: 0.75974804
+     Position: 92.99025
+     Velocity: 21.219254
+     Current_mottor: 0.7654152
+     Position: 94.415565
+     Velocity: 20.686943
+Rotation: 36
+     Current_mottor: 0.75974804
+     Position: 92.99025
+     Velocity: 21.219254
+     Current_mottor: 0.7654152
+     Position: 94.415565
+     Velocity: 20.686943
+     Current_mottor: 0.91283476
+     Position: 95.92342
+     Velocity: 19.798594
+Rotation: 36
+     Current_mottor: 0.75974804
+     Position: 92.99025
+     Velocity: 21.219254
+     Current_mottor: 0.7654152
+     Position: 94.415565
+     Velocity: 20.686943
+     Current_mottor: 0.91283476
+     Position: 95.92342
+     Velocity: 19.798594
+     Current_mottor: 0.86772406
+     Position: 97.36851
+     Velocity: 26.49248
+Rotation: 36
+     Current_mottor: 0.75974804
+     Position: 92.99025
+     Velocity: 21.219254
+     Current_mottor: 0.7654152
+     Position: 94.415565
+     Velocity: 20.686943
+     Current_mottor: 0.91283476
+     Position: 95.92342
+     Velocity: 19.798594
+     Current_mottor: 0.86772406
+     Position: 97.36851
+     Velocity: 26.49248
+     Current_mottor: 0.94988096
+     Position: 98.83266
+     Velocity: 32.580032
+Rotation: 37
+     Current_mottor: 0.76861405
+     Position: 94.30547
+     Velocity: 28.128778
+Rotation: 37
+     Current_mottor: 0.76861405
+     Position: 94.30547
+     Velocity: 28.128778
+     Current_mottor: 0.79279965
+     Position: 95.74067
+     Velocity: 24.222528
+Rotation: 37
+     Current_mottor: 0.76861405
+     Position: 94.30547
+     Velocity: 28.128778
+     Current_mottor: 0.79279965
+     Position: 95.74067
+     Velocity: 24.222528
+     Current_mottor: 0.8991821
+     Position: 97.16831
+     Velocity: 21.457672
+Rotation: 37
+     Current_mottor: 0.76861405
+     Position: 94.30547
+     Velocity: 28.128778
+     Current_mottor: 0.79279965
+     Position: 95.74067
+     Velocity: 24.222528
+     Current_mottor: 0.8991821
+     Position: 97.16831
+     Velocity: 21.457672
+     Current_mottor: 0.9450439
+     Position: 98.61735
+     Velocity: 26.106834
+Rotation: 38
+     Current_mottor: 0.7718266
+     Position: 94.423355
+     Velocity: 25.634766
+Rotation: 38
+     Current_mottor: 0.7718266
+     Position: 94.423355
+     Velocity: 25.634766
+     Current_mottor: 0.8983212
+     Position: 95.88355
+     Velocity: 30.559925
+Rotation: 38
+     Current_mottor: 0.7718266
+     Position: 94.423355
+     Velocity: 25.634766
+     Current_mottor: 0.8983212
+     Position: 95.88355
+     Velocity: 30.559925
+     Current_mottor: 0.905584
+     Position: 97.27213
+     Velocity: 15.400074
+Rotation: 38
+     Current_mottor: 0.7718266
+     Position: 94.423355
+     Velocity: 25.634766
+     Current_mottor: 0.8983212
+     Position: 95.88355
+     Velocity: 30.559925
+     Current_mottor: 0.905584
+     Position: 97.27213
+     Velocity: 15.400074
+     Current_mottor: 0.9780974
+     Position: 98.711395
+     Velocity: 19.09213
+Rotation: 39
+     Current_mottor: 0.7387957
+     Position: 93.0578
+     Velocity: 30.549139
+Rotation: 39
+     Current_mottor: 0.7387957
+     Position: 93.0578
+     Velocity: 30.549139
+     Current_mottor: 0.767813
+     Position: 94.4508
+     Velocity: 19.658928
+Rotation: 39
+     Current_mottor: 0.7387957
+     Position: 93.0578
+     Velocity: 30.549139
+     Current_mottor: 0.767813
+     Position: 94.4508
+     Velocity: 19.658928
+     Current_mottor: 0.85807794
+     Position: 95.929825
+     Velocity: 17.19967
+Rotation: 39
+     Current_mottor: 0.7387957
+     Position: 93.0578
+     Velocity: 30.549139
+     Current_mottor: 0.767813
+     Position: 94.4508
+     Velocity: 19.658928
+     Current_mottor: 0.85807794
+     Position: 95.929825
+     Velocity: 17.19967
+     Current_mottor: 0.87334025
+     Position: 97.340836
+     Velocity: 22.68693
+Rotation: 39
+     Current_mottor: 0.7387957
+     Position: 93.0578
+     Velocity: 30.549139
+     Current_mottor: 0.767813
+     Position: 94.4508
+     Velocity: 19.658928
+     Current_mottor: 0.85807794
+     Position: 95.929825
+     Velocity: 17.19967
+     Current_mottor: 0.87334025
+     Position: 97.340836
+     Velocity: 22.68693
+     Current_mottor: 0.94665664
+     Position: 98.82184
+     Velocity: 24.270218
+Rotation: 40
+     Current_mottor: 0.7968278
+     Position: 94.36755
+     Velocity: 17.59827
+Rotation: 40
+     Current_mottor: 0.7968278
+     Position: 94.36755
+     Velocity: 17.59827
+     Current_mottor: 0.8008706
+     Position: 95.80543
+     Velocity: 31.49258
+Rotation: 40
+     Current_mottor: 0.7968278
+     Position: 94.36755
+     Velocity: 17.59827
+     Current_mottor: 0.8008706
+     Position: 95.80543
+     Velocity: 31.49258
+     Current_mottor: 0.8596813
+     Position: 97.2469
+     Velocity: 31.60293
+Rotation: 40
+     Current_mottor: 0.7968278
+     Position: 94.36755
+     Velocity: 17.59827
+     Current_mottor: 0.8008706
+     Position: 95.80543
+     Velocity: 31.49258
+     Current_mottor: 0.8596813
+     Position: 97.2469
+     Velocity: 31.60293
+     Current_mottor: 0.9732505
+     Position: 98.702095
+     Velocity: 31.06808
+Rotation: 41
+     Current_mottor: 0.67837346
+     Position: 91.584465
+     Velocity: 28.823727
+Rotation: 41
+     Current_mottor: 0.67837346
+     Position: 91.584465
+     Velocity: 28.823727
+     Current_mottor: 0.7573589
+     Position: 92.99874
+     Velocity: 30.896288
+Rotation: 41
+     Current_mottor: 0.67837346
+     Position: 91.584465
+     Velocity: 28.823727
+     Current_mottor: 0.7573589
+     Position: 92.99874
+     Velocity: 30.896288
+     Current_mottor: 0.8064842
+     Position: 94.42324
+     Velocity: 31.279812
+Rotation: 41
+     Current_mottor: 0.67837346
+     Position: 91.584465
+     Velocity: 28.823727
+     Current_mottor: 0.7573589
+     Position: 92.99874
+     Velocity: 30.896288
+     Current_mottor: 0.8064842
+     Position: 94.42324
+     Velocity: 31.279812
+     Current_mottor: 0.82339495
+     Position: 95.89669
+     Velocity: 37.029385
+Rotation: 41
+     Current_mottor: 0.67837346
+     Position: 91.584465
+     Velocity: 28.823727
+     Current_mottor: 0.7573589
+     Position: 92.99874
+     Velocity: 30.896288
+     Current_mottor: 0.8064842
+     Position: 94.42324
+     Velocity: 31.279812
+     Current_mottor: 0.82339495
+     Position: 95.89669
+     Velocity: 37.029385
+     Current_mottor: 0.8532169
+     Position: 97.33595
+     Velocity: 20.995735
+Rotation: 41
+     Current_mottor: 0.67837346
+     Position: 91.584465
+     Velocity: 28.823727
+     Current_mottor: 0.7573589
+     Position: 92.99874
+     Velocity: 30.896288
+     Current_mottor: 0.8064842
+     Position: 94.42324
+     Velocity: 31.279812
+     Current_mottor: 0.82339495
+     Position: 95.89669
+     Velocity: 37.029385
+     Current_mottor: 0.8532169
+     Position: 97.33595
+     Velocity: 20.995735
+     Current_mottor: 0.9072135
+     Position: 98.758484
+     Velocity: 26.673079
+Rotation: 42
+     Current_mottor: 0.7226847
+     Position: 92.96898
+     Velocity: 15.3692465
+Rotation: 42
+     Current_mottor: 0.7226847
+     Position: 92.96898
+     Velocity: 15.3692465
+     Current_mottor: 0.73073906
+     Position: 94.325935
+     Velocity: 30.106886
+Rotation: 42
+     Current_mottor: 0.7226847
+     Position: 92.96898
+     Velocity: 15.3692465
+     Current_mottor: 0.73073906
+     Position: 94.325935
+     Velocity: 30.106886
+     Current_mottor: 0.80969876
+     Position: 95.72428
+     Velocity: 19.921196
+Rotation: 42
+     Current_mottor: 0.7226847
+     Position: 92.96898
+     Velocity: 15.3692465
+     Current_mottor: 0.73073906
+     Position: 94.325935
+     Velocity: 30.106886
+     Current_mottor: 0.80969876
+     Position: 95.72428
+     Velocity: 19.921196
+     Current_mottor: 0.86045265
+     Position: 97.16134
+     Velocity: 24.783684
+Rotation: 42
+     Current_mottor: 0.7226847
+     Position: 92.96898
+     Velocity: 15.3692465
+     Current_mottor: 0.73073906
+     Position: 94.325935
+     Velocity: 30.106886
+     Current_mottor: 0.80969876
+     Position: 95.72428
+     Velocity: 19.921196
+     Current_mottor: 0.86045265
+     Position: 97.16134
+     Velocity: 24.783684
+     Current_mottor: 0.88870007
+     Position: 98.56875
+     Velocity: 31.098724
+Rotation: 43
+     Current_mottor: 0.70738447
+     Position: 92.97897
+     Velocity: 19.724392
+Rotation: 43
+     Current_mottor: 0.70738447
+     Position: 92.97897
+     Velocity: 19.724392
+     Current_mottor: 0.76296556
+     Position: 94.403824
+     Velocity: 24.555347
+Rotation: 43
+     Current_mottor: 0.70738447
+     Position: 92.97897
+     Velocity: 19.724392
+     Current_mottor: 0.76296556
+     Position: 94.403824
+     Velocity: 24.555347
+     Current_mottor: 0.866908
+     Position: 95.84332
+     Velocity: 37.252903
+Rotation: 43
+     Current_mottor: 0.70738447
+     Position: 92.97897
+     Velocity: 19.724392
+     Current_mottor: 0.76296556
+     Position: 94.403824
+     Velocity: 24.555347
+     Current_mottor: 0.866908
+     Position: 95.84332
+     Velocity: 37.252903
+     Current_mottor: 0.859645
+     Position: 97.278755
+     Velocity: 17.954838
+Rotation: 43
+     Current_mottor: 0.70738447
+     Position: 92.97897
+     Velocity: 19.724392
+     Current_mottor: 0.76296556
+     Position: 94.403824
+     Velocity: 24.555347
+     Current_mottor: 0.866908
+     Position: 95.84332
+     Velocity: 37.252903
+     Current_mottor: 0.859645
+     Position: 97.278755
+     Velocity: 17.954838
+     Current_mottor: 0.9426301
+     Position: 98.75651
+     Velocity: 20.27187
+Rotation: 44
+     Current_mottor: 0.7895545
+     Position: 94.38151
+     Velocity: 19.140535
+Rotation: 44
+     Current_mottor: 0.7895545
+     Position: 94.38151
+     Velocity: 19.140535
+     Current_mottor: 0.8282477
+     Position: 95.81717
+     Velocity: 29.525354
+Rotation: 44
+     Current_mottor: 0.7895545
+     Position: 94.38151
+     Velocity: 19.140535
+     Current_mottor: 0.8282477
+     Position: 95.81717
+     Velocity: 29.525354
+     Current_mottor: 0.8362797
+     Position: 97.25562
+     Velocity: 30.070543
+Rotation: 44
+     Current_mottor: 0.7895545
+     Position: 94.38151
+     Velocity: 19.140535
+     Current_mottor: 0.8282477
+     Position: 95.81717
+     Velocity: 29.525354
+     Current_mottor: 0.8362797
+     Position: 97.25562
+     Velocity: 30.070543
+     Current_mottor: 0.9353815
+     Position: 98.68745
+     Velocity: 30.085445
+Rotation: 45
+     Current_mottor: 0.77506393
+     Position: 92.979324
+     Velocity: 17.566216
+Rotation: 45
+     Current_mottor: 0.77506393
+     Position: 92.979324
+     Velocity: 17.566216
+     Current_mottor: 0.74444056
+     Position: 94.37476
+     Velocity: 33.25939
+Rotation: 45
+     Current_mottor: 0.77506393
+     Position: 92.979324
+     Velocity: 17.566216
+     Current_mottor: 0.74444056
+     Position: 94.37476
+     Velocity: 33.25939
+     Current_mottor: 0.8290475
+     Position: 95.80043
+     Velocity: 33.61702
+Rotation: 45
+     Current_mottor: 0.77506393
+     Position: 92.979324
+     Velocity: 17.566216
+     Current_mottor: 0.74444056
+     Position: 94.37476
+     Velocity: 33.25939
+     Current_mottor: 0.8290475
+     Position: 95.80043
+     Velocity: 33.61702
+     Current_mottor: 0.8685152
+     Position: 97.268295
+     Velocity: 33.66532
+Rotation: 45
+     Current_mottor: 0.77506393
+     Position: 92.979324
+     Velocity: 17.566216
+     Current_mottor: 0.74444056
+     Position: 94.37476
+     Velocity: 33.25939
+     Current_mottor: 0.8290475
+     Position: 95.80043
+     Velocity: 33.61702
+     Current_mottor: 0.8685152
+     Position: 97.268295
+     Velocity: 33.66532
+     Current_mottor: 0.9418337
+     Position: 98.77267
+     Velocity: 22.262335
+Rotation: 46
+     Current_mottor: 0.7597412
+     Position: 92.98002
+     Velocity: 16.673018
+Rotation: 46
+     Current_mottor: 0.7597412
+     Position: 92.98002
+     Velocity: 16.673018
+     Current_mottor: 0.75974506
+     Position: 94.359535
+     Velocity: 22.009014
+Rotation: 46
+     Current_mottor: 0.7597412
+     Position: 92.98002
+     Velocity: 16.673018
+     Current_mottor: 0.75974506
+     Position: 94.359535
+     Velocity: 22.009014
+     Current_mottor: 0.8080911
+     Position: 95.769966
+     Velocity: 25.389238
+Rotation: 46
+     Current_mottor: 0.7597412
+     Position: 92.98002
+     Velocity: 16.673018
+     Current_mottor: 0.75974506
+     Position: 94.359535
+     Velocity: 22.009014
+     Current_mottor: 0.8080911
+     Position: 95.769966
+     Velocity: 25.389238
+     Current_mottor: 0.89590746
+     Position: 97.21365
+     Velocity: 25.379559
+Rotation: 46
+     Current_mottor: 0.7597412
+     Position: 92.98002
+     Velocity: 16.673018
+     Current_mottor: 0.75974506
+     Position: 94.359535
+     Velocity: 22.009014
+     Current_mottor: 0.8080911
+     Position: 95.769966
+     Velocity: 25.389238
+     Current_mottor: 0.89590746
+     Position: 97.21365
+     Velocity: 25.379559
+     Current_mottor: 0.8886489
+     Position: 98.665245
+     Velocity: 24.883026
+Rotation: 47
+     Current_mottor: 0.73637736
+     Position: 93.00141
+     Velocity: 25.095034
+Rotation: 47
+     Current_mottor: 0.73637736
+     Position: 93.00141
+     Velocity: 25.095034
+     Current_mottor: 0.75168455
+     Position: 94.40743
+     Velocity: 26.836887
+Rotation: 47
+     Current_mottor: 0.73637736
+     Position: 93.00141
+     Velocity: 25.095034
+     Current_mottor: 0.75168455
+     Position: 94.40743
+     Velocity: 26.836887
+     Current_mottor: 0.8677006
+     Position: 95.854256
+     Velocity: 27.228682
+Rotation: 47
+     Current_mottor: 0.73637736
+     Position: 93.00141
+     Velocity: 25.095034
+     Current_mottor: 0.75168455
+     Position: 94.40743
+     Velocity: 26.836887
+     Current_mottor: 0.8677006
+     Position: 95.854256
+     Velocity: 27.228682
+     Current_mottor: 0.862091
+     Position: 97.310844
+     Velocity: 20.121775
+Rotation: 47
+     Current_mottor: 0.73637736
+     Position: 93.00141
+     Velocity: 25.095034
+     Current_mottor: 0.75168455
+     Position: 94.40743
+     Velocity: 26.836887
+     Current_mottor: 0.8677006
+     Position: 95.854256
+     Velocity: 27.228682
+     Current_mottor: 0.862091
+     Position: 97.310844
+     Velocity: 20.121775
+     Current_mottor: 0.9200697
+     Position: 98.79882
+     Velocity: 29.010853
+Rotation: 48
+     Current_mottor: 0.7710411
+     Position: 93.020134
+     Velocity: 22.85245
+Rotation: 48
+     Current_mottor: 0.7710411
+     Position: 93.020134
+     Velocity: 22.85245
+     Current_mottor: 0.800026
+     Position: 94.394875
+     Velocity: 29.639376
+Rotation: 48
+     Current_mottor: 0.7710411
+     Position: 93.020134
+     Velocity: 22.85245
+     Current_mottor: 0.800026
+     Position: 94.394875
+     Velocity: 29.639376
+     Current_mottor: 0.82741696
+     Position: 95.87646
+     Velocity: 33.289192
+Rotation: 48
+     Current_mottor: 0.7710411
+     Position: 93.020134
+     Velocity: 22.85245
+     Current_mottor: 0.800026
+     Position: 94.394875
+     Velocity: 29.639376
+     Current_mottor: 0.82741696
+     Position: 95.87646
+     Velocity: 33.289192
+     Current_mottor: 0.8733491
+     Position: 97.286545
+     Velocity: 24.527311
+Rotation: 48
+     Current_mottor: 0.7710411
+     Position: 93.020134
+     Velocity: 22.85245
+     Current_mottor: 0.800026
+     Position: 94.394875
+     Velocity: 29.639376
+     Current_mottor: 0.82741696
+     Position: 95.87646
+     Velocity: 33.289192
+     Current_mottor: 0.8733491
+     Position: 97.286545
+     Velocity: 24.527311
+     Current_mottor: 0.9668023
+     Position: 98.734764
+     Velocity: 24.419708
+Rotation: 49
+     Current_mottor: 0.7170428
+     Position: 93.01571
+     Velocity: 22.848736
+Rotation: 49
+     Current_mottor: 0.7170428
+     Position: 93.01571
+     Velocity: 22.848736
+     Current_mottor: 0.78312033
+     Position: 94.41092
+     Velocity: 25.373459
+Rotation: 49
+     Current_mottor: 0.7170428
+     Position: 93.01571
+     Velocity: 22.848736
+     Current_mottor: 0.78312033
+     Position: 94.41092
+     Velocity: 25.373459
+     Current_mottor: 0.87899274
+     Position: 95.83763
+     Velocity: 36.071968
+Rotation: 49
+     Current_mottor: 0.7170428
+     Position: 93.01571
+     Velocity: 22.848736
+     Current_mottor: 0.78312033
+     Position: 94.41092
+     Velocity: 25.373459
+     Current_mottor: 0.87899274
+     Position: 95.83763
+     Velocity: 36.071968
+     Current_mottor: 0.84838873
+     Position: 97.296196
+     Velocity: 29.500324
+Rotation: 49
+     Current_mottor: 0.7170428
+     Position: 93.01571
+     Velocity: 22.848736
+     Current_mottor: 0.78312033
+     Position: 94.41092
+     Velocity: 25.373459
+     Current_mottor: 0.87899274
+     Position: 95.83763
+     Velocity: 36.071968
+     Current_mottor: 0.84838873
+     Position: 97.296196
+     Velocity: 29.500324
+     Current_mottor: 0.9168457
+     Position: 98.75534
+     Velocity: 28.61023
+Rotation: 50
+     Current_mottor: 0.74201703
+     Position: 93.25718
+     Velocity: 22.398222
+Rotation: 50
+     Current_mottor: 0.74201703
+     Position: 93.25718
+     Velocity: 22.398222
+     Current_mottor: 0.7323845
+     Position: 94.68749
+     Velocity: 22.612043
+Rotation: 50
+     Current_mottor: 0.74201703
+     Position: 93.25718
+     Velocity: 22.398222
+     Current_mottor: 0.7323845
+     Position: 94.68749
+     Velocity: 22.612043
+     Current_mottor: 0.837891
+     Position: 96.164894
+     Velocity: 34.856945
+Rotation: 50
+     Current_mottor: 0.74201703
+     Position: 93.25718
+     Velocity: 22.398222
+     Current_mottor: 0.7323845
+     Position: 94.68749
+     Velocity: 22.612043
+     Current_mottor: 0.837891
+     Position: 96.164894
+     Velocity: 34.856945
+     Current_mottor: 0.8572402
+     Position: 97.63485
+     Velocity: 15.646219
+Rotation: 50
+     Current_mottor: 0.74201703
+     Position: 93.25718
+     Velocity: 22.398222
+     Current_mottor: 0.7323845
+     Position: 94.68749
+     Velocity: 22.612043
+     Current_mottor: 0.837891
+     Position: 96.164894
+     Velocity: 34.856945
+     Current_mottor: 0.8572402
+     Position: 97.63485
+     Velocity: 15.646219
+     Current_mottor: 0.9490736
+     Position: 99.06726
+     Velocity: 20.439156

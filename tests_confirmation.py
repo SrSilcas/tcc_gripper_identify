@@ -42,8 +42,8 @@ if __name__ == '__main__':
     rotation = 0
     tuple_response = []
     tuple_bigger_current = []
-    tuple_amount = []
-    tuple_velocity = []
+    tuple_bigger_current_2 = []
+    tuple_amplitude = []
     tuple_media = []
 
     for i in range(1, 51):
@@ -61,17 +61,14 @@ if __name__ == '__main__':
         print(i)
         tuple_response.append(return_[0])
         tuple_bigger_current.append(return_[1])
-        tuple_amount.append(return_[2])
-        tuple_velocity.append(return_[3])
+        tuple_bigger_current_2.append(return_[2])
+        tuple_amplitude.append(return_[3])
         tuple_media.append(return_[4])
 
     robot_singleton.open_tool()
 
-    generate_graphic(tuple_amount, 'amount', tuple_media, 'media')
-    generate_graphic(tuple_bigger_current, 'bigger current', tuple_velocity, 'velocity')
-
-    write_into_txt(results, "confirmation_tests_without")
-
+    generate_graphic(tuple_bigger_current_2, 'amount', tuple_media, 'media')
+    generate_graphic(tuple_bigger_current, 'bigger current', tuple_amplitude, 'velocity')
 
     print("Confirmou ", confirmou)
     print("Não Confirmou ", nao_confirmou)

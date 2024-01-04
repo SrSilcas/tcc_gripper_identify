@@ -30,7 +30,7 @@ def processar_dados(linhas):
 
 def gerar_grafico(biggers, amounts):
     # Gerando gráfico para a variação de Current_motor
-    plt.figure(figsize=(20, 10))
+    plt.figure(figsize=(10, 5))
 
     plt.subplot(1, 2, 1)
     plt.plot(biggers, color='c')
@@ -66,6 +66,3 @@ if __name__ == "__main__":
     print("Resultados:")
     for resultado, valor in results.items():
         print(f"{resultado}: {valor}")
-
-    print("Max and mim Bigger:", max(bigger), min(bigger))
-    print("Max and mim Amount:", max(amount), min(amount))

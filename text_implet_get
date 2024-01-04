@@ -1,300 +1,300 @@
 Rotation: 1
-     True
-     Current_motor: 0.67680573
-     Position: 96.22628
-     Average: 0.31767626849999997
-     Difference: 0.3591294615
+     False
+     Current_motor: 0.5349615
+     Position: 94.320816
+     Average: 0.4986821754545454
+     Difference: 0.03627932454545457
 Rotation: 2
      True
-     Current_motor: 0.71223617
-     Position: 96.9165
-     Average: 0.3435077098095238
-     Difference: 0.36872846019047617
+     Current_motor: 0.5607422
+     Position: 91.29708
+     Average: 0.3731090039999999
+     Difference: 0.18763319600000006
 Rotation: 3
-     True
-     Current_motor: 0.6324714
-     Position: 93.2287
-     Average: 0.31020859944444445
-     Difference: 0.32226280055555556
+     False
+     Current_motor: 0.5873313
+     Position: 95.2825
+     Average: 0.493101225826087
+     Difference: 0.09423007417391299
 Rotation: 4
-     True
-     Current_motor: 0.736384
-     Position: 96.92022
-     Average: 0.36154191190476187
-     Difference: 0.37484208809523817
+     False
+     Current_motor: 0.5559105
+     Position: 94.46637
+     Average: 0.44672472252173906
+     Difference: 0.10918577747826091
 Rotation: 5
      True
-     Current_motor: 0.7202709
-     Position: 96.940796
-     Average: 0.3971897519047619
-     Difference: 0.32308114809523814
+     Current_motor: 0.5551031
+     Position: 91.44926
+     Average: 0.3739608467500001
+     Difference: 0.18114225324999988
 Rotation: 6
-     True
-     Current_motor: 0.70819014
-     Position: 96.10095
-     Average: 0.3803447515
-     Difference: 0.3278453885
+     False
+     Current_motor: 0.5881353
+     Position: 95.34516
+     Average: 0.49376483869565213
+     Difference: 0.0943704613043479
 Rotation: 7
-     True
-     Current_motor: 0.7009296
-     Position: 95.54942
-     Average: 0.32342454832499995
-     Difference: 0.3775050516750001
+     False
+     Current_motor: 0.56557673
+     Position: 94.465324
+     Average: 0.4305301636086956
+     Difference: 0.13504656639130436
 Rotation: 8
-     True
-     Current_motor: 0.79681194
-     Position: 96.8629
-     Average: 0.3198239106666666
-     Difference: 0.4769880293333334
+     False
+     Current_motor: 0.5446343
+     Position: 94.87281
+     Average: 0.464012584347826
+     Difference: 0.08062171565217402
 Rotation: 9
-     True
-     Current_motor: 0.6396993
-     Position: 95.551056
-     Average: 0.3453928425
-     Difference: 0.29430645749999995
+     False
+     Current_motor: 0.51079166
+     Position: 94.3257
+     Average: 0.44923877247826083
+     Difference: 0.06155288752173915
 Rotation: 10
-     True
-     Current_motor: 0.6614624
-     Position: 95.56384
-     Average: 0.32762935484999994
-     Difference: 0.33383304515000006
+     False
+     Current_motor: 0.5768555
+     Position: 95.36016
+     Average: 0.4519771166666667
+     Difference: 0.12487838333333329
 Rotation: 11
-     True
-     Current_motor: 0.73400414
-     Position: 96.98602
-     Average: 0.3533385261904762
-     Difference: 0.38066561380952385
+     False
+     Current_motor: 0.5277124
+     Position: 94.34186
+     Average: 0.4416333101739131
+     Difference: 0.08607908982608686
 Rotation: 12
-     True
-     Current_motor: 0.6203697
-     Position: 94.59693
-     Average: 0.3258746757894737
-     Difference: 0.2944950242105263
+     False
+     Current_motor: 0.55429924
+     Position: 94.899666
+     Average: 0.4595160465217391
+     Difference: 0.09478319347826086
 Rotation: 13
-     True
-     Current_motor: 0.7597429
-     Position: 97.0481
-     Average: 0.3808345461904762
-     Difference: 0.3789083538095238
+     False
+     Current_motor: 0.5406012
+     Position: 94.405685
+     Average: 0.4387584834782608
+     Difference: 0.10184271652173921
 Rotation: 14
-     True
-     Current_motor: 0.76136786
-     Position: 96.046776
-     Average: 0.3191413272222222
-     Difference: 0.4422265327777778
+     False
+     Current_motor: 0.52529854
+     Position: 94.34895
+     Average: 0.44461598247826084
+     Difference: 0.08068255752173914
 Rotation: 15
-     True
-     Current_motor: 0.7170573
-     Position: 96.89394
-     Average: 0.3507184280952381
-     Difference: 0.3663388719047619
+     False
+     Current_motor: 0.5381932
+     Position: 94.43859
+     Average: 0.4024453434782609
+     Difference: 0.13574785652173915
 Rotation: 16
-     True
-     Current_motor: 0.69047713
-     Position: 96.009926
-     Average: 0.37785302600000004
-     Difference: 0.31262410399999996
+     False
+     Current_motor: 0.55268556
+     Position: 95.151596
+     Average: 0.42298213233333337
+     Difference: 0.12970342766666665
 Rotation: 17
-     True
-     Current_motor: 0.7887517
-     Position: 96.84058
-     Average: 0.35857118380952385
-     Difference: 0.4301805161904761
+     False
+     Current_motor: 0.5035426
+     Position: 94.28339
+     Average: 0.4294424639130435
+     Difference: 0.07410013608695643
 Rotation: 18
-     True
-     Current_motor: 0.7283564
-     Position: 96.877785
-     Average: 0.33590146200000004
-     Difference: 0.392454938
+     False
+     Current_motor: 0.5631684
+     Position: 95.1702
+     Average: 0.42670348783333334
+     Difference: 0.13646491216666667
 Rotation: 19
-     True
-     Current_motor: 0.62681955
-     Position: 94.59565
-     Average: 0.31717744578947366
-     Difference: 0.30964210421052635
+     False
+     Current_motor: 0.5148218
+     Position: 94.166664
+     Average: 0.42548390647826084
+     Difference: 0.08933789352173915
 Rotation: 20
-     True
-     Current_motor: 0.66467285
-     Position: 95.563614
-     Average: 0.32698456350000005
-     Difference: 0.33768828649999993
+     False
+     Current_motor: 0.56557673
+     Position: 94.53985
+     Average: 0.4554174591304348
+     Difference: 0.11015927086956517
 Rotation: 21
      False
-     Current_motor: 0.59538627
-     Position: 95.81438
-     Average: 0.3828918052380953
-     Difference: 0.2124944647619047
+     Current_motor: 0.5422119
+     Position: 94.42464
+     Average: 0.46364516573913045
+     Difference: 0.07856673426086952
 Rotation: 22
-     True
-     Current_motor: 0.60666984
-     Position: 94.08551
-     Average: 0.3106485421052632
-     Difference: 0.2960212978947368
+     False
+     Current_motor: 0.5365723
+     Position: 94.40022
+     Average: 0.4416675885652174
+     Difference: 0.09490471143478263
 Rotation: 23
-     True
-     Current_motor: 0.60585934
-     Position: 95.41689
-     Average: 0.29710622849999996
-     Difference: 0.3087531115
+     False
+     Current_motor: 0.52851623
+     Position: 94.33453
+     Average: 0.4084204830434782
+     Difference: 0.12009574695652181
 Rotation: 24
-     True
-     Current_motor: 0.7484658
-     Position: 97.011826
-     Average: 0.339273562
-     Difference: 0.409192238
+     False
+     Current_motor: 0.49870867
+     Position: 94.30768
+     Average: 0.41573395999999996
+     Difference: 0.08297471000000006
 Rotation: 25
-     True
-     Current_motor: 0.79277503
-     Position: 97.02148
-     Average: 0.363515650952381
-     Difference: 0.42925937904761907
+     False
+     Current_motor: 0.5164332
+     Position: 94.3264
+     Average: 0.4328136875652174
+     Difference: 0.08361951243478266
 Rotation: 26
-     True
-     Current_motor: 0.7234868
-     Position: 96.879875
-     Average: 0.35383690631578946
-     Difference: 0.36964989368421053
+     False
+     Current_motor: 0.5615478
+     Position: 94.86083
+     Average: 0.45408194521739137
+     Difference: 0.10746585478260867
 Rotation: 27
-     True
-     Current_motor: 0.7355929
-     Position: 96.98567
-     Average: 0.3914981457142857
-     Difference: 0.3440947542857143
+     False
+     Current_motor: 0.5220728
+     Position: 94.06657
+     Average: 0.398081622826087
+     Difference: 0.123991177173913
 Rotation: 28
-     True
-     Current_motor: 0.7138552
-     Position: 96.983696
-     Average: 0.3787695904761905
-     Difference: 0.3350856095238095
+     False
+     Current_motor: 0.5091803
+     Position: 94.311516
+     Average: 0.42210161086956516
+     Difference: 0.08707868913043487
 Rotation: 29
-     True
-     Current_motor: 0.7170958
-     Position: 96.99567
-     Average: 0.3661385676190476
-     Difference: 0.35095723238095233
+     False
+     Current_motor: 0.52609926
+     Position: 94.40011
+     Average: 0.4121821337826087
+     Difference: 0.11391712621739125
 Rotation: 30
-     True
-     Current_motor: 0.6654805
-     Position: 95.58756
-     Average: 0.342216043
-     Difference: 0.323264457
+     False
+     Current_motor: 0.51884764
+     Position: 94.27152
+     Average: 0.41357023969565215
+     Difference: 0.1052774003043479
 Rotation: 31
-     True
-     Current_motor: 0.6453389
-     Position: 97.0288
-     Average: 0.3401852328571429
-     Difference: 0.30515366714285713
+     False
+     Current_motor: 0.5534918
+     Position: 95.03057
+     Average: 0.45075394826086956
+     Difference: 0.10273785173913041
 Rotation: 32
-     True
-     Current_motor: 0.7476632
-     Position: 97.00439
-     Average: 0.3331968333809524
-     Difference: 0.41446636661904757
+     False
+     Current_motor: 0.5397973
+     Position: 94.456024
+     Average: 0.40879942073913045
+     Difference: 0.1309978792608696
 Rotation: 33
-     True
-     Current_motor: 0.7089848
-     Position: 96.98718
-     Average: 0.34891029476190477
-     Difference: 0.3600745052380952
+     False
+     Current_motor: 0.5236823
+     Position: 94.39894
+     Average: 0.4322459428695652
+     Difference: 0.09143635713043485
 Rotation: 34
-     True
-     Current_motor: 0.6171471
-     Position: 95.82194
-     Average: 0.32752792350000004
-     Difference: 0.2896191764999999
+     False
+     Current_motor: 0.5236841
+     Position: 94.40546
+     Average: 0.41364603391304344
+     Difference: 0.11003806608695654
 Rotation: 35
-     True
-     Current_motor: 0.73476607
-     Position: 97.00125
-     Average: 0.3866083580952381
-     Difference: 0.34815771190476197
+     False
+     Current_motor: 0.54301995
+     Position: 94.404175
+     Average: 0.42907737160869563
+     Difference: 0.1139425783913044
 Rotation: 36
-     True
-     Current_motor: 0.6106981
-     Position: 96.93707
-     Average: 0.33291364663157896
-     Difference: 0.27778445336842106
+     False
+     Current_motor: 0.5228784
+     Position: 94.26525
+     Average: 0.4136803157608696
+     Difference: 0.10919808423913036
 Rotation: 37
-     True
-     Current_motor: 0.70416695
-     Position: 96.95091
-     Average: 0.35774251190476186
-     Difference: 0.3464244380952381
+     False
+     Current_motor: 0.49306703
+     Position: 94.1605
+     Average: 0.3984280824217392
+     Difference: 0.0946389475782608
 Rotation: 38
-     True
-     Current_motor: 0.712244
-     Position: 97.345955
-     Average: 0.36369488
-     Difference: 0.34854912
+     False
+     Current_motor: 0.5252936
+     Position: 94.6911
+     Average: 0.42928039939130436
+     Difference: 0.09601320060869567
 Rotation: 39
-     True
-     Current_motor: 0.77263224
-     Position: 97.00811
-     Average: 0.37446772904761894
-     Difference: 0.39816451095238103
+     False
+     Current_motor: 0.53254944
+     Position: 94.424286
+     Average: 0.40652038752173913
+     Difference: 0.1260290524782609
 Rotation: 40
-     True
-     Current_motor: 0.7460662
-     Position: 96.91882
-     Average: 0.39353234095238093
-     Difference: 0.3525338590476191
+     False
+     Current_motor: 0.5269043
+     Position: 94.12492
+     Average: 0.40993603186956523
+     Difference: 0.11696826813043476
 Rotation: 41
      False
-     Current_motor: 0.6357307
-     Position: 95.541405
-     Average: 0.37573432523809525
-     Difference: 0.25999637476190474
+     Current_motor: 0.56235874
+     Position: 94.50951
+     Average: 0.46112841954545447
+     Difference: 0.1012303204545455
 Rotation: 42
      True
-     Current_motor: 0.7315589
-     Position: 96.98497
-     Average: 0.35093257857142857
-     Difference: 0.38062632142857145
+     Current_motor: 0.5937766
+     Position: 92.786804
+     Average: 0.3602704883095238
+     Difference: 0.2335061116904762
 Rotation: 43
-     True
-     Current_motor: 0.73557836
-     Position: 96.09119
-     Average: 0.363264201
-     Difference: 0.372314159
+     False
+     Current_motor: 0.49548402
+     Position: 94.32105
+     Average: 0.39994445180434784
+     Difference: 0.09553956819565218
 Rotation: 44
-     True
-     Current_motor: 0.7589629
-     Position: 96.843254
-     Average: 0.34873413449999996
-     Difference: 0.41022876550000004
+     False
+     Current_motor: 0.51563066
+     Position: 94.549965
+     Average: 0.4236729547826087
+     Difference: 0.09195770521739133
 Rotation: 45
-     True
-     Current_motor: 0.71468943
-     Position: 97.01206
-     Average: 0.3779762028571429
-     Difference: 0.33671322714285706
+     False
+     Current_motor: 0.5349615
+     Position: 95.02755
+     Average: 0.44045791652173916
+     Difference: 0.09450358347826082
 Rotation: 46
-     True
-     Current_motor: 0.7218768
-     Position: 95.993416
-     Average: 0.3802671940000001
-     Difference: 0.3416096059999999
+     False
+     Current_motor: 0.5309332
+     Position: 94.13446
+     Average: 0.4016095098695652
+     Difference: 0.12932369013043482
 Rotation: 47
      True
-     Current_motor: 0.6670918
-     Position: 96.90871
-     Average: 0.36015399761904754
-     Difference: 0.3069378023809525
+     Current_motor: 0.58974606
+     Position: 92.25353
+     Average: 0.36338032299999995
+     Difference: 0.226365737
 Rotation: 48
-     True
-     Current_motor: 0.6453389
-     Position: 95.57872
-     Average: 0.332525864
-     Difference: 0.31281303600000004
+     False
+     Current_motor: 0.53898984
+     Position: 95.11032
+     Average: 0.4417861397391304
+     Difference: 0.09720370026086966
 Rotation: 49
-     True
-     Current_motor: 0.773448
-     Position: 96.84907
-     Average: 0.3318073731428571
-     Difference: 0.44164062685714295
+     False
+     Current_motor: 0.5317383
+     Position: 94.240486
+     Average: 0.39693414469565225
+     Difference: 0.13480415530434775
 Rotation: 50
-     True
-     Current_motor: 0.7251196
-     Position: 96.98649
-     Average: 0.35029873380952387
-     Difference: 0.3748208661904761
+     False
+     Current_motor: 0.5277124
+     Position: 94.082375
+     Average: 0.40281665186956517
+     Difference: 0.1248957481304348
