@@ -151,16 +151,16 @@ class Robot:
         return finished
 
     def __increment(self, another_way: bool = False) -> float:
-        INCREMENT = (1.3, 1.5, 2, 1.2)
+        increment = (1.3, 1.5, 2, 1.2)
         position = float(self.attribute_from_gripper()["position"])
         if another_way:
-            return (position + INCREMENT[3]) / 100
+            return (position + increment[3]) / 100
         elif position < 70:
-            return (position + INCREMENT[2]) / 100
+            return (position + increment[2]) / 100
         elif position < 85:
-            return (position + INCREMENT[1]) / 100
+            return (position + increment[1]) / 100
         else:
-            return (position + INCREMENT[0]) / 100
+            return (position + increment[0]) / 100
 
     def close_tool(self) -> tuple:
         """
@@ -245,7 +245,7 @@ class Robot:
                 average = currents / loops
                 loops += 1
             else:
-                print("atipical current")
+                print("atypical current")
 
             if loops > 1:
                 if average + max_variation < current:
@@ -376,11 +376,11 @@ class Robot:
     def attribute_from_gripper(self):
         variable = self.base_cyclic.RefreshFeedback().__str__().split()
         position = variable.index("gripper_feedback")
-        informations_gripper = {"position": variable[position + 7],
-                                "velocity": variable[position + 9],
-                                "current_motor": variable[position + 11]}
+        information_gripper = {"position": variable[position + 7],
+                               "velocity": variable[position + 9],
+                               "current_motor": variable[position + 11]}
 
-        return informations_gripper
+        return information_gripper
 
 
 """
