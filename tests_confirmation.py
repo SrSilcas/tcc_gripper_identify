@@ -12,14 +12,14 @@ def generate_graphic(tuple_1: list, name_tuple1: str, tuple_2: list, name_tuple2
     plt.title(f'Variação de {name_tuple1}')
     plt.xlabel('Rotação')
     plt.ylabel(name_tuple1)
-    plt.ylim(min(tuple_1), max(tuple_1))
+    plt.ylim(min(tuple_1)-0.08, max(tuple_1)+0.08)
 
     plt.subplot(1, 2, 2)
     plt.plot(tuple_2, color='c')
     plt.title(f'Variação de {name_tuple2}')
     plt.xlabel('Rotação')
     plt.ylabel(name_tuple2)
-    plt.ylim(min(tuple_2), max(tuple_2))
+    plt.ylim(min(tuple_2)-0.08, max(tuple_2)+0.08)
 
     plt.tight_layout()
     plt.show()
@@ -45,9 +45,9 @@ if __name__ == '__main__':
     tuple_bigger_current_2 = []
     tuple_amplitude = []
     tuple_media = []
-
+    list_amount = []
+    list_difference_b = []
     for i in range(1, 51):
-
         return_ = robot_singleton.confirmation_gripper()
         rotation += 1
 
@@ -59,16 +59,28 @@ if __name__ == '__main__':
             nao_confirmou += 1
 
         print(i)
+
         tuple_response.append(return_[0])
+
         tuple_bigger_current.append(return_[1])
         tuple_bigger_current_2.append(return_[2])
+
         tuple_amplitude.append(return_[3])
         tuple_media.append(return_[4])
 
+        list_amount.append(return_[5])
+        list_difference_b.append(return_[6])
+
+        result = (f'Rotation: {i}\n  Amplitude: {return_[3]}\n  Difference B: {return_[6]}\n  '
+                  f'Bigger Current: {return_[1]}\n  Bigger Current 2: {return_[2]}\n  Amount{return_[5]}\n  '
+                  f'Media: {return_[4]}')
+
+        results += result
     robot_singleton.open_tool()
 
-    generate_graphic(tuple_bigger_current_2, 'amount', tuple_media, 'media')
-    generate_graphic(tuple_bigger_current, 'bigger current', tuple_amplitude, 'velocity')
+    generate_graphic(tuple_amplitude, 'amplitude', tuple_media, 'media')
+    generate_graphic(tuple_bigger_current, 'bigger current', tuple_bigger_current_2, 'bigger current 2')
+    generate_graphic(list_amount, 'amount', list_difference_b, 'difference B')
 
     print("Confirmou ", confirmou)
     print("Não Confirmou ", nao_confirmou)

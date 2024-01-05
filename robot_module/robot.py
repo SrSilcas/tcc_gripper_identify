@@ -162,7 +162,7 @@ class Robot:
         else:
             return (position + increment[0]) / 100
 
-    def close_tool(self) -> tuple:
+    def close_tool(self) -> bool:
         """
         This function close the gripper and try detected object
         Returns:
@@ -172,13 +172,7 @@ class Robot:
         average = 0
         loops = 1
         currents = 0
-        first_variation = 0.27
-        second_variation = 0.27
-        current = 0
-        first_current = 0
-        second_current = 0
-        first_position = 0
-        second_position = 0
+        variation = 0.27
         while not object_detected and float(self.attribute_from_gripper()["position"]) < 94.3:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -196,28 +190,17 @@ class Robot:
                 print("atypical current")
 
             if loops > 1:
-                if first_variation <= current - average:
-                    first_position = float(self.attribute_from_gripper()["position"])
-                    first_current = current
+                if variation <= current - average:
                     finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
                     current = float(self.attribute_from_gripper()["current_motor"])
-                    if second_variation <= current - average:
-                        second_position = float(self.attribute_from_gripper()["position"])
-                        second_current = current
+                    if variation <= current - average:
                         object_detected = True
                         finger.value = self.__increment(another_way=True)
                         self.base.SendGripperCommand(gripper_command)
                         self.final_position = float(self.attribute_from_gripper()["position"]) / 100
 
-        # print(loops)
-        # print(self.attribute_from_gripper()["position"])
-        # print(current)
-        # print(second_current)
-
-        difference = current - average
-
-        return object_detected, first_current, second_current, first_position, second_position, average, difference,
+        return object_detected
 
     def close_destruction(self) -> list:
         """
@@ -312,20 +295,20 @@ class Robot:
             media = amount / rotations
         sleep(0.16)
 
+        amplitude_bigger = bigger_current - bigger_current_2
+
         amplitude = bigger_current - less_current
         self.open_tool(self.final_position)
 
-        return object_continuous, bigger_current, bigger_current_2, amplitude, media
+        return object_continuous, bigger_current, bigger_current_2, amplitude, media, amount, amplitude_bigger
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
         Connect api with the robot,
         using the ethernet connection ip as default connection
         """
-        # Create connection to the device and get the router
         self.device = robot_connection.RobotConnection.create_tcp_connection(connection_ip)
         self.router = self.device.connect()
-        # Create required services
         self.base = BaseClient(self.router)
         self.base_cyclic = BaseCyclicClient(self.router)
         self.gripper = GripperCyclicClient(self.router)

@@ -49,7 +49,7 @@ def generate_graph(list_1: list, name_list_1: str, list_2: list, name_list_2: st
     plt.title(f'Variation of {name_list_1}')
     plt.xlabel('Rotation')
     plt.ylabel(name_list_1)
-    plt.ylim((min(list_1) - 0.2), (max(list_1) + 0.2)) # Get 0.3, 0.8 - Not
+    plt.ylim((min(list_1) - 0.05), (max(list_1) + 0.05)) # Get 0.3, 0.8 - Not
 
     # Gerando gráfico para a variação de Posição
     plt.subplot(1, 2, 2)
@@ -57,7 +57,7 @@ def generate_graph(list_1: list, name_list_1: str, list_2: list, name_list_2: st
     plt.title(f'Variation of {name_list_2}')
     plt.xlabel('Rotation')
     plt.ylabel(name_list_2)
-    plt.ylim((min(list_2)-0.2), max(list_2)+0.2) # Get 91.5, 99.5 - Not
+    plt.ylim((min(list_2)-0.05), max(list_2)+0.05) # Get 91.5, 99.5 - Not
 
     # Exibindo os gráficos
     plt.tight_layout()
@@ -65,7 +65,7 @@ def generate_graph(list_1: list, name_list_1: str, list_2: list, name_list_2: st
 
 
 if __name__ == "__main__":
-    name_archive = 'text_implet_not'
+    name_archive = 'test_day_05_01_2024/text_implet_get'
 
     linhas = read_archive(name_archive)
     first_cu, second_cu, first_po, second_po, results, average, difference = prepossessing_datas(linhas)
