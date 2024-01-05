@@ -28,7 +28,7 @@ def prepossessing_datas(lines) -> tuple[
             first_current.append(float(line.split(':')[-1].strip()))
         elif 'Second Current' in line:
             second_current.append(float(line.split(':')[-1].strip()))
-        elif 'First Position' in line:
+        elif 'First position' in line:
             first_positions.append(float(line.split(':')[-1].strip()))
         elif 'Second Position' in line:
             second_positions.append(float(line.split(':')[-1].strip()))
@@ -49,7 +49,7 @@ def generate_graph(list_1: list, name_list_1: str, list_2: list, name_list_2: st
     plt.title(f'Variation of {name_list_1}')
     plt.xlabel('Rotation')
     plt.ylabel(name_list_1)
-    plt.ylim((min(list_1) - 0.8), (max(list_1) + 0.8)) # Get 0.3, 0.8 - Not
+    plt.ylim((min(list_1) - 0.2), (max(list_1) + 0.2)) # Get 0.3, 0.8 - Not
 
     # Gerando gráfico para a variação de Posição
     plt.subplot(1, 2, 2)
@@ -57,7 +57,7 @@ def generate_graph(list_1: list, name_list_1: str, list_2: list, name_list_2: st
     plt.title(f'Variation of {name_list_2}')
     plt.xlabel('Rotation')
     plt.ylabel(name_list_2)
-    plt.ylim((min(list_2)-0.8), max(list_2)+0.8) # Get 91.5, 99.5 - Not
+    plt.ylim((min(list_2)-0.2), max(list_2)+0.2) # Get 91.5, 99.5 - Not
 
     # Exibindo os gráficos
     plt.tight_layout()

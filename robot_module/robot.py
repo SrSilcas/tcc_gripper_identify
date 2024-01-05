@@ -29,7 +29,6 @@ class Robot:
 
     @staticmethod
     def check_for_end_or_abort(e):
-        # TODO identify right error
         """
         Return a closure checking for END or ABORT notifications
 
@@ -180,7 +179,7 @@ class Robot:
         second_current = 0
         first_position = 0
         second_position = 0
-        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94:
+        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94.3:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -194,7 +193,7 @@ class Robot:
                 average = currents / loops
                 loops += 1
             else:
-                print("atipical current")
+                print("atypical current")
 
             if loops > 1:
                 if first_variation <= current - average:
@@ -212,7 +211,7 @@ class Robot:
                         self.final_position = float(self.attribute_from_gripper()["position"]) / 100
 
         # print(loops)
-        # print(self.atribute_from_gripper()["position"])
+        # print(self.attribute_from_gripper()["position"])
         # print(current)
         # print(second_current)
 
