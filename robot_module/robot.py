@@ -151,7 +151,7 @@ class Robot:
         return finished
 
     def __increment(self, another_way: bool = False) -> float:
-        increment = (1.3, 1.5, 2, 1.2)
+        increment = (1.3, 1.5, 2, 1.3)
         position = float(self.attribute_from_gripper()["position"])
         if another_way:
             return (position + increment[3]) / 100
@@ -173,7 +173,7 @@ class Robot:
         loops = 1
         currents = 0
         variation = 0.27
-        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94.3:
+        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94.5:
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
             gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -199,6 +199,46 @@ class Robot:
                         finger.value = self.__increment(another_way=True)
                         self.base.SendGripperCommand(gripper_command)
                         self.final_position = float(self.attribute_from_gripper()["position"]) / 100
+
+        return object_detected
+
+    def new_close_tool(self) -> bool:
+        """
+        This function close the gripper and try detected object
+        Returns:
+        (bool): returns whether an object was detected or not detected
+        """
+        object_detected = False
+        loops = 1
+        currents = 0
+        variation = 0.27
+        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94.5:
+            average = 0
+            gripper_command = Base_pb2.GripperCommand()
+            finger = gripper_command.gripper.finger.add()
+            gripper_command.mode = Base_pb2.GRIPPER_POSITION
+            finger.finger_identifier = 1
+            finger.value = self.__increment()
+            self.base.SendGripperCommand(gripper_command)
+
+            current = float(self.attribute_from_gripper()["current_motor"])
+            if 4 > current:
+                average = currents / loops
+            else:
+                print("atypical current")
+
+            if loops > 1 and average is not 0:
+                if variation <= current - average:
+                    finger.value = self.__increment()
+                    self.base.SendGripperCommand(gripper_command)
+                    current = float(self.attribute_from_gripper()["current_motor"])
+                    if variation <= current - average:
+                        object_detected = True
+                        finger.value = self.__increment(another_way=True)
+                        self.base.SendGripperCommand(gripper_command)
+                        self.final_position = float(self.attribute_from_gripper()["position"]) / 100
+                currents += current
+                loops += 1
 
         return object_detected
 
