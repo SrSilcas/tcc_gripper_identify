@@ -41,7 +41,7 @@ if __name__ == '__main__':
     first_difference_list = []
 
     for i in range(1, 51):
-        list_ = robot_singleton.new_close_tool()
+        list_ = robot_singleton.close_tool_test()
         time.sleep(0.3)
         pegou_ = list_[0]
         first_current = list_[3]
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         results += result
         print(i)
 
-    write_into_txt(results, "text_implet_get_hypocaina")
+    write_into_txt(results, "text_implet_tygeciclina")
     generate_graph(first_current_list, 'First Current', second_current_list, 'Second Current')
     generate_graph(first_position_list, 'First Position', second_position_list, 'Second Position')
     generate_graph(first_difference_list, 'First Current Difference',

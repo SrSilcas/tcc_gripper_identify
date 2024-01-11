@@ -1,0 +1,350 @@
+Rotation: 1
+  Amplitude: 0.509180244
+  Difference B: 0.509180244
+  Bigger Current: 0.58571833
+  Bigger Current 2: 0.076538086
+  Amount0.662256416
+  Media: 0.331128208
+Rotation: 2
+  Amplitude: 0.525293547
+  Difference B: 0.16193906999999996
+  Bigger Current: 0.5599371
+  Bigger Current 2: 0.39799803
+  Amount0.992578683
+  Media: 0.33085956099999997
+Rotation: 3
+  Amplitude: 0.5389869500000001
+  Difference B: 0.19094370000000005
+  Bigger Current: 0.6123068
+  Bigger Current 2: 0.4213631
+  Amount1.10698975
+  Media: 0.36899658333333335
+Rotation: 4
+  Amplitude: 0.56960151
+  Difference B: 0.19334259000000004
+  Bigger Current: 0.66386765
+  Bigger Current 2: 0.47052506
+  Amount1.22865885
+  Media: 0.40955294999999997
+Rotation: 5
+  Amplitude: 0.40605193
+  Difference B: 0.14179345999999998
+  Bigger Current: 0.52529293
+  Bigger Current 2: 0.38349947
+  Amount1.0280334
+  Media: 0.3426778
+Rotation: 6
+  Amplitude: 0.39155338
+  Difference B: 0.14018619
+  Bigger Current: 0.50676334
+  Bigger Current 2: 0.36657715
+  Amount0.98855045
+  Media: 0.32951681666666666
+Rotation: 7
+  Amplitude: 0.498702805
+  Difference B: 0.15225230000000006
+  Bigger Current: 0.5986084
+  Bigger Current 2: 0.4463561
+  Amount1.144870095
+  Media: 0.381623365
+Rotation: 8
+  Amplitude: 0.63888876
+  Difference B: 0.36817500000000003
+  Bigger Current: 0.7532959
+  Bigger Current 2: 0.3851209
+  Amount1.25282394
+  Media: 0.41760798000000005
+Rotation: 9
+  Amplitude: 0.43424949
+  Difference B: 0.13694974000000004
+  Bigger Current: 0.5140143
+  Bigger Current 2: 0.37706456
+  Amount0.97084367
+  Media: 0.32361455666666666
+Rotation: 10
+  Amplitude: 0.40202391000000004
+  Difference B: 0.09666056
+  Bigger Current: 0.50676334
+  Bigger Current 2: 0.41010278
+  Amount1.0216055499999999
+  Media: 0.34053518333333327
+Rotation: 11
+  Amplitude: 0.63486465
+  Difference B: 0.34401008
+  Bigger Current: 0.76619035
+  Bigger Current 2: 0.42218027
+  Amount1.31969632
+  Media: 0.4398987733333333
+Rotation: 12
+  Amplitude: 0.65983883
+  Difference B: 0.3561027
+  Bigger Current: 0.76699215
+  Bigger Current 2: 0.41088945
+  Amount1.28503492
+  Media: 0.4283449733333333
+Rotation: 13
+  Amplitude: 0.6405006400000001
+  Difference B: 0.28117652000000004
+  Bigger Current: 0.758936
+  Bigger Current 2: 0.47775948
+  Amount1.3551308400000002
+  Media: 0.4517102800000001
+Rotation: 14
+  Amplitude: 0.512407555
+  Difference B: 0.14662190999999997
+  Bigger Current: 0.61231315
+  Bigger Current 2: 0.46569124
+  Amount1.1779099849999999
+  Media: 0.3926366616666666
+Rotation: 15
+  Amplitude: 0.546241655
+  Difference B: 0.20300582
+  Bigger Current: 0.65259236
+  Bigger Current 2: 0.44958654
+  Amount1.2085296049999998
+  Media: 0.4028432016666666
+Rotation: 16
+  Amplitude: 0.5164220799999999
+  Difference B: 0.16595672999999994
+  Bigger Current: 0.65983933
+  Bigger Current 2: 0.4938826
+  Amount1.2971391799999998
+  Media: 0.43237972666666663
+Rotation: 17
+  Amplitude: 0.49870817
+  Difference B: 0.17321331
+  Bigger Current: 0.61794645
+  Bigger Current 2: 0.44473314
+  Amount1.18191787
+  Media: 0.3939726233333333
+Rotation: 18
+  Amplitude: 0.52448389
+  Difference B: 0.15386444999999999
+  Bigger Current: 0.6074712
+  Bigger Current 2: 0.45360675
+  Amount1.14406526
+  Media: 0.3813550866666667
+Rotation: 19
+  Amplitude: 0.556711156
+  Difference B: 0.27392286
+  Bigger Current: 0.65903366
+  Bigger Current 2: 0.3851108
+  Amount1.146466964
+  Media: 0.3821556546666667
+Rotation: 20
+  Amplitude: 0.71461201
+  Difference B: 0.41088828
+  Bigger Current: 0.81936073
+  Bigger Current 2: 0.40847245
+  Amount1.3325819
+  Media: 0.4441939666666667
+Rotation: 21
+  Amplitude: 0.33999068000000005
+  Difference B: 0.33999068000000005
+  Bigger Current: 0.754102
+  Bigger Current 2: 0.41411132
+  Amount1.16821332
+  Media: 0.58410666
+Rotation: 22
+  Amplitude: 0.57443486
+  Difference B: 0.24813753
+  Bigger Current: 0.6638672
+  Bigger Current 2: 0.41572967
+  Amount1.1690292100000002
+  Media: 0.38967640333333337
+Rotation: 23
+  Amplitude: 0.634861805
+  Difference B: 0.31904395999999996
+  Bigger Current: 0.7347674
+  Bigger Current 2: 0.41572344
+  Amount1.2503964349999999
+  Media: 0.4167988116666666
+Rotation: 24
+  Amplitude: 0.66306822
+  Difference B: 0.36255475000000004
+  Bigger Current: 0.7710272
+  Bigger Current 2: 0.40847245
+  Amount1.2874586300000002
+  Media: 0.42915287666666674
+Rotation: 25
+  Amplitude: 0.57685605
+  Difference B: 0.24250227999999996
+  Bigger Current: 0.6638715
+  Bigger Current 2: 0.42136922
+  Amount1.1722561699999998
+  Media: 0.3907520566666666
+Rotation: 26
+  Amplitude: 0.50190633
+  Difference B: 0.14663505
+  Bigger Current: 0.6090869
+  Bigger Current 2: 0.46245185
+  Amount1.17871932
+  Media: 0.39290643999999997
+Rotation: 27
+  Amplitude: 0.52126344
+  Difference B: 0.13209842
+  Bigger Current: 0.6203634
+  Bigger Current 2: 0.48826498
+  Amount1.20772834
+  Media: 0.4025761133333334
+Rotation: 28
+  Amplitude: 0.51642571
+  Difference B: 0.1812727
+  Bigger Current: 0.6550093
+  Bigger Current 2: 0.4737366
+  Amount1.26732949
+  Media: 0.42244316333333337
+Rotation: 29
+  Amplitude: 0.5172356050000001
+  Difference B: 0.21913015000000002
+  Bigger Current: 0.63728225
+  Bigger Current 2: 0.4181521
+  Amount1.175480995
+  Media: 0.39182699833333334
+Rotation: 30
+  Amplitude: 0.46405307
+  Difference B: 0.13454364000000002
+  Bigger Current: 0.5945806
+  Bigger Current 2: 0.46003696
+  Amount1.18514509
+  Media: 0.3950483633333333
+Rotation: 31
+  Amplitude: 0.5260898599999999
+  Difference B: 0.21025312999999995
+  Bigger Current: 0.6743408
+  Bigger Current 2: 0.46408767
+  Amount1.28667941
+  Media: 0.4288931366666667
+Rotation: 32
+  Amplitude: 0.48339775999999995
+  Difference B: 0.12645769999999995
+  Bigger Current: 0.5978049
+  Bigger Current 2: 0.4713472
+  Amount1.1835592400000001
+  Media: 0.3945197466666667
+Rotation: 33
+  Amplitude: 0.505151
+  Difference B: 0.22316784000000006
+  Bigger Current: 0.6429219
+  Bigger Current 2: 0.41975406
+  Amount1.20044686
+  Media: 0.40014895333333333
+Rotation: 34
+  Amplitude: 0.5341539399999999
+  Difference B: 0.20302257
+  Bigger Current: 0.63003135
+  Bigger Current 2: 0.42700878
+  Amount1.1529175399999998
+  Media: 0.3843058466666666
+Rotation: 35
+  Amplitude: 0.51401056
+  Difference B: 0.18852468000000006
+  Bigger Current: 0.6171387
+  Bigger Current 2: 0.42861402
+  Amount1.14888086
+  Media: 0.38296028666666665
+Rotation: 36
+  Amplitude: 0.48741944000000004
+  Difference B: 0.13051126000000002
+  Bigger Current: 0.5937793
+  Bigger Current 2: 0.46326804
+  Amount1.1634072
+  Media: 0.3878024
+Rotation: 37
+  Amplitude: 0.57363477
+  Difference B: 0.2440986
+  Bigger Current: 0.6582295
+  Bigger Current 2: 0.4141309
+  Amount1.15695513
+  Media: 0.38565171000000004
+Rotation: 38
+  Amplitude: 0.5567143600000001
+  Difference B: 0.21590008000000005
+  Bigger Current: 0.6566167
+  Bigger Current 2: 0.44071662
+  Amount1.19723566
+  Media: 0.39907855333333336
+Rotation: 39
+  Amplitude: 0.51724483
+  Difference B: 0.12085548000000002
+  Bigger Current: 0.61150753
+  Bigger Current 2: 0.49065205
+  Amount1.1964222800000002
+  Media: 0.39880742666666674
+Rotation: 40
+  Amplitude: 0.38753014999999996
+  Difference B: 0.15549888999999995
+  Bigger Current: 0.50837976
+  Bigger Current 2: 0.35288087
+  Amount0.9821102399999999
+  Media: 0.32737007999999995
+Rotation: 41
+  Amplitude: 0.42135035000000004
+  Difference B: 0.15790904000000006
+  Bigger Current: 0.51079357
+  Bigger Current 2: 0.35288453
+  Amount0.9531213199999999
+  Media: 0.3177071066666666
+Rotation: 42
+  Amplitude: 0.38591029000000004
+  Difference B: 0.07734296000000007
+  Bigger Current: 0.50273436
+  Bigger Current 2: 0.4253914
+  Amount1.04494983
+  Media: 0.34831660999999997
+Rotation: 43
+  Amplitude: 0.6711153400000001
+  Difference B: 0.31496948
+  Bigger Current: 0.7702153
+  Bigger Current 2: 0.45524582
+  Amount1.32456108
+  Media: 0.44152036
+Rotation: 44
+  Amplitude: 0.6888443599999999
+  Difference B: 0.41087716999999996
+  Bigger Current: 0.80808264
+  Bigger Current 2: 0.39720547
+  Amount1.32452639
+  Media: 0.44150879666666665
+Rotation: 45
+  Amplitude: 0.6678958500000001
+  Difference B: 0.32549137
+  Bigger Current: 0.76135635
+  Bigger Current 2: 0.43586498
+  Amount1.29068183
+  Media: 0.43022727666666666
+Rotation: 46
+  Amplitude: 0.52448933
+  Difference B: 0.14497837999999996
+  Bigger Current: 0.626003
+  Bigger Current 2: 0.48102462
+  Amount1.2085412899999999
+  Media: 0.4028470966666666
+Rotation: 47
+  Amplitude: 0.52771123
+  Difference B: 0.16031429999999997
+  Bigger Current: 0.622783
+  Bigger Current 2: 0.4624687
+  Amount1.1803234699999998
+  Media: 0.3934411566666666
+Rotation: 48
+  Amplitude: 0.548654355
+  Difference B: 0.2312188
+  Bigger Current: 0.6614502
+  Bigger Current 2: 0.4302314
+  Amount1.204477445
+  Media: 0.4014924816666667
+Rotation: 49
+  Amplitude: 0.50997565
+  Difference B: 0.23765814000000002
+  Bigger Current: 0.6437256
+  Bigger Current 2: 0.40606746
+  Amount1.18354301
+  Media: 0.39451433666666663
+Rotation: 50
+  Amplitude: 0.48984583000000004
+  Difference B: 0.14741406000000007
+  Bigger Current: 0.62358606
+  Bigger Current 2: 0.476172
+  Amount1.23349829
+  Media: 0.41116609666666665

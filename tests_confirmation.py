@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     time.sleep(0.5)
 
-    print(robot_singleton.close_tool())
+    print(robot_singleton.close_tool_test())
     input("Press any key to start test without or if medicine")
 
     rotation = 0
@@ -73,12 +73,12 @@ if __name__ == '__main__':
 
         result = (f'Rotation: {i}\n  Amplitude: {return_[3]}\n  Difference B: {return_[6]}\n  '
                   f'Bigger Current: {return_[1]}\n  Bigger Current 2: {return_[2]}\n  Amount{return_[5]}\n  '
-                  f'Media: {return_[4]}')
+                  f'Media: {return_[4]}\n')
 
         results += result
     robot_singleton.open_tool()
 
-    write_into_txt(results, 'confirmation_get')
+    write_into_txt(results, 'confirmation_not')
 
     generate_graphic(tuple_amplitude, 'amplitude', tuple_media, 'media')
     generate_graphic(tuple_bigger_current, 'bigger current', tuple_bigger_current_2, 'bigger current 2')
