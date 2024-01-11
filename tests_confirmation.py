@@ -78,9 +78,11 @@ if __name__ == '__main__':
         results += result
     robot_singleton.open_tool()
 
+    write_into_txt(results, 'confirmation_get')
+
     generate_graphic(tuple_amplitude, 'amplitude', tuple_media, 'media')
     generate_graphic(tuple_bigger_current, 'bigger current', tuple_bigger_current_2, 'bigger current 2')
-    generate_graphic(list_amount, 'amount', list_difference_b, 'difference B')
+    generate_graphic(list_amount, 'amount', list_difference_b, 'first_difference B')
 
     print("Confirmou ", confirmou)
     print("Não Confirmou ", nao_confirmou)

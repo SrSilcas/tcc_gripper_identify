@@ -1,5 +1,7 @@
 import threading
 from time import sleep
+from typing import Tuple
+
 import robot_module.utils as robot_connection
 from kortex_api.autogen.messages import Base_pb2
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
@@ -202,17 +204,21 @@ class Robot:
 
         return object_detected
 
-    def new_close_tool(self) -> bool:
+    def new_close_tool(self) -> tuple[bool, float, float, float, float, float, float]:
         """
         This function close the gripper and try detected object
         Returns:
         (bool): returns whether an object was detected or not detected
         """
         object_detected = False
-        loops = 1
+        loops = 0
         currents = 0
-        variation = 0.27
-        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94.5:
+        variation = 0.29
+        position_one = 0
+        position_two = 0
+        first_current = 0
+        second_current = 0
+        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94:
             average = 0
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -221,26 +227,32 @@ class Robot:
             finger.value = self.__increment()
             self.base.SendGripperCommand(gripper_command)
 
-            current = float(self.attribute_from_gripper()["current_motor"])
-            if 4 > current:
+            first_current = float(self.attribute_from_gripper()["current_motor"])
+            if 4 > first_current:
+                loops += 1
                 average = currents / loops
             else:
                 print("atypical current")
 
             if loops > 1 and average is not 0:
-                if variation <= current - average:
+                print('First Variation', first_current - average, ' First Current:', first_current)
+                if variation <= first_current - average and first_current > 0.6:
+                    position_one = float(self.attribute_from_gripper()['position'])
                     finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
-                    current = float(self.attribute_from_gripper()["current_motor"])
-                    if variation <= current - average:
+                    second_current = float(self.attribute_from_gripper()["current_motor"])
+                    print('Second Variation', second_current - average, ' Second Current:',second_current)
+
+                    if variation <= second_current - average and second_current > 0.6:
                         object_detected = True
+                        position_two = float(self.attribute_from_gripper()['position'])
                         finger.value = self.__increment(another_way=True)
                         self.base.SendGripperCommand(gripper_command)
                         self.final_position = float(self.attribute_from_gripper()["position"]) / 100
-                currents += current
-                loops += 1
-
-        return object_detected
+                currents += first_current
+        print(loops)
+        return (object_detected, position_one, position_two, first_current, second_current, (second_current - average),
+                (first_current - average))
 
     def close_destruction(self) -> list:
         """
