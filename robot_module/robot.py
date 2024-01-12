@@ -322,7 +322,6 @@ class Robot:
         bigger_current = 0
         amount = 0
         rotations = 0
-        media = 0
         bigger_current_2 = 0
         less_current = 2
 
@@ -341,19 +340,16 @@ class Robot:
                 amount += current
                 rotations += 1
 
-        if amount < 1.75 and bigger_current < 0.635:
-            object_continuous = False
+        extend = bigger_current - bigger_current_2
+        amplitude = bigger_current - less_current
 
-        if rotations > 0:
-            media = amount / rotations
+        if extend > 0.22 and bigger_current < 0.655:
+            object_continuous = False
         sleep(0.16)
 
-        amplitude_bigger = bigger_current - bigger_current_2
-
-        amplitude = bigger_current - less_current
         self.open_tool(self.final_position)
 
-        return object_continuous, bigger_current, bigger_current_2, amplitude, media, amount, amplitude_bigger
+        return object_continuous, bigger_current, bigger_current_2, amplitude, less_current, amount, extend
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
