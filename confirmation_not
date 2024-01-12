@@ -1,0 +1,350 @@
+Rotation: 1
+  Amplitude: 0.29002924
+  Difference B: 0.29002924
+  Bigger Current: 0.41250077
+  Bigger Current 2: 0.12247153
+  Amount: 0.5349723
+  Less Current: 0.12247153
+Rotation: 2
+  Amplitude: 0.18771
+  Difference B: 0.18771
+  Bigger Current: 0.4680915
+  Bigger Current 2: 0.2803815
+  Amount: 0.7484729999999999
+  Less Current: 0.2803815
+Rotation: 3
+  Amplitude: 0.38752746
+  Difference B: 0.09829010999999999
+  Bigger Current: 0.42539367
+  Bigger Current 2: 0.32710356
+  Amount: 0.79036344
+  Less Current: 0.03786621
+Rotation: 4
+  Amplitude: 0.342388686
+  Difference B: 0.39236584
+  Bigger Current: 0.39236584
+  Bigger Current 2: 0
+  Amount: 0.775086164
+  Less Current: 0.049977154
+Rotation: 5
+  Amplitude: 0.45038651
+  Difference B: 0.18770993000000002
+  Bigger Current: 0.5760701
+  Bigger Current 2: 0.38836017
+  Amount: 1.0901138600000002
+  Less Current: 0.12568359
+Rotation: 6
+  Amplitude: 0.21269202000000004
+  Difference B: 0.14018294000000003
+  Bigger Current: 0.54785216
+  Bigger Current 2: 0.40766922
+  Amount: 1.2906815200000001
+  Less Current: 0.33516014
+Rotation: 7
+  Amplitude: 0.49792385000000006
+  Difference B: 0.23120684000000002
+  Bigger Current: 0.57285494
+  Bigger Current 2: 0.3416481
+  Amount: 0.98943413
+  Less Current: 0.07493109
+Rotation: 8
+  Amplitude: 0.44794695999999995
+  Difference B: 0.18449679999999996
+  Bigger Current: 0.5623541
+  Bigger Current 2: 0.3778573
+  Amount: 1.0546185399999999
+  Less Current: 0.11440714
+Rotation: 9
+  Amplitude: 0.438283804
+  Difference B: 0.11435447000000004
+  Bigger Current: 0.51079357
+  Bigger Current 2: 0.3964391
+  Amount: 0.979742436
+  Less Current: 0.072509766
+Rotation: 10
+  Amplitude: 0.455988505
+  Difference B: 0.12080223999999995
+  Bigger Current: 0.512408
+  Bigger Current 2: 0.39160576
+  Amount: 0.960433255
+  Less Current: 0.056419495
+Rotation: 11
+  Amplitude: 0.5244792429999999
+  Difference B: 0.18287215999999995
+  Bigger Current: 0.5647705
+  Bigger Current 2: 0.38189834
+  Amount: 0.986960097
+  Less Current: 0.040291257
+Rotation: 12
+  Amplitude: 0.46405732599999994
+  Difference B: 0.16596936999999995
+  Bigger Current: 0.5059596
+  Bigger Current 2: 0.33999023
+  Amount: 0.887852104
+  Less Current: 0.041902274
+Rotation: 13
+  Amplitude: 0.494678317
+  Difference B: 0.1554799
+  Bigger Current: 0.5309332
+  Bigger Current 2: 0.3754533
+  Amount: 0.942641383
+  Less Current: 0.036254883
+Rotation: 14
+  Amplitude: 0.45198019
+  Difference B: 0.13535058
+  Bigger Current: 0.49145773
+  Bigger Current 2: 0.35610715
+  Amount: 0.88704242
+  Less Current: 0.03947754
+Rotation: 15
+  Amplitude: 0.384295373
+  Difference B: 0.06767226000000004
+  Bigger Current: 0.4350586
+  Bigger Current 2: 0.36738634
+  Amount: 0.853208167
+  Less Current: 0.050763227
+Rotation: 16
+  Amplitude: 0.44070306400000003
+  Difference B: 0.18279341000000005
+  Bigger Current: 0.49871647
+  Bigger Current 2: 0.31592306
+  Amount: 0.8726529359999999
+  Less Current: 0.058013406
+Rotation: 17
+  Amplitude: 0.35450681
+  Difference B: 0.22801524
+  Bigger Current: 0.439911
+  Bigger Current 2: 0.21189576
+  Amount: 0.7372109499999999
+  Less Current: 0.08540419
+Rotation: 18
+  Amplitude: 0.331968087
+  Difference B: 0.057984250000000015
+  Bigger Current: 0.37064835
+  Bigger Current 2: 0.3126641
+  Amount: 0.721992713
+  Less Current: 0.038680263
+Rotation: 19
+  Amplitude: 0.406119376
+  Difference B: 0.07096744999999999
+  Bigger Current: 0.44802165
+  Bigger Current 2: 0.3770542
+  Amount: 0.8669781240000001
+  Less Current: 0.041902274
+Rotation: 20
+  Amplitude: 0.44392152
+  Difference B: 0.11520712999999999
+  Bigger Current: 0.49306703
+  Bigger Current 2: 0.3778599
+  Amount: 0.92007244
+  Less Current: 0.04914551
+Rotation: 21
+  Amplitude: 0.415734013
+  Difference B: 0.16916797
+  Bigger Current: 0.47133067
+  Bigger Current 2: 0.3021627
+  Amount: 0.829090027
+  Less Current: 0.055596657
+Rotation: 22
+  Amplitude: 0.473730635
+  Difference B: 0.14661542000000005
+  Bigger Current: 0.535772
+  Bigger Current 2: 0.38915658
+  Amount: 0.986969945
+  Less Current: 0.062041365
+Rotation: 23
+  Amplitude: 0.15790893
+  Difference B: 0.15790893
+  Bigger Current: 0.495486
+  Bigger Current 2: 0.33757707
+  Amount: 0.8330630699999999
+  Less Current: 0.33757707
+Rotation: 24
+  Amplitude: 0.4616224950000001
+  Difference B: 0.15710340000000006
+  Bigger Current: 0.5124049
+  Bigger Current 2: 0.3553015
+  Amount: 0.9184888050000001
+  Less Current: 0.050782405
+Rotation: 25
+  Amplitude: 0.46810078600000005
+  Difference B: 0.15143171000000005
+  Bigger Current: 0.52046895
+  Bigger Current 2: 0.36903724
+  Amount: 0.9418743540000001
+  Less Current: 0.052368164
+Rotation: 26
+  Amplitude: 0.14902910999999996
+  Difference B: 0.14902910999999996
+  Bigger Current: 0.56719667
+  Bigger Current 2: 0.41816756
+  Amount: 0.98536423
+  Less Current: 0.41816756
+Rotation: 27
+  Amplitude: 0.48661434299999995
+  Difference B: 0.16273015999999996
+  Bigger Current: 0.5349609
+  Bigger Current 2: 0.37223074
+  Amount: 0.955538197
+  Less Current: 0.048346557
+Rotation: 28
+  Amplitude: 0.503536078
+  Difference B: 0.13695536000000003
+  Bigger Current: 0.538189
+  Bigger Current 2: 0.40123364
+  Amount: 0.974075562
+  Less Current: 0.034652922
+Rotation: 29
+  Amplitude: 0.16031429000000003
+  Difference B: 0.16031429000000003
+  Bigger Current: 0.56396484
+  Bigger Current 2: 0.40365055
+  Amount: 0.96761539
+  Less Current: 0.40365055
+Rotation: 30
+  Amplitude: 0.492997422
+  Difference B: 0.11843526000000004
+  Bigger Current: 0.5301367
+  Bigger Current 2: 0.41170144
+  Amount: 0.9789774179999999
+  Less Current: 0.037139278
+Rotation: 31
+  Amplitude: 0.479370732
+  Difference B: 0.19012163000000004
+  Bigger Current: 0.5204596
+  Bigger Current 2: 0.33033797
+  Amount: 0.891886438
+  Less Current: 0.041088868
+Rotation: 32
+  Amplitude: 0.521279097
+  Difference B: 0.13852652999999998
+  Bigger Current: 0.5615623
+  Bigger Current 2: 0.42303577
+  Amount: 1.0248812729999999
+  Less Current: 0.040283203
+Rotation: 33
+  Amplitude: 0.44070267
+  Difference B: 0.1425207
+  Bigger Current: 0.4938826
+  Bigger Current 2: 0.3513619
+  Amount: 0.8984244299999999
+  Less Current: 0.05317993
+Rotation: 34
+  Amplitude: 0.482561022
+  Difference B: 0.11839557
+  Bigger Current: 0.5204615
+  Bigger Current 2: 0.40206593
+  Amount: 0.960427908
+  Less Current: 0.037900478
+Rotation: 35
+  Amplitude: 0.445529177
+  Difference B: 0.15388353
+  Bigger Current: 0.502737
+  Bigger Current 2: 0.34885347
+  Amount: 0.908798293
+  Less Current: 0.057207823
+Rotation: 36
+  Amplitude: 0.451972157
+  Difference B: 0.14170839999999996
+  Bigger Current: 0.50595766
+  Bigger Current 2: 0.36424926
+  Amount: 0.924192423
+  Less Current: 0.053985503
+Rotation: 37
+  Amplitude: 0.19334598999999997
+  Difference B: 0.19334598999999997
+  Bigger Current: 0.56557673
+  Bigger Current 2: 0.37223074
+  Amount: 0.93780747
+  Less Current: 0.37223074
+Rotation: 38
+  Amplitude: 0.45118950999999996
+  Difference B: 0.09346046999999996
+  Bigger Current: 0.51645327
+  Bigger Current 2: 0.4229928
+  Amount: 1.00470983
+  Less Current: 0.06526376
+Rotation: 39
+  Amplitude: 0.47774929999999993
+  Difference B: 0.17080939999999994
+  Bigger Current: 0.5462497
+  Bigger Current 2: 0.3754403
+  Amount: 0.9901903999999999
+  Less Current: 0.0685004
+Rotation: 40
+  Amplitude: 0.4519747230000001
+  Difference B: 0.14502120000000007
+  Bigger Current: 0.5124049
+  Bigger Current 2: 0.3673837
+  Amount: 0.940218777
+  Less Current: 0.060430177
+Rotation: 41
+  Amplitude: 0.4632417
+  Difference B: 0.14971328
+  Bigger Current: 0.52610415
+  Bigger Current 2: 0.37639087
+  Amount: 0.96535747
+  Less Current: 0.06286245
+Rotation: 42
+  Amplitude: 0.48178123700000003
+  Difference B: 0.12165454000000003
+  Bigger Current: 0.5204615
+  Bigger Current 2: 0.39880696
+  Amount: 0.957948723
+  Less Current: 0.038680263
+Rotation: 43
+  Amplitude: 0.519682743
+  Difference B: 0.27789885
+  Bigger Current: 0.56319606
+  Bigger Current 2: 0.28529721
+  Amount: 0.892006587
+  Less Current: 0.043513317
+Rotation: 44
+  Amplitude: 0.36577229200000005
+  Difference B: 0.009665489999999999
+  Bigger Current: 0.40283284
+  Bigger Current 2: 0.39316735
+  Amount: 0.8330607380000001
+  Less Current: 0.037060548
+Rotation: 45
+  Amplitude: 0.393156984
+  Difference B: 0.04752673000000002
+  Bigger Current: 0.4390869
+  Bigger Current 2: 0.39156017
+  Amount: 0.876576986
+  Less Current: 0.045929916
+Rotation: 46
+  Amplitude: 0.48420334000000004
+  Difference B: 0.32065370000000004
+  Bigger Current: 0.5365777
+  Bigger Current 2: 0.215924
+  Amount: 0.80487606
+  Less Current: 0.05237436
+Rotation: 47
+  Amplitude: 0.11680141
+  Difference B: 0.03142290999999997
+  Bigger Current: 0.47534454
+  Bigger Current 2: 0.44392163
+  Amount: 1.2778093
+  Less Current: 0.35854313
+Rotation: 48
+  Amplitude: 0.39239848
+  Difference B: 0.07495790999999996
+  Bigger Current: 0.46813518
+  Bigger Current 2: 0.39317727
+  Amount: 0.93704915
+  Less Current: 0.0757367
+Rotation: 49
+  Amplitude: 0.46329102
+  Difference B: 0.16117201999999997
+  Bigger Current: 0.5180821
+  Bigger Current 2: 0.35691008
+  Amount: 0.92978326
+  Less Current: 0.05479108
+Rotation: 50
+  Amplitude: 0.49948428000000006
+  Difference B: 0.18047594000000006
+  Bigger Current: 0.5599574
+  Bigger Current 2: 0.37948146
+  Amount: 0.99991198
+  Less Current: 0.06047312
