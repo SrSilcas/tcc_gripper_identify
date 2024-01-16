@@ -41,14 +41,8 @@ if __name__ == '__main__':
 
     rotation = 0
     tuple_response = []
-    tuple_bigger_current = []
-    tuple_bigger_current_2 = []
-    tuple_amplitude = []
-    tuple_media = []
-    list_amount = []
-    list_difference_b = []
-    list_rotations = []
-    list_below_zero = []
+    tuple_current = []
+    list_position_diff = []
     for i in range(1, 51):
         return_ = robot_singleton.confirmation_gripper()
         rotation += 1
@@ -63,32 +57,17 @@ if __name__ == '__main__':
         print(i)
 
         tuple_response.append(return_[0])
+        tuple_current.append(return_[1])
+        list_position_diff.append(return_[2])
 
-        tuple_bigger_current.append(return_[1])
-        tuple_bigger_current_2.append(return_[2])
-
-        tuple_amplitude.append(return_[3])
-        tuple_media.append(return_[4])
-
-        list_amount.append(return_[5])
-        list_difference_b.append(return_[6])
-
-        list_rotations.append(return_[7])
-        list_below_zero.append(return_[8])
-
-        result = (f'Rotation: {i}\n  Amplitude: {return_[3]}\n  Difference B: {return_[6]}\n  '
-                  f'Bigger Current: {return_[1]}\n  Bigger Current 2: {return_[2]}\n  Amount: {return_[5]}\n  '
-                  f'Less Current: {return_[4]}\n  Rotations: {return_[7]}\n  less current 2: {return_[8]}\n')
+        result = f'Rotation: {i}\n  Response: {return_[0]}\n  Current: {return_[1]}\n  Position Diff: {return_[2]}\n'
 
         results += result
     robot_singleton.open_tool()
 
     write_into_txt(results, 'confirmation_get')
 
-    generate_graphic(tuple_amplitude, 'amplitude', tuple_media, 'Less Current')
-    generate_graphic(tuple_bigger_current, 'bigger current', tuple_bigger_current_2, 'bigger current 2')
-    generate_graphic(list_amount, 'amount', list_difference_b, 'first_difference B')
-    generate_graphic(list_rotations, 'rotations', list_below_zero, 'less current 2')
+    generate_graphic(tuple_current, 'Current', list_position_diff, 'Position')
 
     print("Confirmou ", confirmou)
     print("Não Confirmou ", nao_confirmou)

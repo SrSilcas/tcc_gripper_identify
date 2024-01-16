@@ -153,7 +153,7 @@ class Robot:
         return finished
 
     def __increment(self, another_way: bool = False) -> float:
-        increment = (1.3, 1.5, 2, 1.55)
+        increment = (1.3, 1.5, 2, 1.7)
         position = float(self.attribute_from_gripper()["position"])
         if another_way:
             return (position + increment[3]) / 100
@@ -308,56 +308,28 @@ class Robot:
 
         sleep(0.16)
 
-    def confirmation_gripper(self) -> tuple[
-        bool, Union[int, float], Union[int, Any], Union[int, float], Union[int, float], int, Union[
-            Union[int, float], Any], int, int]:
+    def confirmation_gripper(self) -> tuple[bool, float, Union[float, Any]]:
 
         if self.final_position is None:
             self.final_position = 0.6
-
+        position_before = float(self.attribute_from_gripper()["position"])
         object_continuous = True
         gripper_command = Base_pb2.GripperCommand()
         finger = gripper_command.gripper.finger.add()
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
         finger.finger_identifier = 1
-
-        bigger_current = 0
-        amount = 0
-        rotations = 0
-        bigger_current_2 = 0
-        less_current = 0
-        less_current_2 = 0
-        number_od_rotations_zero_below = 0
-        currents = []
-        for i in range(4):
-            finger.value = self.__increment(another_way=True)
-            self.base.SendGripperCommand(gripper_command)
-            current = float(self.attribute_from_gripper()['current_motor'])
-
-            if 3.0 > current > 0:
-                currents.append(current)
-                rotations += 1
-        currents.sort()
-
-        for i in currents:
-            if i > bigger_current:
-                bigger_current, bigger_current_2, less_current_2, less_current = (i, bigger_current,
-                                                                                  bigger_current_2, less_current_2)
-
-        extend = bigger_current - bigger_current_2
-        amplitude = bigger_current - less_current
-
-        if bigger_current < 0.6 and extend > 0.24:
-            object_continuous = False
-        elif rotations > 4 and amount < 0.72:
-            object_continuous = False
+        finger.value = self.__increment(another_way=True)
+        self.base.SendGripperCommand(gripper_command)
+        current = float(self.attribute_from_gripper()['current_motor'])
+        position_after = float(self.attribute_from_gripper()['position'])
 
         sleep(0.16)
 
+        position_difference = position_after - position_before
+
         self.open_tool(self.final_position)
 
-        return (object_continuous, bigger_current, bigger_current_2, amplitude, less_current, amount, extend, rotations,
-                less_current_2)
+        return object_continuous, current, position_difference
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
