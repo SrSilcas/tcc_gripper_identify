@@ -73,7 +73,7 @@ if __name__ == '__main__':
         results += result
         print(i)
 
-    write_into_txt(results, "text_implet_tygeciclina")
+    write_into_txt(results, "text_implet_ergometrim")
     generate_graph(first_current_list, 'First Current', second_current_list, 'Second Current')
     generate_graph(first_position_list, 'First Position', second_position_list, 'Second Position')
     generate_graph(first_difference_list, 'First Current Difference',

@@ -1,6 +1,6 @@
 import threading
 from time import sleep
-from typing import Tuple
+from typing import Tuple, Union, Any
 
 import robot_module.utils as robot_connection
 from kortex_api.autogen.messages import Base_pb2
@@ -153,7 +153,7 @@ class Robot:
         return finished
 
     def __increment(self, another_way: bool = False) -> float:
-        increment = (1.3, 1.5, 2, 1.3)
+        increment = (1.3, 1.5, 2, 1.55)
         position = float(self.attribute_from_gripper()["position"])
         if another_way:
             return (position + increment[3]) / 100
@@ -174,7 +174,7 @@ class Robot:
         loops = 0
         currents = 0
         variation = 0.28
-        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94:
+        while not object_detected and float(self.attribute_from_gripper()["position"]) < 92.8:
             average = 0
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -219,7 +219,7 @@ class Robot:
         position_two = 0
         first_current = 0
         second_current = 0
-        while not object_detected and float(self.attribute_from_gripper()["position"]) < 94:
+        while not object_detected and float(self.attribute_from_gripper()["position"]) < 92.8:
             average = 0
             gripper_command = Base_pb2.GripperCommand()
             finger = gripper_command.gripper.finger.add()
@@ -242,12 +242,12 @@ class Robot:
                     finger.value = self.__increment()
                     self.base.SendGripperCommand(gripper_command)
                     second_current = float(self.attribute_from_gripper()["current_motor"])
-                    print('Second Variation', second_current - average, ' Second Current:',second_current)
+                    print('Second Variation', second_current - average, ' Second Current:', second_current)
 
                     if variation <= second_current - average and second_current > 0.61:
                         object_detected = True
                         position_two = float(self.attribute_from_gripper()['position'])
-                        finger.value = self.__increment(another_way=True)
+                        finger.value = self.__increment()
                         self.base.SendGripperCommand(gripper_command)
                         self.final_position = float(self.attribute_from_gripper()["position"]) / 100
                 currents += first_current
@@ -308,7 +308,9 @@ class Robot:
 
         sleep(0.16)
 
-    def confirmation_gripper(self):
+    def confirmation_gripper(self) -> tuple[
+        bool, Union[int, float], Union[int, Any], Union[int, float], Union[int, float], int, Union[
+            Union[int, float], Any], int, int]:
 
         if self.final_position is None:
             self.final_position = 0.6
@@ -323,33 +325,39 @@ class Robot:
         amount = 0
         rotations = 0
         bigger_current_2 = 0
-        less_current = 2
-
-        for i in range(3):
+        less_current = 0
+        less_current_2 = 0
+        number_od_rotations_zero_below = 0
+        currents = []
+        for i in range(4):
             finger.value = self.__increment(another_way=True)
             self.base.SendGripperCommand(gripper_command)
             current = float(self.attribute_from_gripper()['current_motor'])
 
-            if 2.0 > current > 0 and current > bigger_current:
-                bigger_current, bigger_current_2 = current, bigger_current
-
-            if 2.0 > current > 0 and current is not 0 and current < less_current:
-                less_current = current
-
-            if 2.0 > current > 0:
-                amount += current
+            if 3.0 > current > 0:
+                currents.append(current)
                 rotations += 1
+        currents.sort()
+
+        for i in currents:
+            if i > bigger_current:
+                bigger_current, bigger_current_2, less_current_2, less_current = (i, bigger_current,
+                                                                                  bigger_current_2, less_current_2)
 
         extend = bigger_current - bigger_current_2
         amplitude = bigger_current - less_current
 
-        if extend > 0.22 and bigger_current < 0.655:
+        if bigger_current < 0.6 and extend > 0.24:
             object_continuous = False
+        elif rotations > 4 and amount < 0.72:
+            object_continuous = False
+
         sleep(0.16)
 
         self.open_tool(self.final_position)
 
-        return object_continuous, bigger_current, bigger_current_2, amplitude, less_current, amount, extend
+        return (object_continuous, bigger_current, bigger_current_2, amplitude, less_current, amount, extend, rotations,
+                less_current_2)
 
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
