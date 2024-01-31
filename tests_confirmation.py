@@ -17,7 +17,7 @@ if __name__ == "__main__":
         robot.move_joints(position)
     print(robot.have_medicine)
     robot.stop_confirmation()
-    
+
 
 
 
