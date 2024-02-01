@@ -236,21 +236,36 @@ class Robot:
         self.requisition = False
 
     def confirmation(self):
+        count = 0
+        self.have_medicine = True
+        self.requisition = True
         currents = []
         return_ = return_2 = return_3 = True
+        position = self.attribute_from_gripper()['position'] / 100
+
         while self.requisition:
+
+            self.__close()
             current = self.attribute_from_gripper()['current_motor']
             if len(currents) > 10 and 4 > current > 0:
                 deviation = statistics.stdev(currents)
                 average = statistics.mean(currents)
+                deviation = deviation * 0.9
                 return_, return_2, return_3 = (self.__verification_confirmation(current, deviation, average), return_,
                                                return_2)
-                print(return_, return_2, return_3)
-            if len(currents) < 15:
+            if len(currents) < 15 and 4 > current > 0:
                 currents.append(current)
 
-            if not return_ and return_2 and not return_3:
+            if not return_ and not return_2 and not return_3:
                 self.have_medicine = False
+                print('\n out\n')
+                break
+
+            if count % 4 == 0:
+                print(self.have_medicine)
+
+            count += 1
+            self.open_tool(position)
 
     @staticmethod
     def __verification(current: float, deviation: float, average_) -> bool:
@@ -301,16 +316,16 @@ class Robot:
 
         return joint_angles
 
-    def get_pose_cartisians(self):
-        joint_cartisians_pose = self.base.GetMeasuredCartesianPose()
+    def get_pose_cartesian(self):
+        joint_cartesian_pose = self.base.GetMeasuredCartesianPose()
 
         joint_poses = [
-            joint_cartisians_pose.x,
-            joint_cartisians_pose.y,
-            joint_cartisians_pose.z,
-            joint_cartisians_pose.theta_x,
-            joint_cartisians_pose.theta_y,
-            joint_cartisians_pose.theta_z
+            joint_cartesian_pose.x,
+            joint_cartesian_pose.y,
+            joint_cartesian_pose.z,
+            joint_cartesian_pose.theta_x,
+            joint_cartesian_pose.theta_y,
+            joint_cartesian_pose.theta_z
         ]
 
         return joint_poses
