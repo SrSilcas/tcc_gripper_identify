@@ -1,5 +1,6 @@
 import threading
 import statistics
+import time
 from time import sleep
 from typing import Tuple, Union, Any
 import robot_module.utils as robot_connection
@@ -155,7 +156,7 @@ class Robot:
         return finished
 
     def __increment(self, have_medicine: bool = False) -> float:
-        increment = [1.4, 1.6, 20, 1.3]
+        increment = [1.4, 1.6, 20, 1.2]
         position = self.attribute_from_gripper()["position"]
 
         if have_medicine:
@@ -199,6 +200,8 @@ class Robot:
                     object_detected = self.__verification(second_current, deviation, average)
                     if object_detected:
                         self.__close()
+                        thread = threading.Thread(target=self.confirmation)
+                        thread.start()
                         self.final_position = self.attribute_from_gripper()["position"] / 100
 
             if 4 > first_current > 0 and len(currents) < 15:
@@ -206,12 +209,12 @@ class Robot:
 
         return object_detected
 
-    def __close(self):
+    def __close(self, have_medicine_: bool = False):
         gripper_command = Base_pb2.GripperCommand()
         finger = gripper_command.gripper.finger.add()
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
         finger.finger_identifier = 1
-        finger.value = self.__increment()
+        finger.value = self.__increment(have_medicine=have_medicine_)
         self.base.SendGripperCommand(gripper_command)
 
     def open_tool(self, value=0.60):
@@ -242,7 +245,6 @@ class Robot:
         currents = []
         return_ = return_2 = return_3 = True
         position = self.attribute_from_gripper()['position'] / 100
-
         while self.requisition:
 
             self.__close()
@@ -250,14 +252,17 @@ class Robot:
             if len(currents) > 10 and 4 > current > 0:
                 deviation = statistics.stdev(currents)
                 average = statistics.mean(currents)
-                deviation = deviation * 0.9
+                deviation = deviation * 0.71
                 return_, return_2, return_3 = (self.__verification_confirmation(current, deviation, average), return_,
                                                return_2)
-            if len(currents) < 15 and 4 > current > 0:
+                print(return_, return_2, return_3)
+                print('current, deviation, average\n', current, deviation, average)
+            if len(currents) < 15 and 4 > current > 0 and return_:
                 currents.append(current)
 
             if not return_ and not return_2 and not return_3:
                 self.have_medicine = False
+                self.open_tool(self.final_position)
                 print('\n out\n')
                 break
 

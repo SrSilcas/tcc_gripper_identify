@@ -8,19 +8,12 @@ if __name__ == "__main__":
     robot.connect()
     robot.open_tool()
     input('Press Enter to start to close gripper')
-    robot.close_tool()
+    print('robot_close', robot.close_tool())
     position = (359.9981689453125, 343.920, 75.13192749023438, 359.9029541015625, 300.0187683105469, 359.9910888671875)
-    thread = threading.Thread(target=robot.confirmation)
-    thread.start()
-    while not keyboard.is_pressed('space'):
+    # thread = threading.Thread(target=robot.confirmation)
+    # thread.start()
+    while not keyboard.is_pressed('space') and robot.have_medicine:
         robot.move_joints((0, 0, 0, 0, 0, 0))
         robot.move_joints(position)
-    print(robot.have_medicine)
     robot.stop_confirmation()
-    print(thread.is_alive())
-
-
-
-
-
-
+    print('robot.have.medicine: ', robot.have_medicine)
