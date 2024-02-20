@@ -168,7 +168,7 @@ class Robot:
         else:
             return (position + increment[0]) / 100
 
-    def close_tool(self) -> bool:
+    def close_tool(self):
 
         """
         This function close the gripper and try detected object
@@ -178,6 +178,11 @@ class Robot:
 
         object_detected = False
         currents = []
+
+        # tests
+        position = 0
+        deviation = 0
+        average = 0
 
         while not object_detected and self.attribute_from_gripper()["position"] < 93:
 
@@ -195,6 +200,7 @@ class Robot:
 
             if deviation is not None:
                 if self.__verification(first_current, deviation, average):
+                    position = self.attribute_from_gripper()['position']
                     self.__close()
                     second_current = self.attribute_from_gripper()["current_motor"]
                     object_detected = self.__verification(second_current, deviation, average)
@@ -207,7 +213,7 @@ class Robot:
             if 4 > first_current > 0 and len(currents) < 15:
                 currents.append(first_current)
 
-        return object_detected
+        return object_detected, position, deviation, average
 
     def __close(self, have_medicine_: bool = False):
         gripper_command = Base_pb2.GripperCommand()
@@ -235,42 +241,10 @@ class Robot:
 
         sleep(0.16)
 
-    def stop_confirmation(self):
-        self.requisition = False
-
-    def confirmation(self):
-        count = 0
-        self.have_medicine = True
-        self.requisition = True
-        currents = []
-        return_ = return_2 = return_3 = True
-        position = self.attribute_from_gripper()['position'] / 100
-        while self.requisition:
-
-            self.__close()
-            current = self.attribute_from_gripper()['current_motor']
-            if len(currents) > 10 and 4 > current > 0:
-                deviation = statistics.stdev(currents)
-                average = statistics.mean(currents)
-                deviation = deviation * 0.71
-                return_, return_2, return_3 = (self.__verification_confirmation(current, deviation, average), return_,
-                                               return_2)
-                print(return_, return_2, return_3)
-                print('current, deviation, average\n', current, deviation, average)
-            if len(currents) < 15 and 4 > current > 0 and return_:
-                currents.append(current)
-
-            if not return_ and not return_2 and not return_3:
-                self.have_medicine = False
-                self.open_tool(self.final_position)
-                print('\n out\n')
-                break
-
-            if count % 4 == 0:
-                print(self.have_medicine)
-
-            count += 1
-            self.open_tool(position)
+    @staticmethod
+    def __calculate_size(size):
+        size_ = size
+        return size_
 
     @staticmethod
     def __verification(current: float, deviation: float, average_) -> bool:
