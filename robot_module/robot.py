@@ -31,6 +31,8 @@ class Robot:
         self.final_position = None
         self.requisition = None
         self.have_medicine = None
+        self.continuous = None
+        self.continue_confirmation = None
 
     @staticmethod
     def check_for_end_or_abort(e):
@@ -206,8 +208,8 @@ class Robot:
                     object_detected = self.__verification(second_current, deviation, average)
                     if object_detected:
                         self.__close()
-                        thread = threading.Thread(target=self.confirmation)
-                        thread.start()
+                        # thread = threading.Thread(target=self.confirmation)
+                        # thread.start()
                         self.final_position = self.attribute_from_gripper()["position"] / 100
 
             if 4 > first_current > 0 and len(currents) < 15:
@@ -222,6 +224,37 @@ class Robot:
         finger.finger_identifier = 1
         finger.value = self.__increment(have_medicine=have_medicine_)
         self.base.SendGripperCommand(gripper_command)
+
+    def confirmation(self):
+        self.continuous = True
+        currents = []
+        self.continue_confirmation = True
+
+        while self.continue_confirmation and self.continuous:
+            current = self.attribute_from_gripper()['current_motor']
+
+            if 2 < current > 0 and len(currents) > 15:
+                deviation = statistics.stdev(currents)
+                average = statistics.mean(currents)
+
+                if not self.__verification_confirmation(current, deviation, average):
+                    count = 0
+                    continuous = False
+
+                    while count < 10 and not continuous:
+                        current = self.attribute_from_gripper()['current_motor']
+                        if self.__verification_confirmation(current, deviation, average):
+                            continuous = True
+                        count += 1
+
+                    if count > 9 and not continuous:
+                        self.continuous = False
+
+            if len(currents) < 15:
+                currents.append(current)
+
+    def stop_confirmation(self):
+        self.continue_confirmation = False
 
     def open_tool(self, value=0.60):
         """
@@ -249,7 +282,7 @@ class Robot:
     @staticmethod
     def __verification(current: float, deviation: float, average_) -> bool:
         return_ = False
-        if deviation <= current - average_ and current > 0.6:
+        if (deviation * 0.61) <= current - average_ and current > 0.6:
             return_ = True
 
         return return_
@@ -257,7 +290,7 @@ class Robot:
     @staticmethod
     def __verification_confirmation(current: float, deviation: float, average_) -> bool:
         return_ = True
-        if deviation <= average_ - current:
+        if (deviation * 0.6) <= average_ - current:
             return_ = False
 
         return return_
