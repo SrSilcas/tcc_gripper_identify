@@ -282,7 +282,7 @@ class Robot:
     @staticmethod
     def __verification(current: float, deviation: float, average_) -> bool:
         return_ = False
-        if (deviation * 0.61) <= current - average_ and current > 0.6:
+        if (deviation * 0.80) <= current - average_ and current > 0.6:
             return_ = True
 
         return return_
