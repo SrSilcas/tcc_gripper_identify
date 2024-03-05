@@ -212,7 +212,7 @@ class Robot:
                         # thread.start()
                         self.final_position = self.attribute_from_gripper()["position"] / 100
 
-            if 4 > first_current > 0 and len(currents) < 15:
+            if 4 > first_current > 0 and len(currents) < 7:
                 currents.append(first_current)
 
         return object_detected, position, deviation, average
@@ -282,7 +282,7 @@ class Robot:
     @staticmethod
     def __verification(current: float, deviation: float, average_) -> bool:
         return_ = False
-        if (deviation * 0.80) <= current - average_ and current > 0.6:
+        if (deviation * 0.35) <= current - average_ and current > 0.6:
             return_ = True
 
         return return_
