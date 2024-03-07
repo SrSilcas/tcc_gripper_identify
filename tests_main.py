@@ -12,8 +12,8 @@ def write_into_csv(dates, csv_name):
 
 if __name__ == '__main__':
 
-    csv_overall_name = 'tests_medications_with_35_csv\\tigeciclina_overall_2024_03_05.csv'
-    csv_statistics_name = 'tests_medications_with_35_csv\\tigeciclina_statistics_2024_03_05.csv'
+    csv_overall_name = 'tests\\tests_medications_with_35_csv\\estructor_24_overall_2024_03_05.csv'
+    csv_statistics_name = 'tests\\tests_medications_with_35_csv\\estructor_24_statistics_2024_03_05.csv'
 
     robot = robot_singleton
     robot.connect()

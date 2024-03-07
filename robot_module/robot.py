@@ -158,7 +158,7 @@ class Robot:
         return finished
 
     def __increment(self, have_medicine: bool = False) -> float:
-        increment = [1.4, 1.6, 20, 1.2]
+        increment = [1.2, 1.2, 1.2, 1.2]
         position = self.attribute_from_gripper()["position"]
 
         if have_medicine:
