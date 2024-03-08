@@ -169,25 +169,29 @@ class Robot:
         else:
             return (position + increment[0]) / 100
 
-    def close_tool(self, size):
-
+    def close_tool(self, cap_size:float = 0, body_size:float = 0) -> tuple[bool, float, float, float]:
         """
         This function close the gripper and try detected object
+
+        Args:
+            cap_size (float, optional): size for cap of object. Defaults to 0.
+            body_size (float, optional): size for body of object. Defaults to 0.
+
         Returns:
-        (bool): returns whether an object was detected or not detected
+            tuple[bool, float, float, float]: tuple here the first (bool) is whether an object was detected or not detected
+            the second (float) when gripper identify the object the third (float) max approach calculate for this object and the 
+            fourth (float) min approach calculate for this object
         """
 
         object_detected = False
         currents = []
-
-        approach = self.__calculate_size(size)
-        # tests
+        if cap_size != 0 and body_size != 0:
+            max_approach = self.__calculate_size(cap_size)
+            min_approach = self.__calculate_size(body_size) - 1
         
         position = 0
-        deviation = 0
-        average = 0
 
-        while not object_detected and self.attribute_from_gripper()["position"] < approach:
+        while not object_detected and self.attribute_from_gripper()["position"] < max_approach:
 
             deviation = None
             average = None
@@ -201,7 +205,7 @@ class Robot:
             else:
                 print("atypical current")
 
-            if deviation is not None:
+            if deviation is not None and self.attribute_from_gripper()['position'] > min_approach:
                 if self.__verification(first_current, deviation, average):
                     position = self.attribute_from_gripper()['position']
                     self.__close()
@@ -216,9 +220,15 @@ class Robot:
             if 4 > first_current > 0 and len(currents) < 7:
                 currents.append(first_current)
 
-        return object_detected, position, deviation, average
+        return object_detected, position, max_approach, min_approach
 
     def __close(self, have_medicine_: bool = False):
+        """
+        This Function close the gripper
+
+        Args:
+            have_medicine_ (bool, optional): Already medicine inside the gripper. Defaults to False.
+        """
         gripper_command = Base_pb2.GripperCommand()
         finger = gripper_command.gripper.finger.add()
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
@@ -227,6 +237,10 @@ class Robot:
         self.base.SendGripperCommand(gripper_command)
 
     def confirmation(self):
+        """
+        This function check if medicine continuos into gripper, in a thread and change the robot attribute 
+
+        """
         self.continuous = True
         currents = []
         self.continue_confirmation = True
@@ -255,6 +269,10 @@ class Robot:
                 currents.append(current)
 
     def stop_confirmation(self):
+        """
+        When this function is called the confirmation is stopped 
+
+        """
         self.continue_confirmation = False
 
     def open_tool(self, value=0.60):
@@ -276,12 +294,32 @@ class Robot:
         sleep(0.16)
 
     @staticmethod
-    def __calculate_size(size):
-        size_ = Utils.cauculate_approach(size)
+    def __calculate_size(size:float)-> float:
+        """
+        This function calculate with size of object the quantity
+
+        Args:
+            size (float): size of object in cm
+
+        Returns:
+            float: quantity for gripper
+        """
+        size_ = Utils.calculate_approach(size)
         return size_
 
     @staticmethod
-    def __verification(current: float, deviation: float, average_) -> bool:
+    def __verification(current: float, deviation: float, average_:float) -> bool:
+        """
+        This function analyse currents for identify if have medicine into gripper
+
+        Args:
+            current (float): current for analyse
+            deviation (float): deviation for list of currents
+            average_ (float): average for the list of currents
+
+        Returns:
+            bool: this current confirm if have medicine or not
+        """
         return_ = False
         if (deviation * 0.35) <= current - average_ and current > 0.6:
             return_ = True
@@ -290,12 +328,38 @@ class Robot:
 
     @staticmethod
     def __verification_confirmation(current: float, deviation: float, average_) -> bool:
+        """
+        This function analyse currents for identify if have medicine into gripper
+
+        Args:
+            current (float): current for analyse
+            deviation (float): deviation for list of currents
+            average_ (float): average for the list of currents
+
+        Returns:
+            bool: this current confirm if have medicine or not
+        """
         return_ = True
         if (deviation * 0.6) <= average_ - current:
             return_ = False
 
         return return_
 
+    def attribute_from_gripper(self)-> dict:
+        """
+        This function to manage information's from base cyclic about gripper
+
+        Returns:
+           dict: all information's into dict for access with keys position, velocity and current_motor
+        """
+        variable = self.base_cyclic.RefreshFeedback().__str__().split()
+        position = variable.index("gripper_feedback")
+        information_gripper = {"position": float(variable[position + 7]),
+                               "velocity": float(variable[position + 9]),
+                               "current_motor": float(variable[position + 11])}
+
+        return information_gripper
+    
     def connect(self, connection_ip: str = "192.168.2.10"):
         """
         Connect api with the robot,
@@ -350,14 +414,6 @@ class Robot:
     def get_gripper_command():
         return Base_pb2.GripperCommand()
 
-    def attribute_from_gripper(self):
-        variable = self.base_cyclic.RefreshFeedback().__str__().split()
-        position = variable.index("gripper_feedback")
-        information_gripper = {"position": float(variable[position + 7]),
-                               "velocity": float(variable[position + 9]),
-                               "current_motor": float(variable[position + 11])}
-
-        return information_gripper
 
 
 """

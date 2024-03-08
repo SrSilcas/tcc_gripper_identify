@@ -1,7 +1,7 @@
 from sklearn.linear_model import LinearRegression
 import math
 
-class utils:
+class Utils:
 
     SIZES = {
         1.40: 90.86,
@@ -16,19 +16,29 @@ class utils:
         1.81: 86.42,
     }
        
-    def cauculate_approach(size_medicine):
-        if size_medicine in utils.SIZES.keys():
-            return utils.SIZES[size_medicine]
+    def calculate_approach(size_)-> float:
+        """
+        This function utilize linear regression for calculate with the size
+        who much the gripper close for this size
 
-        x = [size for size in utils.SIZES.keys()]
-        y = [opened for opened in utils.SIZES.values()]
+        Args:
+            size_ (float): size for object
+
+        Returns:
+            float: quantity for gripper close
+        """
+        if size_ in Utils.SIZES.keys():
+            return Utils.SIZES[size_]
+
+        x = [size for size in Utils.SIZES.keys()]
+        y = [opened for opened in Utils.SIZES.values()]
 
         model = LinearRegression()
         model.fit([[size] for size in x], y) 
-        prevision = model.predict([[size_medicine]])
+        prevision = model.predict([[size_]])
         return prevision.min().__round__(2)
 
 
 
 if __name__ == '__main__':
-    print(utils.cauculate_approach(2.2))
+    print(Utils.calculate_approach(2.2))
