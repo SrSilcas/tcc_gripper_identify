@@ -1,9 +1,8 @@
 import threading
 import statistics
-import time
 from time import sleep
-from typing import Tuple, Union, Any
 import robot_module.utils as robot_connection
+from robot_module.size_of_medcines import Utils
 from kortex_api.autogen.messages import Base_pb2
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
@@ -170,7 +169,7 @@ class Robot:
         else:
             return (position + increment[0]) / 100
 
-    def close_tool(self):
+    def close_tool(self, size):
 
         """
         This function close the gripper and try detected object
@@ -181,12 +180,14 @@ class Robot:
         object_detected = False
         currents = []
 
+        approach = self.__calculate_size(size)
         # tests
+        
         position = 0
         deviation = 0
         average = 0
 
-        while not object_detected and self.attribute_from_gripper()["position"] < 93:
+        while not object_detected and self.attribute_from_gripper()["position"] < approach:
 
             deviation = None
             average = None
@@ -276,7 +277,7 @@ class Robot:
 
     @staticmethod
     def __calculate_size(size):
-        size_ = size
+        size_ = Utils.cauculate_approach(size)
         return size_
 
     @staticmethod
