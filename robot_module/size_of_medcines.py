@@ -1,7 +1,10 @@
 from sklearn.linear_model import LinearRegression
-import math
 
-class Utils:
+
+class SizeOfMedicines:
+    """
+    This class is responsible for calculating the size of medicines
+    """
 
     SIZES = {
         1.40: 90.86,
@@ -15,23 +18,24 @@ class Utils:
         2.1: 83.77,
         1.81: 86.42,
     }
-       
-    def calculate_approach(size_)-> float:
+
+    @staticmethod
+    def calculate_approach(size_) -> float:
         """
         This function utilize linear regression for calculate with the size
         who much the gripper close for this size
 
         Args:
-            size_ (float): size for object
+            :param(float) size_: size for object
 
         Returns:
-            float: quantity for gripper close
+            :return(float): quantity for gripper close
         """
-        if size_ in Utils.SIZES.keys():
-            return Utils.SIZES[size_]
+        if size_ in SizeOfMedicines.SIZES.keys():
+            return SizeOfMedicines.SIZES[size_]
 
-        x = [size for size in Utils.SIZES.keys()]
-        y = [opened for opened in Utils.SIZES.values()]
+        x = [size for size in SizeOfMedicines.SIZES.keys()]
+        y = [opened for opened in SizeOfMedicines.SIZES.values()]
 
         model = LinearRegression()
         model.fit([[size] for size in x], y) 
@@ -39,6 +43,5 @@ class Utils:
         return prevision.min().__round__(2)
 
 
-
 if __name__ == '__main__':
-    print(Utils.calculate_approach(2.2))
+    print(SizeOfMedicines.calculate_approach(2.2))

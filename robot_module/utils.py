@@ -1,14 +1,13 @@
-from kortex_api.TCPTransport import TCPTransport
-from kortex_api.UDPTransport import UDPTransport
 from kortex_api.RouterClient import RouterClient, RouterClientSendOptions
 from kortex_api.SessionManager import SessionManager
+from kortex_api.TCPTransport import TCPTransport
+from kortex_api.UDPTransport import UDPTransport
 from kortex_api.autogen.messages import Session_pb2
 
 
 class RobotConnection:
     """
     Class that manages connection
-
     """
 
     TCP_PORT = 10000
@@ -19,11 +18,16 @@ class RobotConnection:
                               username: str = "admin",
                               password: str = "admin"):
         """
-        returns RouterClient required to create
-        services and send requests to device or sub-devices,
+        This function creates tcp connection with the device
 
+        Args:
+            :param(str, optional) ip: IP address of the device. Defaults to "192.168.2.10"
+            :param(str, optional) username: username of the device. Defaults to "admin"
+            :param(str, optional) password: password of the device. Defaults to "admin"
+
+        Returns:
+            :return(RobotConnection) required to create services and send requests to device or sub-devices
         """
-
         return RobotConnection(ip, port=RobotConnection.TCP_PORT, credentials=(username, password))
 
     @staticmethod
@@ -31,15 +35,28 @@ class RobotConnection:
                               username: str = "admin",
                               password: str = "admin"):
         """
-        returns RouterClient that allows to create services and send requests
-        to a device or its sub-devices @ 1khz.
+        This function creates udp connection with the device
 
+        Args:
+            :param(str, optional) ip: IP address of the device. Defaults to "192.168.2.10"
+            :param(str, optional) username: username of the device. Defaults to "admin"
+            :param(str, optional) password: password of the device. Defaults to "admin"
+
+        Returns:
+            :return(RobotConnection) that allows to create services and send requests to a device or its sub-devices
+            @1khz.
         """
-
         return RobotConnection(ip, port=RobotConnection.UDP_PORT, credentials=(username, password))
 
-    def __init__(self, ip_address, port=TCP_PORT, credentials=("", "")):
+    def __init__(self, ip_address: str, port=TCP_PORT, credentials: list[str, str] = ("", "")):
+        """
+        Method to initialize the robot class generate the necessary parameters for the operation
 
+        Args:
+            :param ip_address: ip address of the connection to the device
+            :param port: port of the connection to the device
+            :param credentials: credentials of the connection to the device generali is admin, admin
+        """
         self.ip_address = ip_address
         self.port = port
         self.credentials = credentials
@@ -50,9 +67,11 @@ class RobotConnection:
         self.transport = TCPTransport() if port == RobotConnection.TCP_PORT else UDPTransport()
         self.router = RouterClient(self.transport, RouterClient.basicErrorCallback)
 
-    def connect(self):
+    def connect(self) -> RouterClient:
         """
         Method responsible for connecting robot. It returns a RouterClient
+
+        :return: RouterClient to connection to the robot
         """
         self.transport.connect(self.ip_address, self.port)
 
@@ -69,9 +88,11 @@ class RobotConnection:
 
         return self.router
 
-    def disconnect(self):
-        """"
+    def disconnect(self) -> None:
+        """
         Method responsible for disconnecting robot, by closing SessionManager object
+
+        :return: None
         """
         if self.session_manager is not None:
             router_options = RouterClientSendOptions()

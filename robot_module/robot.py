@@ -1,18 +1,26 @@
-import threading
 import statistics
+import threading
 from time import sleep
-import robot_module.utils as robot_connection
-from robot_module.size_of_medcines import Utils
-from kortex_api.autogen.messages import Base_pb2
+
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclicClient
+from kortex_api.autogen.messages import Base_pb2
+
+import robot_module.utils as robot_connection
+from robot_module.size_of_medcines import SizeOfMedicines
 
 TIMEOUT_DURATION = 20
 
 
 class Robot:
-    def __init__(self):
+    def __init__(self) -> None:
+        """
+        Method to initialize the robot class generate the necessary parameters for the operation
+
+        Returns:
+            :return None
+        """
         self.active_state = None
         self.action = None
         self.arm_state_notif_handle = None
@@ -34,13 +42,16 @@ class Robot:
         self.continue_confirmation = None
 
     @staticmethod
-    def check_for_end_or_abort(e):
+    def check_for_end_or_abort(e) -> any:
         """
         Return a closure checking for END or ABORT notifications
 
         Args:
-            (any) e: event to signal when the action is completed
+            :param(any) e: event to signal when the action is completed
             (will be set when an END or ABORT occurs)
+
+        Returns:
+            :return(any): a closure checking for END or ABORT
         """
 
         def check(notification, event=e):
@@ -59,10 +70,10 @@ class Robot:
         """
         Set movement for robot with joints values
         Args:
-            (list) joints_list: lista with values for all joints for movement
+            :param(list) joints_list: lista with values for all joints for movement
 
         Returns:
-            (bool) move is finished
+            :return(bool) move is finished
         """
         self.action = Base_pb2.Action()
         self.action.name = "Example angular action movement"
@@ -85,15 +96,15 @@ class Robot:
         """
         Set movement for robot with cartesian coordinates
         Args:
-            (float) pose[0]: x value
-            (float) pose[1]: y value
-            (float) pose[2]: z value
-            (float) 180 - abs(pose[3]): theta_x value
-            (float) -pose[4]: theta_y value
-            (float) 180 + pose[5]: theta_z value
+            :param(float) pose[0]: x value
+            :param(float) pose[1]: y value
+            :param(float) pose[2]: z value
+            :param(float) 180 - abs(pose[3]): theta_x value
+            :param(float) -pose[4]: theta_y value
+            :param(float) 180 + pose[5]: theta_z value
 
         Returns:
-            (bool): Move is finished
+            :return(bool): Move is finished
         """
         self.action = Base_pb2.Action()
         self.action.name = "Example Cartesian action movement"
@@ -130,10 +141,10 @@ class Robot:
         """
         Create a thread and finish robot move
         Args:
-            :(Any) action: Instructions for movement or joints or cartesian
+            :param(Any) obj_notification: Instructions for movement or joints or cartesian
 
-        :return:
-        (bool): Move is finished
+        Returns:
+            :return(bool): Move is finished
         """
 
         e = threading.Event()
@@ -157,38 +168,50 @@ class Robot:
         return finished
 
     def __increment(self, have_medicine: bool = False) -> float:
-        increment = [1.2, 1.2, 1.2, 1.2]
+        """
+        This "private" function is only use to pass to function __close diferentes displacement quotients to gripper
+        close slowly
+
+        Args:
+            :param(bool) have_medicine:
+
+        Returns:
+            :return(float) the new value of the displacement quotient for close to gripper
+        """
+        increment = [1.4, 1.6]
         position = self.attribute_from_gripper()["position"]
 
         if have_medicine:
-            return (position + increment[3]) / 100
-        elif position < 70:
-            return (position + increment[2]) / 100
-        elif position < 85:
             return (position + increment[1]) / 100
         else:
             return (position + increment[0]) / 100
 
-    def close_tool(self, cap_size:float = 0, body_size:float = 0) -> tuple[bool, float, float, float]:
+    def close_tool(self, cap_size: float = 0, body_size: float = 0) -> tuple[bool, float, float, float]:
         """
         This function close the gripper and try detected object
 
         Args:
-            cap_size (float, optional): size for cap of object. Defaults to 0.
-            body_size (float, optional): size for body of object. Defaults to 0.
+            :param(float, optional) cap_size: size for cap of object in cm. Defaults to 0.
+            :param(float, optional) body_size: size for body of object in cm. Defaults to 0.
 
         Returns:
-            tuple[bool, float, float, float]: tuple here the first (bool) is whether an object was detected or not detected
-            the second (float) when gripper identify the object the third (float) max approach calculate for this object and the 
-            fourth (float) min approach calculate for this object
+            :return(bool) tuple[0]: whether an object was detected or not detected
+            :return(float) tuple[1]: when gripper identify the object the third (float) max approach calculate for this object and the
+            :return(float) tuple[2]: min approach calculate for this object
         """
 
         object_detected = False
         currents = []
+
         if cap_size != 0 and body_size != 0:
+
             max_approach = self.__calculate_size(cap_size)
             min_approach = self.__calculate_size(body_size) - 1
-        
+        else:
+
+            max_approach = 94
+            min_approach = 84
+
         position = 0
 
         while not object_detected and self.attribute_from_gripper()["position"] < max_approach:
@@ -206,28 +229,27 @@ class Robot:
                 print("atypical current")
 
             if deviation is not None and self.attribute_from_gripper()['position'] > min_approach:
+
                 if self.__verification(first_current, deviation, average):
-                    position = self.attribute_from_gripper()['position']
-                    self.__close()
-                    second_current = self.attribute_from_gripper()["current_motor"]
-                    object_detected = self.__verification(second_current, deviation, average)
-                    if object_detected:
-                        self.__close()
-                        # thread = threading.Thread(target=self.confirmation)
-                        # thread.start()
-                        self.final_position = self.attribute_from_gripper()["position"] / 100
+
+                    self.__close(have_medicine_=True)
+                    thread = threading.Thread(target=self.confirmation)
+                    thread.start()
 
             if 4 > first_current > 0 and len(currents) < 7:
                 currents.append(first_current)
 
         return object_detected, position, max_approach, min_approach
 
-    def __close(self, have_medicine_: bool = False):
+    def __close(self, have_medicine_: bool = False) -> None:
         """
         This Function close the gripper
 
         Args:
-            have_medicine_ (bool, optional): Already medicine inside the gripper. Defaults to False.
+            :param(bool, optional) have_medicine_: Already medicine inside the gripper. Defaults to False.
+
+        Returns:
+            :return None
         """
         gripper_command = Base_pb2.GripperCommand()
         finger = gripper_command.gripper.finger.add()
@@ -236,27 +258,29 @@ class Robot:
         finger.value = self.__increment(have_medicine=have_medicine_)
         self.base.SendGripperCommand(gripper_command)
 
-    def confirmation(self):
+    def confirmation(self) -> None:
         """
-        This function check if medicine continuos into gripper, in a thread and change the robot attribute 
+        This function check if medicine continues into gripper, in a thread and change the robot attribute continuous
 
+        Returns:
+            :return None
         """
         self.continuous = True
         currents = []
         self.continue_confirmation = True
 
         while self.continue_confirmation and self.continuous:
+            print('conditionals ', self.continue_confirmation and self.continuous)
             current = self.attribute_from_gripper()['current_motor']
 
-            if 2 < current > 0 and len(currents) > 15:
+            if 2 > current > 0 and len(currents) > 8:
                 deviation = statistics.stdev(currents)
                 average = statistics.mean(currents)
-
-                if not self.__verification_confirmation(current, deviation, average):
+                condicionas = self.__verification_confirmation(current, deviation, average)
+                if not condicionas:
                     count = 0
                     continuous = False
-
-                    while count < 10 and not continuous:
+                    while count < 2 and not continuous:
                         current = self.attribute_from_gripper()['current_motor']
                         if self.__verification_confirmation(current, deviation, average):
                             continuous = True
@@ -268,18 +292,23 @@ class Robot:
             if len(currents) < 15:
                 currents.append(current)
 
-    def stop_confirmation(self):
+    def stop_confirmation(self) -> None:
         """
         When this function is called the confirmation is stopped 
 
+        Returns:
+            :return None
         """
         self.continue_confirmation = False
 
-    def open_tool(self, value=0.60):
+    def open_tool(self, value=0.60) -> None:
         """
         Open griper with value
         Args
-            :(float) value: Value for open grips
+            :param(float) value: Value for open grips
+
+        Returns:
+            :return None
         """
         # Create the GripperCommand we will send
         self.gripper_command = Base_pb2.GripperCommand()
@@ -294,63 +323,66 @@ class Robot:
         sleep(0.16)
 
     @staticmethod
-    def __calculate_size(size:float)-> float:
+    def __calculate_size(size: float) -> float:
         """
         This function calculate with size of object the quantity
 
         Args:
-            size (float): size of object in cm
+            :param(float) size: size of object in cm
 
         Returns:
-            float: quantity for gripper
+            :return(float): quantity for gripper
         """
-        size_ = Utils.calculate_approach(size)
+        size_ = SizeOfMedicines.calculate_approach(size)
         return size_
 
     @staticmethod
-    def __verification(current: float, deviation: float, average_:float) -> bool:
+    def __verification(current: float, deviation: float, average_: float) -> bool:
         """
-        This function analyse currents for identify if have medicine into gripper
+        This "private" method receives the current of the last movement and the standard deviation and average of the
+        last movements and checks if the current has varied enough to infer that the object was detected
 
         Args:
-            current (float): current for analyse
-            deviation (float): deviation for list of currents
-            average_ (float): average for the list of currents
+            :param(float) current: current for analyse
+            :param(float) deviation: the standard deviation of the last movements
+            :param(float) average_: average for the list of currents
 
         Returns:
-            bool: this current confirm if have medicine or not
+            :return(bool): True if the current has varied enough to infer that the object was detected
         """
         return_ = False
-        if (deviation * 0.35) <= current - average_ and current > 0.6:
+        if (deviation * 0.10) <= current - average_ and current > 0.62:
             return_ = True
 
         return return_
 
     @staticmethod
     def __verification_confirmation(current: float, deviation: float, average_) -> bool:
+        # TODO not finish, realize tests
         """
-        This function analyse currents for identify if have medicine into gripper
+        This "private" method receives the last current and the standard deviation and average from the last currents
+        and checks if the current has varied enough to infer that the object missing
 
         Args:
-            current (float): current for analyse
-            deviation (float): deviation for list of currents
-            average_ (float): average for the list of currents
+            :param current(float): the current value to analysis
+            :param deviation(float): the standard deviation of the last movements
+            :param average_(float): average value of the last movements
 
         Returns:
-            bool: this current confirm if have medicine or not
+            :return(bool): True if the current has varied enough to infer that the object was missing
         """
         return_ = True
-        if (deviation * 0.6) <= average_ - current:
+        if (deviation * 0.005) <= average_ - current:
             return_ = False
 
         return return_
 
-    def attribute_from_gripper(self)-> dict:
+    def attribute_from_gripper(self) -> dict:
         """
         This function to manage information's from base cyclic about gripper
 
         Returns:
-           dict: all information's into dict for access with keys position, velocity and current_motor
+           :return(dict): all information's into dict for access with keys position, velocity and current_motor
         """
         variable = self.base_cyclic.RefreshFeedback().__str__().split()
         position = variable.index("gripper_feedback")
@@ -360,10 +392,13 @@ class Robot:
 
         return information_gripper
     
-    def connect(self, connection_ip: str = "192.168.2.10"):
+    def connect(self, connection_ip: str = "192.168.2.10") -> None:
         """
         Connect api with the robot,
         using the ethernet connection ip as default connection
+
+        Returns:
+            :return None
         """
         self.device = robot_connection.RobotConnection.create_tcp_connection(connection_ip)
         self.router = self.device.connect()
@@ -375,6 +410,9 @@ class Robot:
     def disconnect(self):
         """
         Finish connection with robot
+
+        Returns:
+            :return None
         """
         if not self.device:
             return
@@ -384,7 +422,13 @@ class Robot:
         self.device = None
         self.router = None
 
-    def get_joint_angles(self):
+    def get_joint_angles(self) -> list[any]:
+        """
+        Get joint angles from robot.
+
+        Returns:
+            :return(list): joint_angles: list with all joints angles
+        """
         joint_angles_obj = self.base.GetMeasuredJointAngles()
         joint_angles_list = joint_angles_obj.joint_angles
         joint_angles = []
@@ -393,7 +437,13 @@ class Robot:
 
         return joint_angles
 
-    def get_pose_cartesian(self):
+    def get_pose_cartesian(self) -> list[any]:
+        """
+        Get actual cartesian pose from robot.
+
+        Returns:
+            :return(list): final_pose: list with cartesian pose
+        """
         joint_cartesian_pose = self.base.GetMeasuredCartesianPose()
 
         joint_poses = [
@@ -407,13 +457,14 @@ class Robot:
 
         return joint_poses
 
-    def apply_emergency_stop(self):
+    def apply_emergency_stop(self) -> None:
+        """
+        This function applies emergency stop with API
+
+        Returns:
+            None
+        """
         self.base.ApplyEmergencyStop()
-
-    @staticmethod
-    def get_gripper_command():
-        return Base_pb2.GripperCommand()
-
 
 
 """

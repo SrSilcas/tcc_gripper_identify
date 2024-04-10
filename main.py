@@ -1,5 +1,7 @@
-from robot_module import robot_singleton
 import time
+
+from robot_module import robot_singleton
+
 
 def gripper_move():
     robot_singleton.connect()
@@ -10,7 +12,7 @@ def gripper_move():
         try:
             response = float(response)
             size_ = float(size_)
-        except:
+        except ValueError:
             break
         
         return_ = robot_singleton.close_tool(response, size_)
@@ -22,6 +24,7 @@ def gripper_move():
 
         print(f'\nthe last position is {return_[1]} and the max and min approach is {return_[2]}, {return_[3]}\n')
         time.sleep(0.5)
+
 
 if __name__ == '__main__':
     gripper_move()
