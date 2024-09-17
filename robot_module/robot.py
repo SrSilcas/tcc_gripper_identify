@@ -14,14 +14,13 @@ TIMEOUT_DURATION = 20
 
 
 class Robot:
-    def __init__(self) -> None:
+    def __init__(self, gripper_test=False) -> None:
         """
         Method to initialize the robot class generate the necessary parameters for the operation
 
         Returns:
             :return None
         """
-        self.active_state = None
         self.action = None
         self.arm_state_notif_handle = None
         self.base = None
@@ -30,16 +29,15 @@ class Robot:
         self.error = None
         self.gripper = None
         self.router = None
-        self.safety_state_notif_handle = None
-        self.safety_status = None
         self.gripper_command = None
-        self.action_list = []
-        self.status_message = []
         self.final_position = None
-        self.requisition = None
         self.have_medicine = None
         self.continuous = None
         self.continue_confirmation = None
+        self.limit = False
+        self.current = 0
+        self.currents = []
+        self.gripper_test = gripper_test
 
     @staticmethod
     def check_for_end_or_abort(e) -> any:
@@ -158,8 +156,8 @@ class Robot:
 
         try:
             self.base.ExecuteAction(self.action)
-        except (Exception,):
-            pass
+        except Exception as e:
+            raise e
 
         finished = e.wait(TIMEOUT_DURATION)
 
@@ -186,62 +184,101 @@ class Robot:
         else:
             return (position + increment[0]) / 100
 
-    def close_tool(self, cap_size: float = 0, body_size: float = 0) -> tuple[bool, float, float, float]:
+    def close_tool(self, cap_size):
         """
-        This function close the gripper and try detected object
 
-        Args:
-            :param(float, optional) cap_size: size for cap of object in cm. Defaults to 0.
-            :param(float, optional) body_size: size for body of object in cm. Defaults to 0.
+        :param cap_size:
+        :return:
+        """
+        self.final_position = self.__calculate_size(cap_size) / 100
+        self.have_medicine = False
+        self.currents = []
+
+        self.limit = False
+
+        thread = threading.Thread(target=self.verification_gripper)
+        thread.start()
+
+        self.open_tool(0.97)
+
+        while not self.have_medicine and not self.limit:
+            if self.limit or self.have_medicine:
+                break
+
+        position = self.attribute_from_gripper()['position']
+        return self.have_medicine, self.final_position, position, self.currents, self.current
+
+    def verification_gripper(self):
+        """
 
         Returns:
-            :return(bool) tuple[0]: whether an object was detected or not detected
-            :return(float) tuple[1]: when gripper identify the object the third (float) max approach calculate for this object and the
-            :return(float) tuple[2]: min approach calculate for this object
+
         """
+        limit = (self.final_position * 100) + 0.5
 
-        object_detected = False
-        currents = []
+        if limit > 94:
+            limit = 94
 
-        if cap_size != 0 and body_size != 0:
+        while not self.limit and not self.have_medicine:
 
-            max_approach = self.__calculate_size(cap_size)
-            min_approach = self.__calculate_size(body_size) - 1
-        else:
-
-            max_approach = 94
-            min_approach = 84
-
-        position = 0
-
-        while not object_detected and self.attribute_from_gripper()["position"] < max_approach:
+            if self.attribute_from_gripper()['position'] > limit:
+                self.limit = True
+                break
 
             deviation = None
             average = None
-            self.__close()
-            first_current = self.attribute_from_gripper()["current_motor"]
+            self.current = self.attribute_from_gripper()['current_motor']
 
-            if 4 > first_current > 0:
-                if len(currents) > 3:
-                    deviation = statistics.stdev(currents)
-                    average = statistics.mean(currents)
+            if 4 > self.current > 0:
+
+                if len(self.currents) >= 2:
+                    deviation = statistics.stdev(self.currents)
+                    average = statistics.mean(self.currents)
+
+                if deviation is not None and self.current > 0.5:
+                    response = self.__verification(self.current, deviation, average)
+                    if response:
+                        self.have_medicine = True
+
             else:
-                print("atypical current")
+                print('Atypical current')
 
-            if deviation is not None and self.attribute_from_gripper()['position'] > min_approach:
+            if 4 > self.current > 0 and len(self.currents) < 4 and not self.have_medicine:
+                self.currents.append(self.current)
 
-                if self.__verification(first_current, deviation, average):
+    def is_holding(self):
+        """
 
-                    self.__close(have_medicine_=True)
-                    thread = threading.Thread(target=self.confirmation)
-                    thread.start()
+        Returns:
 
-            if 4 > first_current > 0 and len(currents) < 7:
-                currents.append(first_current)
+        """
+        self.current = 0
 
-        return object_detected, position, max_approach, min_approach
+        if self.have_medicine:
+            for i in range(2):
+                self.__close()
 
-    def __close(self, have_medicine_: bool = False) -> None:
+                self.current = self.attribute_from_gripper()["current_motor"]
+
+                response = self.attribute_from_gripper()['position'] / 100
+
+                while response < self.final_position:
+                    response = self.attribute_from_gripper()['position'] / 100
+
+                if len(self.currents) >= 2:
+                    deve = statistics.stdev(self.currents)
+                    mean = statistics.mean(self.currents)
+
+                    if self.__verification_confirmation(self.current, deve, mean):
+                        self.have_medicine = True
+                        return self.have_medicine, self.currents, self.current
+
+                self.open_tool(self.final_position)
+
+        self.have_medicine = False
+        return self.have_medicine, self.currents, self.current
+
+    def __close(self) -> None:
         """
         This Function close the gripper
 
@@ -255,51 +292,8 @@ class Robot:
         finger = gripper_command.gripper.finger.add()
         gripper_command.mode = Base_pb2.GRIPPER_POSITION
         finger.finger_identifier = 1
-        finger.value = self.__increment(have_medicine=have_medicine_)
+        finger.value = self.__increment(have_medicine=True)
         self.base.SendGripperCommand(gripper_command)
-
-    def confirmation(self) -> None:
-        """
-        This function check if medicine continues into gripper, in a thread and change the robot attribute continuous
-
-        Returns:
-            :return None
-        """
-        self.continuous = True
-        currents = []
-        self.continue_confirmation = True
-
-        while self.continue_confirmation and self.continuous:
-            print('conditionals ', self.continue_confirmation and self.continuous)
-            current = self.attribute_from_gripper()['current_motor']
-
-            if 2 > current > 0 and len(currents) > 8:
-                deviation = statistics.stdev(currents)
-                average = statistics.mean(currents)
-                condicionas = self.__verification_confirmation(current, deviation, average)
-                if not condicionas:
-                    count = 0
-                    continuous = False
-                    while count < 2 and not continuous:
-                        current = self.attribute_from_gripper()['current_motor']
-                        if self.__verification_confirmation(current, deviation, average):
-                            continuous = True
-                        count += 1
-
-                    if count > 9 and not continuous:
-                        self.continuous = False
-
-            if len(currents) < 15:
-                currents.append(current)
-
-    def stop_confirmation(self) -> None:
-        """
-        When this function is called the confirmation is stopped 
-
-        Returns:
-            :return None
-        """
-        self.continue_confirmation = False
 
     def open_tool(self, value=0.60) -> None:
         """
@@ -351,14 +345,13 @@ class Robot:
             :return(bool): True if the current has varied enough to infer that the object was detected
         """
         return_ = False
-        if (deviation * 0.10) <= current - average_ and current > 0.62:
+        if deviation <= current - average_:
             return_ = True
 
         return return_
 
     @staticmethod
     def __verification_confirmation(current: float, deviation: float, average_) -> bool:
-        # TODO not finish, realize tests
         """
         This "private" method receives the last current and the standard deviation and average from the last currents
         and checks if the current has varied enough to infer that the object missing
@@ -371,9 +364,12 @@ class Robot:
         Returns:
             :return(bool): True if the current has varied enough to infer that the object was missing
         """
-        return_ = True
-        if (deviation * 0.005) <= average_ - current:
-            return_ = False
+        print(f'Deviation: {deviation}')
+        print(f'Current: {current}')
+        print(f'Average: {average_}')
+        return_ = False
+        if deviation * 0.5 <= current - average_:
+            return_ = True
 
         return return_
 
@@ -384,11 +380,11 @@ class Robot:
         Returns:
            :return(dict): all information's into dict for access with keys position, velocity and current_motor
         """
-        variable = self.base_cyclic.RefreshFeedback().__str__().split()
-        position = variable.index("gripper_feedback")
-        information_gripper = {"position": float(variable[position + 7]),
-                               "velocity": float(variable[position + 9]),
-                               "current_motor": float(variable[position + 11])}
+        variable = self.base_cyclic.RefreshFeedback().interconnect.gripper_feedback.motor[0]
+        information_gripper = {"position": variable.position,
+                               "velocity": variable.velocity,
+                               "current_motor": variable.current_motor,
+                               "temperature": variable.temperature_motor}
 
         return information_gripper
     
@@ -405,7 +401,7 @@ class Robot:
         self.base = BaseClient(self.router)
         self.base_cyclic = BaseCyclicClient(self.router)
         self.gripper = GripperCyclicClient(self.router)
-        self.open_tool()
+        # self.open_tool()
 
     def disconnect(self):
         """

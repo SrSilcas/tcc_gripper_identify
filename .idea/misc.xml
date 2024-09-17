@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="farmacia-backend" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="farmacia-backend" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="diario" project-jdk-type="Python SDK" />
 </project>
