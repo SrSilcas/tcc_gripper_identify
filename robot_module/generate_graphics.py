@@ -8,10 +8,12 @@ def ler_arquivo(nome_arquivo):
 
 
 def processar_dados(linhas_):
-    temperature = []
-    velocity = []
-    position = []
-    current = []
+    final_positions = []
+    positions = []
+    deviations = []
+    averages = []
+    first_currents = []
+    second_currents = []
 
     resultados = {'True': 0, 'False': 0}
 
@@ -54,7 +56,7 @@ def gerar_grafico(information_1, information_2, names_information: tuple):
 
 if __name__ == "__main__":
     # Nome do arquivo a ser lido
-    nome_arquivo = 'confirmation_2.txt'
+    nome_arquivo = 'close_gripper.txt'
 
     # Lendo o arquivo e processando os dados
     linhas_argv = ler_arquivo(nome_arquivo)
