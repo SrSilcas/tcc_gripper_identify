@@ -1,5 +1,6 @@
 import statistics
 import threading
+import time
 from time import sleep
 
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
@@ -243,20 +244,23 @@ class Robot:
         count = 0
         current = 0
 
+        # the if below is necessary to using test is_holding to force a enter into the loop
+        # if True:
         if self.have_medicine:
             while count < 2 and count_overall < 5:
 
                 if self.final_position:
                     self.open_tool(self.final_position)
+                    time.sleep(0.16)
 
                 self.__close(True)
                 current = self.attribute_from_gripper()["current_motor"]
 
-                if self.__verification_confirmation(current):
+                if self.__verification_confirmation(current) and current > 0.55:
                     self.have_medicine = True
                     if self.final_position:
                         self.open_tool(self.final_position)
-                    return self.have_medicine, self.currents, current
+                    return self.have_medicine, self.currents, current, count, count_overall
 
                 if current > 0.009:
                     count += 1
@@ -264,7 +268,7 @@ class Robot:
                 count_overall += 1
 
         self.have_medicine = False
-        return self.have_medicine, self.currents, current
+        return self.have_medicine, self.currents, current, count, count_overall
 
     def __close(self, have_medicine_: bool = False) -> None:
         """
