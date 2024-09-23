@@ -8,7 +8,7 @@ from kortex_api.autogen.client_stubs.GripperCyclicClientRpc import GripperCyclic
 from kortex_api.autogen.messages import Base_pb2
 
 import robot_module.utils as robot_connection
-from robot_module.size_of_medcines import SizeOfMedicines
+from robot_module.utils.size_of_medcines import SizeOfMedicines
 
 TIMEOUT_DURATION = 20
 
@@ -32,9 +32,6 @@ class Robot:
         self.gripper_command = None
         self.final_position = None
         self.have_medicine = None
-        self.continuous = None
-        self.continue_confirmation = None
-        self.limit = False
         self.currents = []
         self.gripper_test = gripper_test
 
@@ -200,15 +197,15 @@ class Robot:
 
         self.final_position = None
         self.have_medicine = False
+        positions = []
         self.currents = []
         first_current = second_current = 0
-        position = 0
 
-        while not self.have_medicine and self.attribute_from_gripper()["position"] < 95:
+        while not self.have_medicine and self.attribute_from_gripper()["position"] < 95.5:
 
             self.__close()
             first_current = self.attribute_from_gripper()["current_motor"]
-            position = self.attribute_from_gripper()["position"]
+            positions.append(self.attribute_from_gripper()["position"])
 
             if 4 > first_current > 0:
 
@@ -220,6 +217,7 @@ class Robot:
                         self.__close()
 
                         second_current = self.attribute_from_gripper()['current_motor']
+                        positions.append(self.attribute_from_gripper()["position"])
 
                         if self.__verification(second_current) and second_current > 0.55:
                             self.have_medicine = True
@@ -232,7 +230,7 @@ class Robot:
         deviation = statistics.stdev(self.currents)
         average = statistics.mean(self.currents)
 
-        return self.have_medicine, self.final_position, position, deviation, average, first_current, second_current
+        return self.have_medicine, positions, self.currents, deviation, average, first_current, second_current
 
     def is_holding(self):
         """
@@ -246,7 +244,6 @@ class Robot:
         current = 0
 
         if self.have_medicine:
-            self.open_tool()
             while count < 2 and count_overall < 5:
 
                 if self.final_position:
@@ -338,7 +335,7 @@ class Robot:
 
         return_ = False
 
-        if deviation <= current - average and self.attribute_from_gripper()['position'] < 96:
+        if deviation <= current - average and self.attribute_from_gripper()['position'] < 96.5:
             return_ = True
 
         return return_

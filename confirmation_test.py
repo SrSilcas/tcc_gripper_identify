@@ -1,13 +1,15 @@
 import time
-from robot_module.robot import robot_singleton
+from robot_module.robot import Robot
 import keyboard
-from robot_module.write_tests import write_into_txt
+from robot_module.utils.write_tests import write_into_txt
 
 if __name__ == "__main__":
-    robot = robot_singleton
+    robot = Robot()
     robot.connect()
 
     information = ''
+    currents = ''
+    positions = ''
 
     have_medicine = []
     final_position = []
@@ -67,16 +69,21 @@ if __name__ == "__main__":
     robot.open_tool(0.65)
 
     for i in range(len(have_medicine)):
-        information += (f'Rotation {i + 1}\n   {have_medicine[i]}\n   Final position {final_position[i]}\n   '
-                        f'Position{position[i]}\n   Deviation{deviation[i]}\n   Average {average[i]}\n   '
+        information += (f'Rotation {i + 1}\n   {have_medicine[i]}\n   '
+                        f'Deviation {deviation[i]}\n   Average {average[i]}\n   '
                         f'First current {first_current[i]}\n   Second current {second_current[i]}\n')
+
+        currents += f'currents {position[i]}\n'
+        positions += f'positions {final_position[i]}\n'
 
     # for i in range(len(final_current)):
     #     print(f'Rotation: {i}')
     #     print(f'Final Current: {final_current[i]}')
     #     print(f'Currents holding: {currents_holding[i]}')
 
-    write_into_txt(information, 'close_gripper_no_med')
+    write_into_txt(information, 'close_gripper_not_23_09_v3.txt')
+    write_into_txt(currents, 'currents_23_09_not_v3.txt')
+    write_into_txt(positions, 'position_23_09_not_v3.txt')
 
     print(f'True close: {true_close_tool}')
     print(f'False close: {false_close_tool}')
